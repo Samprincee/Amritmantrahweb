@@ -45,3 +45,6 @@
       gsap.to('#hero > div.pointer-events-none:nth-child(1)', { yPercent: 10, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', scrub: true } });
       gsap.to('#hero > div.pointer-events-none:nth-child(2)', { yPercent: -10, ease: 'none', scrollTrigger: { trigger: '#hero', start: 'top top', scrub: true } });
     });
+
+
+
