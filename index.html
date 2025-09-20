@@ -38,13 +38,19 @@
   <!-- NAV -->
   <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100">
     <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="font-extrabold tracking-tight text-lg">Amrit <span class="text-emerald-600">Mantrah</span></a>
+      <!-- <img src="/1st/logo image png.png" alt="Logo" class="h-6 w-auto mr-1 "> -->
+      <a href="#" class="font-extrabold tracking-tight text-lg">
+        Amrit <span class="text-emerald-600">Mantrah</span>
+      </a>
       <div class="hidden md:flex items-center gap-6 text-sm">
         <a href="#why" class="hover:text-slate-900 text-slate-600">Why Us</a>
         <a href="#how" class="hover:text-slate-900 text-slate-600">How It Works</a>
         <a href="#blend" class="hover:text-slate-900 text-slate-600">Ingredients</a>
         <a href="#pricing" class="hover:text-slate-900 text-slate-600">Pricing</a>
         <a href="#faq" class="hover:text-slate-900 text-slate-600">FAQ</a>
+        <a href="about.html" class="text-slate-600 hover:text-slate-900">About Us</a>
+        <a href="contact.html" class="text-slate-600 hover:text-slate-900">Contact Us</a>
+
       </div>
       <a href="#consult"
         class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium bg-slate-900 text-white hover:opacity-90 transition">Consult
@@ -95,7 +101,8 @@
 
             <!-- Floating Pill -->
             <div id="floating-pill" class="fixed top-30 left-11 translate-x-1/2 z-40 pointer-events-none">
-              <img src="/1st/Capsule without shadow image.png" alt="pill" class="w-20 h-auto drop-shadow-lg opacity-95" />
+              <img src="/1st/Capsule without shadow image.png" alt="pill"
+                class="w-20 h-auto drop-shadow-lg opacity-95" />
             </div>
 
           </div>
@@ -251,80 +258,69 @@
     <div class="container mx-auto px-4">
       <div class="max-w-2xl mx-auto mb-10 text-center">
         <h2 class="text-3xl md:text-4xl font-bold">Powerful Ayurvedic Blend for Fat Loss</h2>
-        <p class="mt-3 text-slate-600">Amla, Garcinia Cambogia, Green Tea, Methi, Gudmar, Shudh Guggul, Harad.</p>
+        <p class="mt-3 text-slate-600">Amla, Garcinia Cambogia, Methi, <br> Green Tea,  Gudmar, Shudh Guggul, Harad.</p>
       </div>
 
       <!-- layout: central capsule graphic + circular nodes around it -->
-      <div class="relative mx-auto max-w-4xl h-[560px]">
+      <div class="relative mx-auto max-w-4xl h-[360px]">
         <!-- central capsule (replace src with your capsule image) -->
-        <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-          <img src="/4th/Cap4thsec.png" alt="Central capsule" class="w-36 md:w-44 lg:w-56" />
+        <div class="absolute left-[52%] top-[62%] -translate-x-[50%] -translate-y-[50%] z-20">
+          <img src="/4th/Cap4thsec.png" alt="Central capsule" class="w-21 h-21 md:w-44 lg:w-56" />
         </div>
-
-        <!-- connecting SVG lines (absolute) -->
-        <svg class="absolute inset-0 w-full h-full -z-10" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <!-- adjustable thin connector lines/arcs -->
-          <line x1="50%" y1="50%" x2="18%" y2="18%" stroke="#cfeee6" stroke-width="0" stroke-linecap="round" />
-          <line x1="50%" y1="50%" x2="82%" y2="18%" stroke="#cfeee6" stroke-width="0" stroke-linecap="round" />
-          <line x1="50%" y1="50%" x2="12%" y2="70%" stroke="#cfeee6" stroke-width="0" stroke-linecap="round" />
-          <line x1="50%" y1="50%" x2="88%" y2="70%" stroke="#cfeee6" stroke-width="0" stroke-linecap="round" />
-          <line x1="50%" y1="50%" x2="36%" y2="86%" stroke="#cfeee6" stroke-width="0" stroke-linecap="round" />
-          <line x1="50%" y1="50%" x2="64%" y2="86%" stroke="#cfeee6" stroke-width="0" stroke-linecap="round" />
-        </svg>
 
         <!-- nodes: circle image + label -->
         <!-- top-left: Garcinia -->
-        <div class="absolute left-[16%] top-[12%] w-36 flex flex-col items-center text-center">
-          <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
-            <img src="/4th/Garcinia Cambogia.png" alt="Garcinia" class="w-26 h-26 object-contain" />
+        <div class="absolute left-[10%] top-[3%] w-36 flex flex-col items-center text-center">
+          <div class="w-20 h-20 flex items-center justify-center overflow-hidden">
+            <img src="/4th/Garcinia Cambogia.png" alt="Garcinia" class="w-20 h-20 object-contain" />
           </div>
-          <div class="mt-3 text-sm font-semibold text-slate-700">Garcinia Cambogia</div>
-          <div class="text-xs text-slate-500 mt-1">Blocks fat production and reduces appetite.</div>
+          <div class="mt-[1px] text-[12px] font-semibold text-slate-700">Garcinia Cambogia</div>
+          <div class="text-[10px] text-slate-500 mt-1">Blocks fat production and reduces appetite.</div>
         </div>
 
         <!-- top-right: Methi -->
-        <div class="absolute left-[78%] top-[12%] w-36 -translate-x-1/2 flex flex-col items-center text-center">
-          <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
-            <img src="/4th/Methi.png" alt="Methi" class="w-26 h-26 object-contain" />
+        <div class="absolute left-[80%] top-[3%] w-36 -translate-x-1/2 flex flex-col items-center text-center">
+          <div class="w-20 h-20 flex items-center justify-center overflow-hidden">
+            <img src="/4th/Methi.png" alt="Methi" class="w-20 h-20 object-contain" />
           </div>
-          <div class="mt-3 text-sm font-semibold text-slate-700">Methi</div>
-          <div class="text-xs text-slate-500 mt-1">Controls appetite and supports digestion.</div>
+          <div class="mt-[1px] text-[12px] font-semibold text-slate-700">Methi</div>
+          <div class="text-[10px] text-slate-500 mt-1">Controls appetite and supports digestion.</div>
         </div>
 
         <!-- left-mid: Green Tea -->
-        <div class="absolute left-[6%] top-[44%] w-36 flex flex-col items-center text-center">
-          <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
-            <img src="/4th/Green Tea.png" alt="Green Tea" class="w-26 h-26 object-contain" />
+        <div class="absolute left-[2%] top-[45%] w-36 flex flex-col items-center text-center">
+          <div class="w-20 h-20 flex items-center justify-center overflow-hidden">
+            <img src="/4th/Green Tea.png" alt="Green Tea" class="w-20 h-20 object-contain" />
           </div>
-          <div class="mt-3 text-sm font-semibold text-slate-700">Green Tea</div>
-          <div class="text-xs text-slate-500 mt-1">Boosts metabolism and helps burn fat faster.</div>
+          <div class="mt-[1px] text-[12px] font-semibold text-slate-700">Green Tea</div>
+          <div class="text-[10px] text-slate-500 mt-1">Boosts metabolism and <br>helps burn fat faster.</div>
         </div>
 
         <!-- right-mid: Amla -->
-        <div class="absolute left-[86%] top-[46%] w-36 -translate-x-1/2 flex flex-col items-center text-center">
-          <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
-            <img src="/4th/Amla.png" alt="Amla" class="w-26 h-26 object-contain" />
+        <div class="absolute left-[88%] top-[45%] w-36 -translate-x-1/2 flex flex-col items-center text-center">
+          <div class="w-20 h-20 flex items-center justify-center overflow-hidden">
+            <img src="/4th/Amla.png" alt="Amla" class="w-20 h-20 object-contain" />
           </div>
-          <div class="mt-3 text-sm font-semibold text-slate-700">Amla</div>
-          <div class="text-xs text-slate-500 mt-1">Boosts metabolism and improves digestion.</div>
+          <div class="mt-[1px] text-[12px] font-semibold text-slate-700">Amla</div>
+          <div class="text-[10px] text-slate-500 mt-1">Boosts metabolism and improves digestion.</div>
         </div>
 
         <!-- bottom-left: Shudh Guggul -->
-        <div class="absolute left-[22%] top-[76%] w-36 flex flex-col items-center text-center">
-          <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
-            <img src="/4th/Shudh Guggul.png" alt="Shudh Guggul" class="w-26 h-26 object-contain" />
+        <div class="absolute left-[10%] top-[85%] w-36 flex flex-col items-center text-center">
+          <div class="w-20 h-20 flex items-center justify-center overflow-hidden">
+            <img src="/4th/Shudh Guggul.png" alt="Shudh Guggul" class="w-20 h-20 object-contain" />
           </div>
-          <div class="mt-3 text-sm font-semibold text-slate-700">Shudh Guggul</div>
-          <div class="text-xs text-slate-500 mt-1">Promotes fat metabolism and supports thyroid health.</div>
+          <div class="mt-[1px] text-[12px] font-semibold text-slate-700">Shudh Guggul</div>
+          <div class="text-[10px] text-slate-500 mt-1">Promotes fat metabolism & supports thyroid health.</div>
         </div>
 
         <!-- bottom-right: Harad / Gudmar -->
-        <div class="absolute left-[74%] top-[76%] w-36 -translate-x-1/2 flex flex-col items-center text-center">
-          <div class="w-28 h-28 flex items-center justify-center overflow-hidden">
-            <img src="/4th/Harad.png" alt="Harad" class="w-26 h-26 object-contain" />
+        <div class="absolute left-[80%] top-[85%] w-36 -translate-x-1/2 flex flex-col items-center text-center">
+          <div class="w-20 h-20 flex items-center justify-center overflow-hidden">
+            <img src="/4th/Harad.png" alt="Harad" class="w-20 h-20 object-contain" />
           </div>
-          <div class="mt-3 text-sm font-semibold text-slate-700">Harad</div>
-          <div class="text-xs text-slate-500 mt-1">Improves digestion and detoxifies the body.</div>
+          <div class="mt-[1px] text-[12px] font-semibold text-slate-700">Harad</div>
+          <div class="text-[10px] text-slate-500 mt-1">Improves digestion and detoxifies the body.</div>
         </div>
       </div>
 
@@ -420,77 +416,59 @@
         <div class="h-[1px] bg-slate-100 my-8"></div>
       </div>
 
-      <!-- Verified Buyers -->
-      <div class="max-w-5xl mx-auto mt-2">
-        <h3 class="text-lg md:text-xl font-semibold text-center mb-6">Verified Buyers</h3>
+     
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
-          <!-- card 1 -->
-          <article class="relative bg-white rounded-2xl p-6 pt-10 flex flex-col items-center text-center shadow-sm">
-            <!-- clip / polaroid style -->
-            <div class="absolute -top-7 left-1/2 -translate-x-1/2 w-20 h-20 bg-white overflow-hidden">
-              <img src="/5th/Frame.png" alt="Prerna Sharma" class="w-full h-full object-cover" />
-            </div>
+      <!-- Testimonials Section -->
+<section id="testimonials" class="py-16 md:py-20 ">
+  <div class="container mx-auto px-4">
+    <h2 class="text-2xl md:text-3xl font-extrabold text-center mb-12">
+      User <span class="text-emerald-700">Testimonials</span>
+    </h2>
 
-            <!-- check badge -->
-            <div
-              class="absolute -top-3 left-5 w-6 h-6 bg-emerald-700 rounded-full flex items-center justify-center text-white text-xs shadow">
-              ✓
-            </div>
-
-            <h4 class="mt-10 font-semibold">Prerna Sharma</h4>
-
-            <!-- stars -->
-            <div class="flex items-center gap-1 mt-2">
-              <span class="text-amber-400">★★★★★</span>
-            </div>
-
-            <p class="mt-3 text-sm text-slate-600">“Amrit Mantrah helped me stay disciplined and motivated during my fat
-              loss journey.”</p>
-          </article>
-
-          <!-- card 2 -->
-          <article class="relative bg-white rounded-2xl p-6 pt-10 flex flex-col items-center text-center shadow-sm">
-            <div
-              class="absolute -top-7 left-1/2 -translate-x-1/2 w-28 h-28 bg-white rounded-md drop-shadow-sm border border-slate-100 overflow-hidden">
-              <img src="/5th/Frame.png" alt="Preeti Jaiswal" class="w-full h-full object-cover" />
-            </div>
-
-            <div
-              class="absolute -top-3 left-5 w-6 h-6 bg-emerald-700 rounded-full flex items-center justify-center text-white text-xs shadow">
-              ✓
-            </div>
-
-            <h4 class="mt-10 font-semibold">Preeti Jaiswal</h4>
-            <div class="flex items-center gap-1 mt-2">
-              <span class="text-amber-400">★★★★★</span>
-            </div>
-            <p class="mt-3 text-sm text-slate-600">“Along with healthy habits, Amrit Mantrah kept me focused and
-              consistent.”</p>
-          </article>
-
-          <!-- card 3 -->
-          <article class="relative bg-white rounded-2xl p-6 pt-10 flex flex-col items-center text-center shadow-sm">
-            <div
-              class="absolute -top-7 left-1/2 -translate-x-1/2 w-28 h-28 bg-white rounded-md drop-shadow-sm border border-slate-100 overflow-hidden">
-              <img src="/5th/Frame.png" alt="Prince Kumar" class="w-full h-full object-cover" />
-            </div>
-
-            <div
-              class="absolute -top-3 left-5 w-6 h-6 bg-emerald-700 rounded-full flex items-center justify-center text-white text-xs shadow">
-              ✓
-            </div>
-
-            <h4 class="mt-10 font-semibold">Prince Kumar</h4>
-            <div class="flex items-center gap-1 mt-2">
-              <span class="text-amber-400">★★★★★</span>
-            </div>
-            <p class="mt-3 text-sm text-slate-600">“I felt lighter and more energetic — finally lost stubborn fat.”</p>
-          </article>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+        <div class="flex justify-center -mt-16">
+          <img src="/Image/gi.jpg" alt="Prerna Sharma" class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover">
         </div>
-
-        <p class="mt-6 text-center text-xs text-slate-500">*Results may vary person to person</p>
+        <div class="mt-6 flex justify-center text-amber-400 text-xl">★★★★★</div>
+        <h4 class="mt-3 font-bold">Prerna Sharma</h4>
+        <p class="text-sm text-slate-500">Verified Buyer</p>
+        <p class="mt-4 text-sm text-slate-600">
+          Amrit Mantrah helped me stay <br> disciplined and motivated during my fat loss journey.
+        </p>
       </div>
+
+      <!-- Card 2 (highlighted) -->
+      <div class="bg-emerald-700 text-white rounded-2xl shadow-md p-6 text-center">
+        <div class="flex justify-center -mt-16">
+          <img src="/Image/girl.jpg" alt="Preeti Jaiswal" class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover">
+        </div>
+        <div class="mt-6 flex justify-center text-yellow-300 text-xl">★★★★★</div>
+        <h4 class="mt-3 font-bold">Preeti Jaiswal</h4>
+        <p class="text-sm opacity-90">Verified Buyer</p>
+        <p class="mt-4 text-sm opacity-90">
+          Along with healthy habits, Amrit Mantrah kept me focused and consistent.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl shadow-md p-6 text-center">
+        <div class="flex justify-center -mt-16">
+          <img src="/Image/man.jpg" alt="Prince Kumar" class="w-24 h-24 rounded-full border-4 border-white shadow-md object-cover">
+        </div>
+        <div class="mt-6 flex justify-center text-amber-400 text-xl">★★★★★</div>
+        <h4 class="mt-3 font-bold">Prince Kumar</h4>
+        <p class="text-sm text-slate-500">Verified Buyer</p>
+        <p class="mt-4 text-sm text-slate-600">
+          I felt lighter and more energetic — finally lost stubborn fat.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     </div>
   </section>
 
@@ -537,45 +515,34 @@
       <div class="relative mx-auto mt-12 max-w-3xl h-[380px] flex items-center justify-center">
         <!-- central capsule image -->
         <div class="z-20">
-          <img src="/1st/Capsule without shadow image.png" alt="Capsule" class="w-20 h-20 object-contain mx-auto" />
+          <!-- <img src="/1st/Capsule without shadow image.png" alt="Capsule" class="w-20 h-20 object-contain mx-auto" /> -->
         </div>
 
-        <!-- connector arrows -->
-        <svg class="absolute inset-0 w-full h-full -z-10" xmlns="http://www.w3.org/2000/svg" fill="none">
-          <path d="M50% 30 L35% 20" stroke="#065f46" stroke-width="1.5" marker-end="url(#arrow)" />
-          <path d="M65% 20 L50% 30" stroke="#065f46" stroke-width="1.5" marker-end="url(#arrow)" />
-          <path d="M50% 30 L65% 60" stroke="#065f46" stroke-width="1.5" marker-end="url(#arrow)" />
-          <defs>
-            <marker id="arrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="6" markerHeight="6"
-              orient="auto-start-reverse">
-              <path d="M0 0 L10 5 L0 10 z" fill="#065f46" />
-            </marker>
-          </defs>
-        </svg>
+        
 
         <!-- Step 1 -->
-        <div class="absolute top-6 left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <div class="w-26 h-26 flex items-center justify-center overflow-hidden ">
-            <img src="/5th/Glass.png" alt="Water" class="w-20 h-20 object-contain" />
+        <div class="absolute top-[-5%] left-[50%] -translate-x-1/2 flex flex-col items-center">
+          <div class="w-36 h-36 flex items-center justify-center overflow-hidden ">
+            <img src="/5th/Glass.png" alt="Water" class="w-30 h-30 object-contain" />
           </div>
-          <p class="mt-2 text-xs md:text-sm font-medium text-slate-700">Before Meal<br>with Lukewarm Water</p>
+          <p class="mt-0.01 text-[15px] md:text-sm font-medium text-slate-700">Before Meal<br>with Lukewarm Water</p>
         </div>
 
         <!-- Step 2 -->
-        <div class="absolute bottom-6 left-12 flex flex-col items-center">
-          <div class="w-26 h-26 flex items-center justify-center overflow-hidden ">
-            <img src="/5th/tablet.png" alt="2 Capsules" class="w-20 h-20 object-contain" />
+        <div class="absolute bottom-6 left-[5%] flex flex-col items-center">
+          <div class="w-36 h-36 flex items-center justify-center overflow-hidden ">
+            <img src="/5th/tablet.png" alt="2 Capsules" class="w-30 h-30 object-contain" />
           </div>
-          <p class="mt-2 text-xs md:text-sm font-medium text-slate-700">Take 2 Capsules Daily<br>or as directed by
+          <p class="mt-0.01 text-[15px] md:text-sm font-medium text-slate-700">Take 2 Capsules Daily<br>or as directed by
             physician</p>
         </div>
 
         <!-- Step 3 -->
-        <div class="absolute bottom-6 right-12 flex flex-col items-center">
-          <div class="w-26 h-26 flex items-center justify-center overflow-hidden ">
-            <img src="/5th/Calender.png" alt="90 Days" class="w-20 h-20 object-contain" />
+        <div class="absolute bottom-6 right-[5%] flex flex-col items-center">
+          <div class="w-36 h-36 flex items-center justify-center overflow-hidden ">
+            <img src="/5th/Calender.png" alt="90 Days" class="w-30 h-30 object-contain" />
           </div>
-          <p class="mt-2 text-xs md:text-sm font-medium text-slate-700">Follow Consistently<br>for 90 Days</p>
+          <p class="mt-0.01 text-[15px] md:text-sm font-medium text-slate-700">Follow Consistently<br>for 90 Days</p>
         </div>
       </div>
     </div>
@@ -806,7 +773,11 @@
     <div class="container mx-auto px-4 text-sm text-slate-500 grid md:grid-cols-4 gap-6">
       <div>
         <p class="font-bold text-slate-800">Amrit Mantrah</p>
-        <p class="mt-2">Your Health Partner</p>
+        <p class="mt-1">Your Health Partner</p>
+        <ul>
+          <li><a href="about.html" class="hover:text-slate-900">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-slate-900">Contact Us</a></li>
+        </ul>
       </div>
       <div>
         <p class="font-semibold text-slate-700">Quick Links</p>
@@ -819,10 +790,14 @@
       <div>
         <p class="font-semibold text-slate-700">Policies</p>
         <ul class="mt-2 space-y-2">
-          <li><a class="hover:text-slate-700" href="#">Privacy Policy</a></li>
-          <li><a class="hover:text-slate-700" href="#">Refund & Return Policy</a></li>
-          <li><a class="hover:text-slate-700" href="#">Terms & Conditions</a></li>
+          <li><a class="hover:text-slate-700" href="privacypolicy.html">Privacy Policy</a></li>
+          <li><a class="hover:text-slate-700" href="refund&returnpolicy.html">Refund & Return Policy</a></li>
+          <li><a class="hover:text-slate-700" href="terms&conditions.html">Terms & Conditions</a></li>
+
         </ul>
+
+
+
       </div>
       <div>
         <p class="font-semibold text-slate-700">Contact</p>
@@ -840,7 +815,7 @@
   <!-- JS (WhatsApp link + GSAP) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script> -->
 
   <script src="script.js"></script>
 </body>
