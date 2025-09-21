@@ -1,217 +1,190 @@
-<!-- Save this as about.html -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>About • Amrit Mantrah</title>
-  <meta name="description" content="Amrit Mantrah — Pure Ayurvedic wellness. Our story, mission and team." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Amrit Mantra</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- GSAP (for small reveal animations) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
-  <style>
-    /* Small inline fallback so fonts render nicely while Tailwind loaded */
-    body { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
-  </style>
 </head>
-<body class="antialiased text-slate-800 bg-white">
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100">
-    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="font-extrabold tracking-tight text-lg">Amrit <span class="text-emerald-600">Mantrah</span></a>
-      <div class="hidden md:flex items-center gap-6 text-sm">
-        <a href="index.html#hero" class="text-slate-600 hover:text-slate-900">Home</a>
-        <a href="index.html#why" class="text-slate-600 hover:text-slate-900">Why Us</a>
-        <a href="index.html#pricing" class="text-slate-600 hover:text-slate-900">Pricing</a>
-        <a href="index.html#consult" class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium bg-slate-900 text-white">Consult Now</a>
+<body class="bg-white font-sans text-gray-800">
+
+  
+  <!-- Header -->
+  <div class="text-center py-6 mt-10">
+    <h2 class="text-lg  font-semibold p-1">We Are</h2>
+    <h1 class="text-3xl font-bold text-green-900 p-1">Amrit Mantra</h1>
+    <p class="text-lg font-bold text-green-900 p-1">अमृत मन्त्र:</p>
+    
+    <img src="/aboutus/Contact Us Leaf.png" alt="" class="absolute top-[20px] right-[-10px] w-[280px] h-auto opacity-100 -z-10">
+
+  </div>
+
+  <!-- Stats Section -->
+ <div class="flex justify-around items-center text-center py-6">
+    <div>
+      <img src="/aboutus/Customer.png" alt="Customers" class="w-10 h-10 mx-auto mb-2">
+      <p class="text-lg font-bold" id="customers">0 <SPAn>+</SPAn></p>
+      <p class="text-sm">Trusted Customers</p>
+    </div>
+    <div>
+      <img src="/aboutus/100_ Ayurvedic.png" alt="Natural" class="w-10 h-10 mx-auto mb-2">
+      <p class="text-lg font-bold" id="ayurvedic">0 %</p>
+      <p class="text-sm">Ayurvedic & Natural</p>
+    </div>
+    <div>
+      <img src="/aboutus/4 Wellness Area.png" alt="Wellness" class="w-10 h-10 mx-auto mb-2">
+      <p class="text-lg font-bold" id="wellness">0+</p>
+      <p class="text-sm">Core Wellness Area</p>
+    </div>
+</div>
+
+<script>
+function countUp(id, target, duration, suffix="") {
+    let element = document.getElementById(id);
+    let start = 0;
+    let increment = target / (duration / 50); // update every 50ms
+    let interval = setInterval(() => {
+        start += increment;
+        if(start >= target) {
+            element.textContent = target + suffix;
+            clearInterval(interval);
+        } else {
+            element.textContent = Math.floor(start) + suffix;
+        }
+    }, 50);
+}
+
+// Call the function for each counter
+countUp('customers', 1000, 2000, "+");    // 1000+
+countUp('ayurvedic', 100, 2000, "%");     // 100%
+countUp('wellness', 4, 2000, "+");        // 4+
+</script>
+
+  <!-- About Us -->
+  <div class="px-4 py-6 mt-1">
+    <h2 class="text-xl font-bold text-green-900 mb-2">About Us</h2>
+
+    <div class="flex justify-center gap-[10px] mt-3">
+
+      <div style="flex-basis: 60%;" class=" sm:basis-3/5 text-container">
+        <p class="text-[12px] font-semibold leading-relaxed">
+          Amrit Mantrah is more than just a wellness brand it’s a promise of health, purity, and authenticity. <br><br>
+          Our vision is to help people stay healthy with products made from pure Ayurvedic ingredients.
+        </p>
       </div>
-      <button class="md:hidden p-2 rounded-md text-slate-600" aria-label="Open menu" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">☰</button>
-    </nav>
+      <div style="flex-basis: 40%;" class="image-container flex justify-center ">
+        <img src="/aboutus/About Us.png" alt="Ayurvedic Ingredients" class="w-22 h-22 object-contain">
+      </div>
 
-    <!-- Mobile menu (simple) -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-100">
-      <div class="px-4 py-3 flex flex-col gap-2 text-sm">
-        <a href="index.html#hero" class="text-slate-700">Home</a>
-        <a href="index.html#why" class="text-slate-700">Why Us</a>
-        <a href="privacypolicy.html" class="text-slate-700">Privacy</a>
-        <a href="contact.html" class="text-slate-700">Contact us</a>
-        <a href="refund&returnpolicy.html" class="text-slate-700">Refund and Return</a>
-        <a href="terms&conditions.html" class="text-slate-700">Terms & Conditions</a>
+    </div>
+  </div>
+
+
+  
+  
+  
+  
+  <!-- Our Story -->
+  <div class="px-3 py-6 mt-1">
+    <div class=" absolute top-55 left-0 w-[190px] h-auto -z-10 opacity-100 bg-black ">
+  <img src="/aboutus/Contact Us 3rd Leaf.png" alt="Leaf" class="w-full h-auto">
+  </div>
+    
+    <div class="flex justify-center gap-[10px] mt-1">
+      
+      <div style="flex-basis: 40%;"   class="sm:basis-2/5 ">
+        <img src="/aboutus/Our Story.png" alt="Our Story" class="w-[500px] h-[200px] object-cover" >
+      </div>
+      
+      <div style="flex-basis: 60%;"  class="sm:basis-3/5">
+        <h2 class="text-xl font-bold text-green-900 mb-2">Our Story</h2>
+
+        <p class="text-[12px] font-semibold leading-relaxed">
+          The journey of Amrit Mantrah began with a belief that true health comes from nature’s wisdom. <br><br>
+          We started with Fat Loss, and now we are moving forward into Gut Health, Hair Care and Skin Care
+          with the same focus on purity and real results.
+        </p>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- Our Mission -->
+  <div class="px-4 py-6 mt-1 ">
+    <h2 class="text-xl font-bold text-green-900 mb-2">Our Mission</h2>
+    <div class="flex justify-center gap-[10px] mt-3">
+      <div style="flex-basis: 60%;"  class="sm:basis-3/5">
+        <p class="text-[12px] font-semibold leading-relaxed">
+          Our mission is to bring the power of Ayurveda into modern lifestyles in a way that is reliable, safe, and
+          effective. <br><br>
+          We aim to empower people with natural solutions that improve health while building trust through honesty and
+          purity.
+        </p>
+      </div>
+      <div style="flex-basis: 40%;"  class="sm:basis-2/5 flex justify-center items-center">
+        <img src="/aboutus/Our Mission.png" alt="Our Mission" class="w-[180px] h-[150px] object-contain">
       </div>
     </div>
-  </header>
+  </div>
 
-  <!-- MAIN -->
-  <main class="pt-6">
-    <!-- HERO -->
-    <section id="about-hero" class="py-16 md:py-24">
-      <div class="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <p class="text-xs uppercase tracking-widest text-emerald-600 font-semibold mb-3" data-anim>We Are Amrit Mantrah</p>
-          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight" data-anim>Amrit Mantrah — Natural Fat Loss</h1>
-          <p class="mt-6 text-slate-700 max-w-xl" data-anim>
-            Amrit Mantrah is a promise of health and authenticity. We combine traditional Ayurvedic knowledge with modern testing to create products that support natural fat loss, gut health and overall wellbeing.
-          </p>
-
-          <p class="mt-4 text-slate-600 max-w-xl" data-anim>
-            Started with a simple belief — nature has answers. Our products are 100% Ayurvedic, lab-tested and GMP certified to ensure safety and lasting results.
-          </p>
-
-          <div class="mt-6 flex gap-3" data-anim>
-            <a href="#team" class="rounded-2xl px-5 py-3 bg-emerald-700 text-white text-sm font-medium">Meet the Team</a>
-            <a href="#mission" class="rounded-2xl px-5 py-3 border border-slate-300 text-slate-700 text-sm font-medium">Our Mission</a>
-          </div>
-        </div>
-
-        <div class="relative">
-          <!-- replace src with your hero capsule image -->
-          <div class="aspect-[4/3] rounded-3xl bg-gradient-to-br from-slate-100 to-white shadow-xl border border-slate-200 flex items-center justify-center overflow-hidden" data-anim>
-            <img src="icons/about-hero-capsule.png" alt="Amrit Mantrah capsule" class="w-64 object-contain" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- MISSION -->
-    <section id="mission" class="py-12 md:py-20 bg-slate-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h2 class="text-2xl md:text-3xl font-bold" data-anim>Our Mission</h2>
-          <p class="mt-3 text-slate-600" data-anim>
-            To make Ayurveda accessible and reliable for modern lifestyles — honest ingredients, consistent quality and measurable results.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CORE AREAS -->
-    <section id="core" class="py-16 md:py-24">
-      <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-6 items-start">
-          <div class="col-span-2">
-            <h3 class="text-xl font-semibold mb-3" data-anim>Our Focus Areas</h3>
-            <p class="text-slate-600 mb-6" data-anim>We began with Fat Loss and now expand into Gut Health, Hair Care and Skin Care — always prioritizing purity and safety.</p>
-
-            <div class="grid sm:grid-cols-2 gap-4">
-              <div class="rounded-2xl bg-white p-5 shadow-sm" data-anim>
-                <h4 class="font-semibold text-emerald-700">Fat Loss</h4>
-                <p class="mt-2 text-sm text-slate-600">Science-guided Ayurvedic blends to support natural fat reduction.</p>
-              </div>
-              <div class="rounded-2xl bg-white p-5 shadow-sm" data-anim>
-                <h4 class="font-semibold text-emerald-700">Gut Health</h4>
-                <p class="mt-2 text-sm text-slate-600">Support digestion and absorption for overall wellness.</p>
-              </div>
-              <div class="rounded-2xl bg-white p-5 shadow-sm" data-anim>
-                <h4 class="font-semibold text-emerald-700">Hair Care</h4>
-                <p class="mt-2 text-sm text-slate-600">Natural solutions to strengthen hair & scalp.</p>
-              </div>
-              <div class="rounded-2xl bg-white p-5 shadow-sm" data-anim>
-                <h4 class="font-semibold text-emerald-700">Skin Care</h4>
-                <p class="mt-2 text-sm text-slate-600">Gentle, Ayurvedic support for healthy skin.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- TRUST / STATS -->
-          <aside class="rounded-2xl bg-white p-6 shadow-sm" data-anim>
-            <div class="text-sm text-slate-500">Trusted by</div>
-            <div class="mt-2 text-2xl font-extrabold">1000+</div>
-            <div class="mt-4 text-sm text-slate-600">Customers</div>
-
-            <div class="mt-6 border-t border-slate-100 pt-4">
-              <div class="text-xs text-slate-500">100% Ayurvedic & Natural</div>
-              <div class="mt-2 text-xs text-slate-500">Lab Tested • GMP • FSSAI</div>
-            </div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEAM -->
-    <section id="team" class="py-16 md:py-24 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="max-w-2xl mx-auto text-center mb-8">
-          <h2 class="text-2xl md:text-3xl font-bold" data-anim>Our Team</h2>
-          <p class="mt-3 text-slate-600" data-anim>Ayurvedic experts and health professionals dedicated to real results.</p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div class="rounded-2xl bg-white p-6 text-center shadow-sm" data-anim>
-            <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border border-slate-100">
-              <img src="team/person-1.jpg" alt="Team member" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="mt-4 font-semibold">Dr. S. Sharma</h4>
-            <div class="text-xs text-slate-500 mt-1">Ayurvedic Expert</div>
-          </div>
-
-          <div class="rounded-2xl bg-white p-6 text-center shadow-sm" data-anim>
-            <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border border-slate-100">
-              <img src="team/person-2.jpg" alt="Team member" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="mt-4 font-semibold">Priya</h4>
-            <div class="text-xs text-slate-500 mt-1">Nutritionist</div>
-          </div>
-
-          <div class="rounded-2xl bg-white p-6 text-center shadow-sm" data-anim>
-            <div class="w-28 h-28 mx-auto rounded-full overflow-hidden border border-slate-100">
-              <img src="team/person-3.jpg" alt="Team member" class="w-full h-full object-cover" />
-            </div>
-            <h4 class="mt-4 font-semibold">Rahul</h4>
-            <div class="text-xs text-slate-500 mt-1">Quality Head</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA / CONTACT -->
-    <section id="about-contact" class="py-12 md:py-16 bg-slate-50">
-      <div class="container mx-auto px-4">
-        <div class="max-w-3xl mx-auto text-center">
-          <h3 class="text-xl font-semibold mb-3" data-anim>Want to know more?</h3>
-          <p class="text-slate-600 mb-6" data-anim>Questions, feedback or partnerships — reach us at <a href="mailto:amritmantrah@gmail.com" class="text-emerald-700">amritmantrah@gmail.com</a> or use the consult form on the main site.</p>
-          <a href="index.html#consult" class="inline-flex items-center rounded-2xl px-6 py-3 bg-emerald-700 text-white font-medium">Get Free Consultation</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="py-8 border-t border-slate-100 bg-white">
-    <div class="container mx-auto px-4 text-sm text-slate-500 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
-      <div>© <span id="year"></span> Amrit Mantrah</div>
-      <div class="flex gap-4">
-        <a href="privacypolicy.html" class="hover:text-slate-700">Privacy</a>
-        <a href="refund&returnpolicy.html" class="hover:text-slate-700">Refund</a>
-        <a href="terms&conditions.html" class="hover:text-slate-700">Terms</a>
-      </div>
+  <!-- Our Team -->
+  <div class="px-4 py-6 mt-1">
+    <div class="flex justify-center gap-[10px] mt-3">
+    
+    <div style="flex-basis: 40%;"  class="sm:basis-2/5 flex justify-center mt-[20px]">
+      <img src="/aboutus/Our Team.png" alt="Our Team" class="w-[180px] h-[150px] object-contain">
     </div>
-  </footer>
+    
+      
+    
+    <div style="flex-basis: 60%;" class="sm:basis-3/5">
+        <h2 class="text-xl font-bold text-green-900 mb-2">Our Team</h2>
+        <p class="text-[12px] font-semibold leading-relaxed">
+          Amrit Mantrah is powered by a team of Ayurvedic experts and health professionals who share a common goal
+          i.e. to make authentic Ayurvedic wellness accessible to all. <br><br>
+          Together, we are dedicated to creating products that truly make a positive difference in people’s lives.
+        </p>
+      </div>
 
-  <!-- GSAP init for simple reveals -->
+      
+      
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <div class="px-4 py-6 mt-1 text-center">
+    <h2 class="text-xl font-bold text-green-900 mb-2">Contact Us</h2>
+    <p class="text-[12px] font-semibold leading-relaxed mb-4">
+      We’d love to hear from you! If you have any questions, feedback, or just want to chat, <br>
+      feel free to reach out to us at:
+    </p>
+    <a href="mailto:amritmantrah@gmail.com" class="text-green-700 font-semibold underline">amritmantrah@gmail.com</a>
+  </div>
+
   <script>
-    window.addEventListener('load', () => {
-      if (!window.gsap) return;
-      const { gsap } = window;
-      if (window.ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
+    function counterUp(id, target, speed) {
+      let count = 0;
+      const step = Math.ceil(target / speed); // step size
+      const element = document.getElementById(id);
 
-      // simple fade+up reveal for elements with data-anim
-      gsap.utils.toArray('[data-anim]').forEach((el, i) => {
-        gsap.from(el, {
-          scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none reverse' },
-          y: 18,
-          opacity: 0,
-          duration: 0.6,
-          delay: (i % 6) * 0.06
-        });
-      });
+      const interval = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(interval);
+        }
+        element.textContent = count;
+      }, 10); // 10ms = very fast
+    }
 
-      // set year
-      const y = document.getElementById('year');
-      if (y) y.textContent = new Date().getFullYear();
-    });
+    // Run counter: (id, target, speed factor)
+    counterUp("counter", 1000, 50);
   </script>
+
 </body>
+
+
 </html>
