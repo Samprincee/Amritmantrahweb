@@ -10,135 +10,143 @@
 
 <body class="bg-white font-sans text-gray-800">
 
-  
+
   <!-- Header -->
-  <div class="text-center py-6 mt-10">
+  <div class="relative text-center py-6 mt-10">
 
-   
-    <h2 class="text-lg  font-semibold p-1">We Are</h2>
-    <h1 class="text-3xl font-bold text-green-900 p-1">Amrit Mantra</h1>
-    <p class="text-lg font-bold text-green-900 p-1">अमृत मन्त्र:</p>
+
+    <h2 class="text-[25px]  font-semibold p-1">We Are</h2>
+    <h1 class="text-[40px] font-bold text-green-900 p-1">Amrit Mantra</h1>
+    <p class="text-[30px] font-bold text-green-900 p-1">अमृत मन्त्र:</p>
+
+    <img src="/aboutus/Contact Us Leaf.png" alt=""
+      class="absolute top-[20px] right-[20px] w-[280px] h-auto opacity-100 -z-10 scale-125">
     
-    <img src="/aboutus/Contact Us Leaf.png" alt="" class="absolute top-[20px] right-[-10px] w-[280px] h-auto opacity-100 -z-10">
-
   </div>
 
   <!-- Stats Section -->
- <div class="flex justify-around items-center text-center py-6">
+  <div class="flex justify-around items-center text-center py-6">
     <div>
-      <img src="/aboutus/Customer.png" alt="Customers" class="w-10 h-10 mx-auto mb-2">
-      <p class="text-lg font-bold" id="customers">0 <SPAn>+</SPAn></p>
+      <img src="/aboutus/Customer.png" alt="Customers" class="w-16 h-16 mx-auto mb-2">
+      <p class="text-lg font-bold" id="customers">0 <span>+</span></p>
       <p class="text-sm">Trusted Customers</p>
     </div>
     <div>
-      <img src="/aboutus/100_ Ayurvedic.png" alt="Natural" class="w-10 h-10 mx-auto mb-2">
+      <img src="/aboutus/100_ Ayurvedic.png" alt="Natural" class="w-16 h-16 mx-auto mb-2">
       <p class="text-lg font-bold" id="ayurvedic">0 %</p>
       <p class="text-sm">Ayurvedic & Natural</p>
     </div>
     <div>
-      <img src="/aboutus/4 Wellness Area.png" alt="Wellness" class="w-10 h-10 mx-auto mb-2">
+      <img src="/aboutus/4 Wellness Area.png" alt="Wellness" class="w-16 h-16 mx-auto mb-2">
       <p class="text-lg font-bold" id="wellness">0+</p>
       <p class="text-sm">Core Wellness Area</p>
     </div>
-</div>
+  </div>
 
-<script>
-function countUp(id, target, duration, suffix="") {
-    let element = document.getElementById(id);
-    let start = 0;
-    let increment = target / (duration / 50); // update every 50ms
-    let interval = setInterval(() => {
+  <script>
+    function countUp(id, target, duration, suffix = "") {
+      let element = document.getElementById(id);
+      let start = 0;
+      let increment = target / (duration / 50); // update every 50ms
+      let interval = setInterval(() => {
         start += increment;
-        if(start >= target) {
-            element.textContent = target + suffix;
-            clearInterval(interval);
+        if (start >= target) {
+          element.textContent = target + suffix;
+          clearInterval(interval);
         } else {
-            element.textContent = Math.floor(start) + suffix;
+          element.textContent = Math.floor(start) + suffix;
         }
-    }, 50);
-}
+      }, 50);
+    }
 
-// Call the function for each counter
-countUp('customers', 1000, 2000, "+");    // 1000+
-countUp('ayurvedic', 100, 2000, "%");     // 100%
-countUp('wellness', 4, 2000, "+");        // 4+
-</script>
+    // Call the function for each counter
+    countUp('customers', 1000, 2000, "+");    // 1000+
+    countUp('ayurvedic', 100, 2000, "%");     // 100%
+    countUp('wellness', 4, 2000, "+");        // 4+
+  </script>
 
 
-<div>
-  
-</div>
+  <div>
 
-<!-- About Us -->
-<div class="relative py-6 mt-1">
-  
-  <img src="/aboutus/bg.png" 
-    alt="Background Rectangle" 
-    class="absolute top-20 left-1/2 -translate-x-1/2 w-[450px] h-[90px] opacity-40 -z-50 rotate-12 scale-125">
+  </div>
 
-    <h2 class="text-xl font-bold text-green-900 mb-2">About Us</h2>
+  <!-- About Us -->
+  <div class="relative py-6 mt-1 ml-5">
+
+    <img src="/aboutus/bg.png" alt="Background Rectangle" class="absolute top-20 left-1/2 -translate-x-1/2 w-[450px] h-[90px] opacity-40 
+      -z-50 rotate-[20deg] scale-[150%] mt-5">
+
+    <h2 class="animate-left text-xl font-bold text-green-900 mb-2 ">About Us</h2>
 
     <div class="flex justify-center gap-[10px] mt-3">
 
       <div style="flex-basis: 60%;" class=" sm:basis-3/5 text-container">
-        <p class="text-[14px] font-semibold leading-relaxed">
+        <p class="animate-left text-[14px] font-semibold leading-relaxed">
           Amrit Mantrah is more than just a wellness brand it’s a promise of health, purity, and authenticity. <br><br>
           Our vision is to help people stay healthy with products made from pure Ayurvedic ingredients.
         </p>
       </div>
-      <div style="flex-basis: 40%;" class="image-container flex justify-center z-10">
-        <img src="/aboutus/About Us.png" alt="Ayurvedic Ingredients" class="w-22 h-22 object-contain">
+      <div style="flex-basis: 38%;" class="image-container flex justify-center z-10">
+        <img src="/aboutus/About Us.png" alt="Ayurvedic Ingredients" class=" animate-right w-[100%] h-[100%] scale-125 object-contain">
       </div>
 
     </div>
   </div>
 
-  <img src="/aboutus/Contact Us 3rd Leaf.png" alt="" class="-ml-[25px] w-[180px] h-auto opacity-100 -z-10 ">
+  <img src="/aboutus/Contact Us 3rd Leaf.png" alt="" class="-ml-[25px] w-[180px] h-auto opacity-100 -z-10">
 
-  
-  
-  
+
+
+
   <!-- Our Story -->
-    
-    <div class="flex justify-center gap-[10px] mt-1 mr-4">
-      
-      
-      <div style="flex-basis: 40%;"   class="sm:basis-2/5  z-0 ">
-        <img src="/aboutus/Our Story.png" alt="Our Story" class="w-[500px] h-[200px] object-cover" >
-      </div>
-      
-      <div style="flex-basis: 60%;"  class="sm:basis-3/5">
-        <h2 class=" text-end text-xl font-bold text-green-900 mr-3 mb-2">Our Story</h2>
 
-        <p class="text-end text-[14px] font-semibold leading-relaxed">
-          The journey of Amrit Mantrah began with a belief that true health comes from nature’s wisdom. <br><br>
-          We started with Fat Loss, and now we are moving forward into Gut Health, Hair Care and Skin Care
-          with the same focus on purity and real results.
-        </p>
-      </div>
+  <div class=" relative flex justify-center gap-[10px] mt-9 mr-4">
 
-      
+    <div style="flex-basis: 45%;" class="sm:basis-2/5 z-0 -mt-10">
+      <img src="/aboutus/Our Story.png" alt="Our Story" class=" animate-left w-[100%] h-[150%] object-cover scale-100">
     </div>
+
+    <div style=" flex-basis: 60%;" class="sm:basis-3/5">
+
+      <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-20 left-1/2 -translate-x-1/2 w-[450px] h-[100px] opacity-40 
+        -z-50 -rotate-[23deg] scale-[150%] mt-5 -ml-5">
+
+      <h2 class="animate-text text-end text-xl font-bold text-green-900 mr-2 mb-2">Our Story</h2>
+
+      <p class=" animate-right text-end text-[14px] font-semibold leading-relaxed">
+        The journey of Amrit Mantrah began with a belief that true health comes from nature’s wisdom. <br><br>
+        We started with Fat Loss, and now we are moving forward into Gut Health, Hair Care and Skin Care
+        with the same focus on purity and real results.
+      </p>
+    </div>
+
+
+  </div>
   </div>
 
   <div class="flex justify-end">
-    <img src="/aboutus/Contact Us 3rd Leaf.png" alt="" class=" scale-x-[-1] -mr-[25px] w-[180px] h-auto opacity-100 -z-10 ">
+    <img src="/aboutus/Contact Us 3rd Leaf.png" alt=""
+      class=" scale-x-[-1] mt-8 -mr-[25px] w-[180px] h-auto opacity-100 -z-10 ">
   </div>
 
   <!-- Our Mission -->
-  <div class="px-4 py-6 mt-1 ">
-    <h2 class="text-xl font-bold text-green-900 mb-2">Our Mission</h2>
+  <div class=" relative py-6 mt-1 ml-3 ">
+
+    <img src="/aboutus/bg.png" alt="Background Rectangle" class=" absolute top-20 left-1/2 -translate-x-1/2 w-[450px] h-[90px] opacity-40 
+      -z-50 rotate-[23deg] scale-[150%] mt-5 -ml-5">
+
+    <h2 class=" animate-left text-xl font-bold text-green-900 mb-2">Our Mission</h2>
     <div class="flex justify-center gap-[10px] mt-3">
-      <div style="flex-basis: 60%;"  class="sm:basis-3/5">
-        <p class="text-[14px] font-semibold leading-relaxed">
+      <div style="flex-basis: 70%;" class="sm:basis-3/5">
+        <p class=" animate-left text-[14px] font-semibold leading-relaxed">
           Our mission is to bring the power of Ayurveda into modern lifestyles in a way that is reliable, safe, and
           effective. <br><br>
           We aim to empower people with natural solutions that improve health while building trust through honesty and
           purity.
         </p>
       </div>
-      <div style="flex-basis: 40%;"  class="sm:basis-2/5 flex justify-center items-center">
-        <img src="/aboutus/Our Mission.png" alt="Our Mission" class="w-[180px] h-[150px] object-contain">
+      <div style=" flex-basis: 60%;" class="animate-right sm:basis-2/5 flex justify-center items-center ">
+        <img src="/aboutus/Our Mission.png" alt="Our Mission" class="w-[100%] h-[130%] scale-100 object-cover">
       </div>
     </div>
   </div>
@@ -146,31 +154,35 @@ countUp('wellness', 4, 2000, "+");        // 4+
   <img src="/aboutus/Contact Us 3rd Leaf.png" alt="" class="-ml-[25px] w-[180px] h-auto opacity-100 -z-10 ">
 
   <!-- Our Team -->
-  <div class="px-4 py-6 mt-1">
-    <div class="flex justify-center gap-[10px] mt-3">
-    
-    <div style="flex-basis: 40%;"  class="sm:basis-2/5 flex justify-center mt-[20px]">
-      <img src="/aboutus/Our Team.png" alt="Our Team" class="w-[180px] h-[150px] object-contain">
-    </div>
-    
-      
-    
-    <div style="flex-basis: 60%;" class="sm:basis-3/5">
-        <h2 class="text-end text-xl font-bold text-green-900 mb-2">Our Team</h2>
-        <p class="text-end text-[14px] font-semibold leading-relaxed">
+  <div class="relative px-4 py-6 mt-1">
+    <div class="flex justify-center gap-[10px]">
+
+      <div style="flex-basis: 60%;" class="sm:basis-2/5 flex justify-center">
+        <img src="/aboutus/Our Team.png" alt="Our Team" class=" animate-left w-[100%] h-[100%] object-cover scale-100">
+      </div>
+
+
+
+      <div style="flex-basis: 60%;" class="sm:basis-3/5">
+
+        <img src="/aboutus/bg.png" alt="Background Rectangle" class=" absolute top-20 left-1/2 -translate-x-1/2 w-[450px] h-[100px] opacity-40 
+        -z-50 -rotate-[25deg] scale-[150%] mt-5 -ml-5">
+
+        <h2 class="animate-right text-end text-xl font-bold text-green-900 mb-2">Our Team</h2>
+        <p class="animate-right text-end text-[14px] font-semibold leading-relaxed">
           Amrit Mantrah is powered by a team of Ayurvedic experts and health professionals who share a common goal
           i.e. to make authentic Ayurvedic wellness accessible to all. <br><br>
           Together, we are dedicated to creating products that truly make a positive difference in people’s lives.
         </p>
       </div>
 
-      
-      
+
+
     </div>
   </div>
 
   <!-- Contact Us -->
-  <div class="px-4 py-6 mt-1 text-center">
+  <div class="px-4 py-6 mt-5 text-center">
     <!-- <h2 class="text-xl font-bold text-green-900 mb-2">Contact Us</h2> -->
     <p class="text-[12px] font-semibold leading-relaxed mb-4 text-center">
       We’d love to hear from you! If you have any questions, feedback, or just want to chat,
@@ -198,6 +210,119 @@ countUp('wellness', 4, 2000, "+");        // 4+
     // Run counter: (id, target, speed factor)
     counterUp("counter", 1000, 50);
   </script>
+
+  <!-- 1) Add these CDN scripts just before </body> (paste once) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- 2) Add this JS after the CDN scripts (same place) -->
+<script>
+  // register plugin
+  gsap.registerPlugin(ScrollTrigger);
+
+  // GENERAL SETTINGS
+  const commonOpts = {
+    duration: 0.8,
+    ease: "power2.out",
+    opacity: 0,
+    left: 30,
+    stagger: 0.12,
+    overwrite: true
+  };
+
+  // TEXT: fade-up (use class .animate-text on headings / paragraphs you want animated)
+  gsap.utils.toArray(".animate-text").forEach(el => {
+    gsap.from(el, {
+      ...commonOpts,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
+  // IMAGES: subtle scale+fade (use class .animate-image on images you want animated)
+  gsap.utils.toArray(".animate-image").forEach(el => {
+    gsap.from(el, {
+      duration: 0.9,
+      ease: "power3.out",
+      opacity: 0,
+      y: 20,
+      scale: 0.98,
+      stagger: 0.08,
+      scrollTrigger: {
+        trigger: el,
+        start: "top 70%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+
+  //Right → Left (right se slide-in)
+  gsap.utils.toArray(".animate-right").forEach(el => {
+  gsap.from(el, {
+  x: 50,        // right se aayega
+  opacity: 0,
+  duration: 0.8,
+  ease: "power2.out",
+  scrollTrigger: {
+    trigger: el,
+    start: "top 80%",
+    toggleActions: "play none none none"
+  }
+});
+});
+
+//Left → Right (left se slide-in)
+gsap.utils.toArray(".animate-left").forEach(el => {
+  gsap.from(el, {
+    x: -50,       // left se aayega
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 85%",
+      toggleActions: "play none none none"
+    }
+  });
+});
+
+  // OPTIONAL: reveal groups (if you wrap a heading+para together with .animate-group)
+  gsap.utils.toArray(".animate-group").forEach(group => {
+    gsap.from(group.querySelectorAll(".animate-text, .animate-image"), {
+      ...commonOpts,
+      scrollTrigger: {
+        trigger: group,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      }
+    });
+  });
+</script>
+
+<!-- 3) Where to add classes in your existing HTML:
+     - Add class="animate-text" to headings or paragraphs you want to animate.
+     - Add class="animate-image" to images you want to animate (e.g. the girl image).
+     - DO NOT add animate-* classes to your background images (they will remain static).
+     
+   Example (replace or extend your existing elements):
+
+   <h2 class="text-end text-xl font-bold text-green-900 mr-2 mb-2 animate-text">Our Story</h2>
+
+   <p class="text-end text-[14px] font-semibold leading-relaxed animate-text">
+     The journey...
+   </p>
+
+   <div style="flex-basis: 45%;" class="sm:basis-2/5 z-0 -mt-10">
+     <img src="/aboutus/Our Story.png" alt="Our Story"
+          class="w-[100%] h-[150%] object-cover scale-100 animate-image">
+   </div>
+
+   (Leave background imgs like: <img src="/aboutus/bg.png" ... class="absolute ... -z-50 ..."> untouched)
+-->
+
 
 </body>
 
