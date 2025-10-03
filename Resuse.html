@@ -1,0 +1,52 @@
+    <div class="mt-6 text-center">
+            <a href="#consult"
+        class="mt-4 inline-block rounded-full px-6 py-2 bg-emerald-700 text-white text-sm font-medium hover:opacity-90">Consult
+        Now</a>
+    </div>
+  </div>
+
+
+    <!-- PRICING • Three cards with ribbons (drop-in) -->
+    <section class="py-1 flex items-center justify-center">
+      <div class="w-full max-w-sm overflow-hidden relative">
+        <!-- track uses px to center 250px slides inside container -->
+        <div class="flex slider-track gap-4 px-4" style="padding-left: calc((100% - 250px) / 2); padding-right: calc((100% - 250px) / 2);">
+          <div class="flex-shrink-0 " style="width:250px;">
+            <img src="./Image/1st pricing.png" alt="Plan 1" class="w-full rounded-2xl" />
+          </div>
+
+          <div class="flex-shrink-0" style="width:250px;">
+            <img src="./Image/2nd pricing.png" alt="Plan 2" class="w-full rounded-2xl" />
+          </div>
+
+          <div class="flex-shrink-0" style="width:250px;">
+            <img src="./Image/3rd pricing.png" alt="Plan 3" class="w-full rounded-2xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider-track > div');
+  const slideCount = slides.length;
+
+  // container width = parent of track
+  const slideWidth = track.parentElement.offsetWidth;
+
+  // GSAP timeline
+  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+
+  slides.forEach((_, i) => {
+    // move to slide i
+    tl.to(track, {
+      x: -slideWidth * i,
+      duration: 1,   // slide transition speed (1 sec)
+      ease: "power2.inOut"
+    });
+    // stop for 3 sec
+    tl.to({}, { duration: 1 });
+  });
+</script>

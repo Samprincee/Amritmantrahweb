@@ -347,66 +347,83 @@
     </section>
 
 
-    <div class="mt-6 text-center">
-      <div class="text-2xl font-extrabold text-slate-900">₹1,499</div>
-      <a href="#consult"
-        class="mt-4 inline-block rounded-full px-6 py-2 bg-emerald-700 text-white text-sm font-medium hover:opacity-90">Consult
-        Now</a>
-    </div>
-  </div>
+
 
 
     <!-- PRICING • Three cards with ribbons (drop-in) -->
-    <section class="py-1 flex items-center justify-center bg-black">
+    <section class="py-3 flex items-center justify-center">
+      
       <div class="w-full max-w-sm overflow-hidden relative">
-        <!-- track uses px to center 250px slides inside container -->
-        <div class="flex slider-track gap-4 px-4" style="padding-left: calc((100% - 250px) / 2); padding-right: calc((100% - 250px) / 2);">
-          <div class="flex-shrink-0 gap-2 " style="width:300px;">
+        <h2 class="text-lg font-semibold text-center text-emerald-800 font-bold">
+        Choose Your Plan <br><span class="text-teal-800 text-2xl font-bold">for a Healthier You</span>
+      </h2>
+        <!-- Track uses px to center 250px slides inside container -->
+        <div class="flex slider-track gap-4 px-4"
+          style="padding-left: calc((100% - 250px) / 2); padding-right: calc((100% - 250px) / 2);">
+          <!-- Card 1 -->
+          <div class="flex-shrink-0 w-[280px] relative">
             <img src="./Image/1st pricing.png" alt="Plan 1" class="w-full rounded-2xl" />
+            <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
+              <a href="#consult"
+                class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
+                text-sm font-medium hover:opacity-90 shadow-md">
+                Consult Now
+              </a>
+            </div>
           </div>
-    
-          <div class="flex-shrink-0 gap-4 " style="width:300px;">
-            <img src="./Image/2nd pricing.png" alt="Plan 2" class="w-full rounded-2xl" />
+
+          <!-- Card 2 -->
+          <div class="flex-shrink-0 w-[280px] relative">
+            <img src="./Image/2nd pricing.png" alt="Plan 2" class="w-full rounded-2xl relative" />
+            <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
+              <a href="#consult"
+                class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
+                text-sm font-medium hover:opacity-90 shadow-md">Consult
+                Now</a>
+            </div>
           </div>
-    
-          <div class="flex-shrink-0 gap-14" style="width:300px;">
+
+          <!-- Card 3 -->
+          <div class="flex-shrink-0 w-[280px] relative">
             <img src="./Image/3rd pricing.png" alt="Plan 3" class="w-full rounded-2xl" />
+            <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
+              <a href="#consult"
+                class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
+                text-sm font-medium hover:opacity-90 shadow-md">Consult
+                Now</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script>
-  const track = document.querySelector('.slider-track');
-  const slides = document.querySelectorAll('.slider-track > div');
-  const slideCount = slides.length;
 
-  // container width = parent of track
-  const slideWidth = track.parentElement.offsetWidth;
+    <!-- GSAP Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+      const track = document.querySelector('.slider-track');
+      const slides = document.querySelectorAll('.slider-track > div');
+      const slideWidth = slides[0].offsetWidth + 16; // 250px + 16px gap
+      const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
 
-  // GSAP timeline
-  const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+      slides.forEach((_, i) => {
+        tl.to(track, {
+          x: -slideWidth * i,
+          duration: 1,
+          ease: 'power2.inOut',
+        });
+        tl.to({}, { duration: 2 }); // pause at each slide
+      });
 
-  slides.forEach((_, i) => {
-    // move to slide i
-    tl.to(track, {
-      x: -slideWidth * i,
-      duration: 1,   // slide transition speed (1 sec)
-      ease: "power2.inOut"
-    });
-    // stop for 3 sec
-    tl.to({}, { duration: 1 });
-  });
-</script>
+      // Start the timeline at the 2nd slide (index 1)
+      tl.progress(1 / slides.length);
+    </script>
 
-    
-    
+
+
 
 
     <!-- FAQ Section -->
-    <section id="faq" class="relative py-16 md:py-20 bg-white">
+    <section id="faq" class="relative py-16 md:py-20>
       <!-- subtle diagonal background -->
       <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
         <div
@@ -455,29 +472,65 @@
     </section>
 
 
-    <!-- CONSULT FORM -->
-    <section id="consult" class="py-16 md:py-24">
-      <div class="container mx-auto px-4">
-        <div class="max-w-2xl mb-8">
-          <h2 class="text-3xl md:text-4xl font-bold">Get a Free Consultation</h2>
-          <p class="mt-3 text-slate-600">Experienced expert guidance. Your data stays private.</p>
+  
+    <!-- Container -->
+<section id="consult" class="min-h-[550px] w-[380px] flex items-center justify-center">
+  <!-- Card -->
+  <div class="relative w-[360px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-emerald-700/30">
+    
+  <!-- 🟢 Top-left custom image -->
+    <div class="absolute -top-[20px] -left-[28px] w-[100px] h-[100px] ">
+      <img src="./1st/Contact Form badge image png.png" alt="Badge" class="w-full h-full object-contain" />
+    </div>
+
+    <!-- Inner padding -->
+    <div class="px-6 pt-8 pb-6">
+      <!-- Heading -->
+      <h2 class="text-2xl font-semibold text-emerald-900 text-end ">Get a Free Consultation</h2>
+      <p class="text-emerald-800 text-center mt-1">Experienced Expert Guidance</p>
+
+      <!-- Form -->
+      <form action="#" method="POST" class="mt-6 space-y-4">
+        <!-- Name -->
+        <div>
+          <label for="name" class="block text-sm text-emerald-900 mb-1">Name</label>
+          <input id="name" name="name" type="text" required
+                 placeholder="Full Name"
+                 class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"/>
         </div>
-        <form class="grid md:grid-cols-2 gap-4 max-w-2xl" onsubmit="return false;">
-          <input type="text" placeholder="Full Name"
-            class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" />
-          <input type="tel" placeholder="Phone / WhatsApp"
-            class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300" />
-          <input type="text" placeholder="Your Goal"
-            class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300 md:col-span-2" />
-          <textarea rows="4" placeholder="Message"
-            class="rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-slate-300 md:col-span-2"></textarea>
-          <button id="sendBtn" type="button"
-            class="rounded-2xl px-5 py-3 bg-slate-900 text-white text-sm font-medium hover:opacity-90 md:col-span-2">Submit</button>
-          <p id="sentNote" class="hidden md:col-span-2 text-sm text-emerald-600">Thanks! We will contact you
-            shortly.</p>
-        </form>
-      </div>
-    </section>
+
+        <!-- Phone -->
+        <div>
+          <label for="phone" class="block text-sm text-emerald-900 mb-1">Phone Number</label>
+          <input id="phone" name="phone" type="tel" required
+                 placeholder="Phn. Number/ Whatsapp Number"
+                 class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"/>
+        </div>
+
+        <!-- Goal -->
+        <div>
+          <label for="goal" class="block text-sm text-emerald-900 mb-1">Your Goal</label>
+          <textarea id="goal" name="goal" rows="3" required
+                    placeholder="Message"
+                    class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+                class="mt-2 w-full rounded-xl bg-emerald-700 text-white text-lg font-medium py-3 hover:opacity-95 active:opacity-90 transition">
+          Submit
+        </button>
+      </form>
+
+      <!-- Privacy -->
+      <p class="text-center text-emerald-900 mt-3 text-sm">Your Data Stays Private</p>
+    </div>
+
+    <!-- Bottom-right decorative image slot (replace src with your image) -->
+    <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
+         class="pointer-events-none select-none absolute -bottom-3 -right-3 w-28 h-20 object-contain" />
+  </div>
+</section>
 
 
 
