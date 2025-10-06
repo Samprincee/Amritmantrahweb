@@ -36,7 +36,7 @@
 
 <body class="bg-white min-h-screen">
 
-  <main class="max-w-sm mx-auto p-1">
+  <main class="max-w-sm mx-auto p-1 overflow-hidden">
 
     <!-- Simple Mobile Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
@@ -60,9 +60,9 @@
 
     <!-- Hero -->
     <section id="hero" class="relative bg-white overflow-hidden pt-5">
-      <div class="max-w-[360px] mx-auto px-4">
+      <div class="max-w-[360px] mx-auto px-4 relative">
         <div class="relative flex justify-space-between items-center w-full h-[220px]">
-
+          
           <!-- Text block (left) -->
           <div class="absolute left-0 top-4 w-1/2">
             <h1 class="text-[15px] font-extrabold leading-tight text-emerald-800">
@@ -79,8 +79,10 @@
             class="absolute right-[-45px] -top-[35px] w-[260px] h-auto transform -rotate-[25deg] drop-shadow-lg" />
 
           <!-- Scattered pills (positioned to match image) -->
+          <!-- Scattered pill (animated on scroll) -->
           <img src="/1st/Capsule without shadow image.png" alt="pill"
-            class="absolute w-10 left-[185px] top-[138px] transform rotate-[45deg]" />
+            class="anim-hero-pill absolute w-10 left-[185px] top-[138px] transform rotate-[45deg]" />
+
 
         </div>
       </div>
@@ -88,21 +90,31 @@
 
 
     <!-- WHY US -->
-    <section id="why" class="relative py-1 ">
+    <section id="why" class="relative py-1">
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto mb-10 text-center">
           <h2 class="text-3xl md:text-4xl font-bold">Why Choose <br> Amrit Mantrah</h2>
         </div>
 
         <div class="space-y-8">
+          <img src="/aboutus/bg.png" alt="Background Rectangle" 
+          class=" absolute top-40 left-1/2 -translate-x-1/2 w-[350px] h-[90px] 
+          opacity-40 -z-50 rotate-[23deg] scale-[150%] mt-5 -ml-5">
+
+          <div class="space-y-8">
+            <img src="/aboutus/bg.png" alt="Background Rectangle" 
+            class=" absolute top-[70%] left-1/2 -translate-x-1/2 w-[350px] h-[90px] 
+            opacity-40 -z-50 rotate-[23deg] scale-[150%] mt-5 -ml-5">
+
 
           <!-- Item 1 (Left) -->
-          <section class="flex items-center gap-2">
+          <section class="anim-group flex items-center gap-2" data-side="left">
             <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
               bg-white-900 flex items-center justify-center overflow-hidden">
-              <img src="/2nd/Expert icon png.png" alt="Expert Guided" class="w-[45px] h-[45px] object-contain" />
+              <img src="/2nd/Expert icon png.png" alt="Expert Guided"
+                class="w-[45px] h-[45px] object-contain  " />
             </div>
-            <div class="flex-1 ">
+            <div class="anim-text flex-1 ">
               <h3 class="text-emerald-700 font-semibold text-[12px]  ">
                 Expert-Guided <br> and Scientifically <br> Proven
               </h3>
@@ -113,8 +125,8 @@
           </section>
 
           <!-- Item 2 (Right) -->
-          <section class="flex items-center gap-2 mt-2">
-            <div class="flex-1 text-right">
+          <section class="anim-group flex items-center gap-2 mt-2" data-side="right">
+            <div class="anim-text flex-1 text-right">
               <h3 class="text-emerald-800 font-semibold text-[12px]">
                 Trusted By <br> 1000+ Customers
               </h3>
@@ -130,8 +142,9 @@
 
           </section>
 
+         
           <!-- Item 3 (Left) -->
-          <section class="flex items-center gap-4 mt-10">
+          <section class="anim-group flex items-center gap-4 mt-10" data-side="left">
             <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
               bg-white-900 flex items-center justify-center overflow-hidden">
               <img src="/2nd/Ayurvedic icon image.png" alt="100% Ayurvedic" class="w-[45px] h-[45px] 
@@ -148,8 +161,8 @@
           </section>
 
           <!-- Item 4 (Right) -->
-          <section class="flex items-center gap-4 mt-10">
-            <div class="flex-1 text-right">
+          <section class="anim-group flex items-center gap-4 mt-10" data-side="right">
+            <div class="anim-text flex-1 text-right">
               <h3 class="text-emerald-800 font-semibold text-[12px]">
                 No Side Effects, <br> Only Results
               </h3>
@@ -352,11 +365,11 @@
 
     <!-- PRICING • Three cards with ribbons (drop-in) -->
     <section class="py-3 flex items-center justify-center">
-      
+
       <div class="w-full max-w-sm overflow-hidden relative">
         <h2 class="text-lg font-semibold text-center text-emerald-800 font-bold">
-        Choose Your Plan <br><span class="text-teal-800 text-2xl font-bold">for a Healthier You</span>
-      </h2>
+          Choose Your Plan <br><span class="text-teal-800 text-2xl font-bold">for a Healthier You</span>
+        </h2>
         <!-- Track uses px to center 250px slides inside container -->
         <div class="flex slider-track gap-4 px-4"
           style="padding-left: calc((100% - 250px) / 2); padding-right: calc((100% - 250px) / 2);">
@@ -364,8 +377,7 @@
           <div class="flex-shrink-0 w-[280px] relative">
             <img src="./Image/1st pricing.png" alt="Plan 1" class="w-full rounded-2xl" />
             <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
-              <a href="#consult"
-                class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
+              <a href="#consult" class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
                 text-sm font-medium hover:opacity-90 shadow-md">
                 Consult Now
               </a>
@@ -376,8 +388,7 @@
           <div class="flex-shrink-0 w-[280px] relative">
             <img src="./Image/2nd pricing.png" alt="Plan 2" class="w-full rounded-2xl relative" />
             <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
-              <a href="#consult"
-                class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
+              <a href="#consult" class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
                 text-sm font-medium hover:opacity-90 shadow-md">Consult
                 Now</a>
             </div>
@@ -387,8 +398,7 @@
           <div class="flex-shrink-0 w-[280px] relative">
             <img src="./Image/3rd pricing.png" alt="Plan 3" class="w-full rounded-2xl" />
             <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
-              <a href="#consult"
-                class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
+              <a href="#consult" class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
                 text-sm font-medium hover:opacity-90 shadow-md">Consult
                 Now</a>
             </div>
@@ -425,11 +435,7 @@
     <!-- FAQ Section -->
     <section id="faq" class="relative py-16 md:py-20>
       <!-- subtle diagonal background -->
-      <div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div
-          style="transform: rotate(-6deg); transform-origin:center; width:140%; height:260px; background:linear-gradient(180deg,#f6fbf8,#ffffff); opacity:0.9; margin-left:-20%;"
-          class="hidden md:block"></div>
-      </div>
+      <div class=" pointer-events-none absolute inset-0 -z-10 overflow-hidden">
 
       <div class="container mx-auto px-4">
         <h2 class="text-2xl md:text-3xl font-bold mb-8 text-emerald-900">FAQ</h2>
@@ -472,65 +478,62 @@
     </section>
 
 
-  
+
     <!-- Container -->
-<section id="consult" class="min-h-[550px] w-[380px] flex items-center justify-center">
-  <!-- Card -->
-  <div class="relative w-[360px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-emerald-700/30">
-    
-  <!-- 🟢 Top-left custom image -->
-    <div class="absolute -top-[20px] -left-[28px] w-[100px] h-[100px] ">
-      <img src="./1st/Contact Form badge image png.png" alt="Badge" class="w-full h-full object-contain" />
-    </div>
+    <section id="consult" class="min-h-[550px] w-[380px] flex items-center justify-center">
+      <!-- Card -->
+      <div class="relative w-[360px] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] border border-emerald-700/30">
 
-    <!-- Inner padding -->
-    <div class="px-6 pt-8 pb-6">
-      <!-- Heading -->
-      <h2 class="text-2xl font-semibold text-emerald-900 text-end ">Get a Free Consultation</h2>
-      <p class="text-emerald-800 text-center mt-1">Experienced Expert Guidance</p>
-
-      <!-- Form -->
-      <form action="#" method="POST" class="mt-6 space-y-4">
-        <!-- Name -->
-        <div>
-          <label for="name" class="block text-sm text-emerald-900 mb-1">Name</label>
-          <input id="name" name="name" type="text" required
-                 placeholder="Full Name"
-                 class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"/>
+        <!-- 🟢 Top-left custom image -->
+        <div class="absolute -top-[20px] -left-[28px] w-[100px] h-[100px] ">
+          <img src="./1st/Contact Form badge image png.png" alt="Badge" class="w-full h-full object-contain" />
         </div>
 
-        <!-- Phone -->
-        <div>
-          <label for="phone" class="block text-sm text-emerald-900 mb-1">Phone Number</label>
-          <input id="phone" name="phone" type="tel" required
-                 placeholder="Phn. Number/ Whatsapp Number"
-                 class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"/>
+        <!-- Inner padding -->
+        <div class="px-6 pt-8 pb-6">
+          <!-- Heading -->
+          <h2 class="text-2xl font-semibold text-emerald-900 text-end ">Get a Free Consultation</h2>
+          <p class="text-emerald-800 text-center mt-1">Experienced Expert Guidance</p>
+
+          <!-- Form -->
+          <form action="#" method="POST" class="mt-6 space-y-4">
+            <!-- Name -->
+            <div>
+              <label for="name" class="block text-sm text-emerald-900 mb-1">Name</label>
+              <input id="name" name="name" type="text" required placeholder="Full Name"
+                class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70" />
+            </div>
+
+            <!-- Phone -->
+            <div>
+              <label for="phone" class="block text-sm text-emerald-900 mb-1">Phone Number</label>
+              <input id="phone" name="phone" type="tel" required placeholder="Phn. Number/ Whatsapp Number"
+                class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70" />
+            </div>
+
+            <!-- Goal -->
+            <div>
+              <label for="goal" class="block text-sm text-emerald-900 mb-1">Your Goal</label>
+              <textarea id="goal" name="goal" rows="3" required placeholder="Message"
+                class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit"
+              class="mt-2 w-full rounded-xl bg-emerald-700 text-white text-lg font-medium py-3 hover:opacity-95 active:opacity-90 transition">
+              Submit
+            </button>
+          </form>
+
+          <!-- Privacy -->
+          <p class="text-center text-emerald-900 mt-3 text-sm">Your Data Stays Private</p>
         </div>
 
-        <!-- Goal -->
-        <div>
-          <label for="goal" class="block text-sm text-emerald-900 mb-1">Your Goal</label>
-          <textarea id="goal" name="goal" rows="3" required
-                    placeholder="Message"
-                    class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"></textarea>
-        </div>
-
-        <!-- Submit -->
-        <button type="submit"
-                class="mt-2 w-full rounded-xl bg-emerald-700 text-white text-lg font-medium py-3 hover:opacity-95 active:opacity-90 transition">
-          Submit
-        </button>
-      </form>
-
-      <!-- Privacy -->
-      <p class="text-center text-emerald-900 mt-3 text-sm">Your Data Stays Private</p>
-    </div>
-
-    <!-- Bottom-right decorative image slot (replace src with your image) -->
-    <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
-         class="pointer-events-none select-none absolute -bottom-3 -right-3 w-28 h-20 object-contain" />
-  </div>
-</section>
+        <!-- Bottom-right decorative image slot (replace src with your image) -->
+        <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
+          class="pointer-events-none select-none absolute -bottom-3 -right-3 w-28 h-20 object-contain" />
+      </div>
+    </section>
 
 
 
@@ -584,6 +587,99 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script> -->
+
+
+    <script>
+      // Register GSAP plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Animate hero pill on scroll
+      gsap.to(".anim-hero-pill", {
+        scrollTrigger: {
+          trigger: "#hero",       // starts anim when hero section in view
+          start: "top top",       // when hero top hits top of viewport
+          end: "+=400",           // animation distance
+          scrub: 1,               // smooth scroll-based motion
+          // markers: true,        // (uncomment for debug)
+        },
+        y: 120,                   // pill moves down 120px
+        x: 40,                    // slight right zigzag
+        rotation: 90,             // rotate while moving
+        ease: "power2.out"
+      });
+
+      // Optional: Animate hero text block too (left-side text)
+      gsap.from("#hero h1, #hero p", {
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "top center",
+          end: "+=300",
+          scrub: 1,
+        },
+        x: -50,
+        opacity: 0,
+        ease: "power2.out",
+        stagger: 0.1
+      });
+    </script>
+
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      const SETTINGS = {
+        dropY: 60,    // pill vertical move
+        dropX: 35,    // side move (zigzag)
+        rotate: 8,    // rotate degrees
+        pillDur: 0.7, // pill motion time
+        textDur: 0.6, // text slide time
+        start: "top 85%" // trigger point
+      };
+
+      // sab anim-group ke liye loop
+      document.querySelectorAll('.anim-group').forEach(group => {
+        const side = group.dataset.side === 'right' ? 'right' : 'left';
+        const pill = group.querySelector('.anim-pill');
+        const text = group.querySelector('.anim-text');
+
+        if (!pill || !text) return;
+
+        // starting state
+        gsap.set(pill, { y: 0, x: 0, rotation: 0 });
+        gsap.set(text, { x: side === 'left' ? -40 : 40, autoAlpha: 0 });
+
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: group,
+            start: SETTINGS.start,
+            toggleActions: "play reverse play reverse",
+            // markers:true, // enable for testing
+          }
+        });
+
+        const xDir = side === 'left' ? SETTINGS.dropX : -SETTINGS.dropX;
+
+        // pill move
+        tl.to(pill, {
+          y: SETTINGS.dropY,
+          x: xDir,
+          rotation: side === 'left' ? SETTINGS.rotate : -SETTINGS.rotate,
+          duration: SETTINGS.pillDur,
+          ease: "power2.out"
+        }, 0);
+
+        // text fade-in + slide
+        tl.to(text, {
+          x: 0,
+          autoAlpha: 1,
+          duration: SETTINGS.textDur,
+          ease: "power3.out"
+        }, 0.15);
+      });
+    </script>
+
+
+
 
     <script src="script.js"></script>
 
