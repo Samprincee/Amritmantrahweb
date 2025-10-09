@@ -68,10 +68,10 @@
 
           <!-- Text block (left) -->
           <div class="absolute left-0 top-4 w-1/2">
-            <h1 class="text-[15px] font-extrabold leading-tight text-emerald-800">
+            <h1 class="text-[19px] font-extrabold leading-tight text-emerald-800 whitespace-nowrap ">
               Natural Fat Loss <br> Scientifically Proven
             </h1>
-            <p class="mt-2 text-[10px] text-slate-800 font-medium">
+            <p class="mt-2 text-[10px] text-black font-medium">
               Verified Expert | Free Diet Chart | Free Follow-Up
             </p>
           </div>
@@ -96,7 +96,7 @@
     <section id="why" class="relative py-1">
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto mb-10 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold">Why Choose <br> Amrit Mantrah</h2>
+          <h2 class="text-[15px] md:text-4xl font-bold">Why Choose <br> <span class="text-2xl md:text-4xl font-bold"> Amrit Mantrah </span></h2>
         </div>
 
         <div class="space-y-8">
@@ -115,10 +115,10 @@
                 <img src="/2nd/Expert icon png.png" alt="Expert Guided" class="w-[45px] h-[45px] object-contain  " />
               </div>
               <div class="anim-text flex-1 ">
-                <h3 class="text-emerald-700 font-semibold text-[12px]  ">
+                <h3 class="text-emerald-800 font-bold text-[12px] ">
                   Expert-Guided <br> and Scientifically <br> Proven
                 </h3>
-                <p class="text-[10px] text-slate-600 mt-1">
+                <p class="text-[10px] font-bold text-black mt-1">
                   Modern Research + <br> Ancient Ayurveda
                 </p>
               </div>
@@ -127,10 +127,10 @@
             <!-- Item 2 (Right) -->
             <section class="animate-right flex items-center gap-2 mt-2" data-side="right">
               <div class="anim-text flex-1 text-right">
-                <h3 class="text-emerald-800 font-semibold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[12px]">
                   Trusted By <br> 1000+ Customers
                 </h3>
-                <p class="text-[10px] text-slate-600 mt-1">
+                <p class="text-[10px] text-black font-bold mt-1">
                   Many Customers find <br> our product effective.
                 </p>
               </div>
@@ -151,10 +151,10 @@
               object-contain" />
               </div>
               <div class="flex-1">
-                <h3 class="text-emerald-800 font-semibold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[12px]">
                   100% Ayurvedic <br> and Natural
                 </h3>
-                <p class="text-[10px] text-slate-600 mt-1">
+                <p class="text-[10px] text-black font-bold mt-1">
                   Safe, Pure and <br> Chemical–Free
                 </p>
               </div>
@@ -163,10 +163,10 @@
             <!-- Item 4 (Right) -->
             <section class="animate-right flex items-center gap-4 mt-10" data-side="right">
               <div class="anim-text flex-1 text-right">
-                <h3 class="text-emerald-800 font-semibold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[12px]">
                   No Side Effects, <br> Only Results
                 </h3>
-                <p class="text-[10px] text-slate-600 mt-1">
+                <p class="text-[10px] text-black font-bold mt-1">
                   Effective and Long-Term <br> Fat Management
                 </p>
               </div>
@@ -701,7 +701,7 @@
       });
 
       //Right → Left (right se slide-in)
-      gsap.utils.toArray(".animate-right").forEach(el => {
+      gsap.utils.toArray(".animate-rightt").forEach(el => {
         gsap.from(el, {
           x: 50,        // right se aayega
           opacity: 0,
@@ -716,7 +716,7 @@
       });
 
       //Left → Right (left se slide-in)
-      gsap.utils.toArray(".animate-left").forEach(el => {
+      gsap.utils.toArray(".animate-leftt").forEach(el => {
         gsap.from(el, {
           x: -50,       // left se aayega
           opacity: 0,
