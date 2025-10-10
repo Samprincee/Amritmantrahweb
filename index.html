@@ -35,26 +35,28 @@
 </head>
 
 <body class="bg-white min-h-screen">
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100 scale-[102%]">
 
-      <!-- Simple Mobile Header -->
-    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-      <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+    
+    
+    <!-- Simple Mobile Header -->
+    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="./index.html" class="font-extrabold tracking-tight text-lg">
+        Amrit <span class="text-emerald-600">Mantrah</span>
+      </a>
+      
+      <!-- Consult button -->
+      <a href="#consult"
+      class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium bg-emerald-600 text-white shadow hover:opacity-95 transition">
+      Consult Now
+    </a>
+    
+  </nav>
+</header>
 
-        <!-- Logo -->
-        <a href="./index.html" class="font-extrabold tracking-tight text-lg">
-          Amrit <span class="text-emerald-600">Mantrah</span>
-        </a>
-
-        <!-- Consult button -->
-        <a href="#consult"
-          class="inline-flex items-center rounded-2xl px-4 py-2 text-sm font-medium bg-emerald-600 text-white shadow hover:opacity-95 transition">
-          Consult Now
-        </a>
-
-      </nav>
-    </header>
-
-  <main class="max-w-sm mx-auto p-1 overflow-hidden">
+<main class="max-w-sm mx-auto p-1 overflow-hidden">
 
 
 
@@ -87,7 +89,7 @@
 
           <!-- Scattered pill (animated on scroll) -->
           <img src="/1st/Capsule without shadow image.png" alt="pill"
-            class="anim-hero-pill absolute z-50 w-10 left-[185px] top-[180px] transform rotate-[45deg] scale-[130%]" />
+            class="anim-hero-pill absolute z-50 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[130%]" />
 
         </div>
       </div>
@@ -597,15 +599,15 @@
     <section id="consult" class="min-h-[550px] w-[380px] flex items-center justify-center">
       <!-- Card -->
       <div
-        class="relative w-[300px] bg-emerald-0 shadow-[0_8px_25px_rgba(0,0,0,0.2)] border border-emerald-900 rounded-[10px]">
+        class="relative w-[300px] bg-white shadow-[0_8px_25px_rgba(0,0,0,0.2)] border border-emerald-900 rounded-[10px]">
 
         <!-- 🟢 Top-left custom image -->
-        <div class="absolute -top-[24px] -left-[33px] w-[100px] h-[100px] ">
+        <div class="absolute -top-[24px] -left-[33px] w-[100px] h-[100px]">
           <img src="./1st/Contact Form badge image png.png" alt="Badge" class="w-full h-full object-contain" />
         </div>
 
         <!-- Inner padding -->
-        <div class="px-6 pt-8 pb-6">
+        <div class="px-6 pt-8 pb-6 ">
           <!-- Heading -->
           <h2 class="text-[20px] font-semibold text-emerald-900 text-center ">Get a Free Consultation</h2>
           <p class="text-emerald-800 text-center mt-1">Experienced Expert Guidance</p>
