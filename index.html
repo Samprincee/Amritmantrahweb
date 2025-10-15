@@ -31,7 +31,15 @@
     .container {
       max-width: 1200px
     }
+
+     /* extra small helper to ensure smooth pixel rendering on mobile */
+  .card-smooth {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
   </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-white min-h-screen">
@@ -89,7 +97,7 @@
 
           <!-- Scattered pill (animated on scroll) -->
           <img src="/1st/Capsule without shadow image.png" alt="pill"
-            class="anim-hro-pill absolute z-0 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[130%]" />
+            class="anim-hero-pill absolute z-0 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[130%]" />
 
         </div>
       </div>
@@ -475,50 +483,235 @@
       </div>
     </section>
 
+<!-- Pricing -->
+<section class="min-h-[300px] flex items-center justify-center p-4 mt-8 scale-[125%]">
 
-    <!-- PRICING • Three cards with ribbons (drop-in) -->
-    <section class="py-1 flex items-center justify-center">
-
-      <div class="w-full max-w-sm overflow-hidden relative">
-        <h2 class="text-lg font-semibold text-center text-emerald-800 font-bold">
-          Choose Your Plan <br><span class="text-teal-800 text-2xl font-bold">for a Healthier You</span>
-        </h2>
-        <!-- Track uses px to center 250px slides inside container -->
-        <div class="flex slider-track gap-4 px-4"
-          style="padding-left: calc((100% - 250px) / 2); padding-right: calc((100% - 250px) / 2);">
-          <!-- Card 1 -->
-          <div class="flex-shrink-0 w-[280px] relative">
-            <img src="./Image/1st pricing.png" alt="Plan 1" class="w-full rounded-2xl" />
-            <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
-              <a href="#consult" class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
-                text-sm font-medium hover:opacity-90 shadow-md">
-                Consult Now
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="flex-shrink-0 w-[280px] relative">
-            <img src="./Image/2nd pricing.png" alt="Plan 2" class="w-full rounded-2xl relative" />
-            <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
-              <a href="#consult" class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
-                text-sm font-medium hover:opacity-90 shadow-md">Consult
-                Now</a>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="flex-shrink-0 w-[280px] relative">
-            <img src="./Image/3rd pricing.png" alt="Plan 3" class="w-full rounded-2xl" />
-            <div class="absolute bottom-[75px] left-[137px] -translate-x-1/2">
-              <a href="#consult" class="inline-block rounded-full px-5 py-1.5 bg-emerald-700 text-white 
-                text-sm font-medium hover:opacity-90 shadow-md">Consult
-                Now</a>
-            </div>
-          </div>
-        </div>
+  <div id="carousel" class="relative w-[86vw] max-w-xs h-auto touch-none">
+    <!-- Card 0 -->
+    <div class="card card-smooth" data-i="0" data-front="false" style="width:100px;height:100px;">
+      <div class="card-inner">
+        <img src="/Image/1st pricing.png" alt="Card 1" class="card-img" />
+        <div class="card-label">CARD 1</div>
       </div>
-    </section>
+    </div>
+
+    <!-- Card 1 -->
+    <div class="card card-smooth" data-i="1" data-front="false" style="width:100px;height:100px;">
+      <div class="card-inner">
+        <img src="/Image/2nd pricing.png" alt="Card 2" class="card-img" />
+        <div class="card-label">CARD 2</div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card card-smooth" data-i="2" data-front="false" style="width:100px;height:100px;">
+      <div class="card-inner">
+        <img src="/Image/3rd pricing.png" alt="Card 3" class="card-img" />
+        <div class="card-label">CARD 3</div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<script>
+/*
+  Mobile-first carousel + taper effect
+  - no image crop (object-fit: contain)
+  - container sizes to current front image natural dims (scaled down if needed)
+  - side cards receive taper class -> vertical mask + scaleY squeeze + muted brightness
+  - interactions: auto-rotate, tap, swipe, long-press pause
+*/
+
+const root = document.getElementById('carousel');
+const cardEls = Array.from(root.querySelectorAll('.card'));
+const imgs = cardEls.map(c => c.querySelector('.card-img'));
+let index = 0; // front card index
+const INTERVAL = 2200;
+let timer = null;
+let isPaused = false;
+
+// params (tuned for mobile)
+let params = {
+  gapPx: Math.round(Math.min(window.innerWidth * 0.25, 110)),
+  depthPx: Math.round(Math.min(window.innerWidth * 0.38, 200)),
+  durMs: 700,
+  blurFront: 0,
+  blurSide: 3,
+  scaleFront: 1.03,
+  scaleSide: 0.92
+};
+
+// store natural sizes of images when loaded
+const naturalSizes = new Array(imgs.length).fill(null);
+let loadedCount = 0;
+
+function onImageLoaded(i){
+  const img = imgs[i];
+  naturalSizes[i] = { w: img.naturalWidth || img.width, h: img.naturalHeight || img.height };
+  loadedCount++;
+  if(loadedCount >= 1) {
+    sizeToIndex(index);
+  }
+  if(loadedCount === imgs.length) {
+    applyPositions();
+  }
+}
+
+imgs.forEach((img, i) => {
+  if (img.complete && img.naturalWidth) {
+    onImageLoaded(i);
+  } else {
+    img.addEventListener('load', () => onImageLoaded(i));
+    img.addEventListener('error', () => {
+      naturalSizes[i] = { w: img.width || 300, h: img.height || 200 };
+      loadedCount++;
+      if(loadedCount >= 1) sizeToIndex(index);
+    });
+  }
+});
+
+function getMaxConstraints(){
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const breathingRoom = 56; // px to avoid touching bottom
+  const maxW = Math.min(Math.round(vw * 0.86), 420);
+  const maxH = Math.min(Math.round(vw * 0.62), Math.round(vh - breathingRoom));
+  return { maxW, maxH };
+}
+
+function sizeToIndex(i){
+  const sz = naturalSizes[i];
+  if(!sz) return;
+  const { maxW, maxH } = getMaxConstraints();
+  const scale = Math.min(maxW / sz.w, maxH / sz.h, 1); // never upscale beyond natural
+  const finalW = Math.round(sz.w * scale);
+  const finalH = Math.round(sz.h * scale);
+
+  // ensure finalH respects root max-height
+  const computedMax = parseInt(getComputedStyle(root).maxHeight, 10) || (window.innerHeight - 56);
+  const safeFinalH = Math.min(finalH, computedMax);
+
+  root.style.width = finalW + 'px';
+  root.style.height = safeFinalH + 'px';
+
+  cardEls.forEach(c => {
+    c.style.width = finalW + 'px';
+    c.style.height = safeFinalH + 'px';
+  });
+
+  params.gapPx = Math.round(Math.min(finalW * 0.28, 110));
+  params.depthPx = Math.round(Math.min(finalW * 0.42, 200));
+
+  applyPositions();
+}
+
+// set z-index and data-front attribute
+function setZIndices(front, right, left){
+  cardEls.forEach(c => c.style.zIndex = 0);
+  cardEls[front].style.zIndex = 30;
+  cardEls[right].style.zIndex = 20;
+  cardEls[left].style.zIndex = 10;
+  cardEls.forEach((c, idx) => c.setAttribute('data-front', (idx === front).toString()));
+}
+
+// apply positions + tapering
+function applyPositions(){
+  const front = index;
+  const left = (index + 1) % 3;
+  const right  = (index + 2) % 3;
+
+  setZIndices(front, right, left);
+  void document.body.offsetHeight; // force reflow
+
+  cardEls.forEach(card => {
+    card.style.transition = `transform ${params.durMs}ms cubic-bezier(.2,.9,.2,1), filter ${params.durMs}ms cubic-bezier(.2,.9,.2,1), opacity ${params.durMs}ms cubic-bezier(.2,.9,.2,1)`;
+    card.style.backfaceVisibility = 'hidden';
+  });
+
+  // FRONT - clear, slightly popped
+  cardEls[front].style.transform = `translate(-50%,-50%) translateZ(${params.depthPx}px) scale(${params.scaleFront})`;
+  cardEls[front].style.filter = `blur(${params.blurFront}px) brightness(1)`;
+  cardEls[front].style.opacity = '1';
+  const frontInner = cardEls[front].querySelector('.card-inner');
+  frontInner.classList.remove('taper');
+  frontInner.setAttribute('data-taper', 'false');
+  frontInner.style.transform = `scaleY(1) translateZ(0)`; // ensure no squeeze
+
+  // RIGHT - tapered, slightly squeezed vertically, muted
+  cardEls[right].style.transform = `translate(calc(-50% + ${params.gapPx}px),-50%) translateZ(0px) rotateY(-18deg) scale(${params.scaleSide})`;
+  cardEls[right].style.filter = `blur(${params.blurSide}px) brightness(.88)`;
+  cardEls[right].style.opacity = '0.95';
+  const rightInner = cardEls[right].querySelector('.card-inner');
+  rightInner.classList.add('taper');
+  rightInner.setAttribute('data-taper', 'true');
+  rightInner.style.transform = `scaleY(0.92) translateZ(0)`;
+
+  // LEFT - tapered, slightly squeezed vertically, more muted
+  cardEls[left].style.transform = `translate(calc(-50% - ${params.gapPx}px),-50%) translateZ(0px) rotateY(18deg) scale(${params.scaleSide})`;
+  cardEls[left].style.filter = `blur(${params.blurSide + 1}px) brightness(.82)`;
+  cardEls[left].style.opacity = '0.88';
+  const leftInner = cardEls[left].querySelector('.card-inner');
+  leftInner.classList.add('taper');
+  leftInner.setAttribute('data-taper', 'true');
+  leftInner.style.transform = `scaleY(0.92) translateZ(0)`;
+}
+
+// initial positions
+applyPositions();
+
+
+// touch interactions: long-press pause, swipe left/right, tap rotate
+let touchHoldTimer = null;
+let startX = null;
+
+root.addEventListener('touchstart', (e) => {
+  clearTimeout(touchHoldTimer);
+  touchHoldTimer = setTimeout(() => { isPaused = true; }, 140);
+  startX = e.touches ? e.touches[0].clientX : e.clientX;
+}, {passive:true});
+
+root.addEventListener('touchmove', (e) => {
+  if(startX === null) return;
+  const current = e.touches ? e.touches[0].clientX : e.clientX;
+  const diff = current - startX;
+  if(Math.abs(diff) > 28){
+    if(diff < 0){
+      index = (index - 1 + 3) % 3;
+    } else {
+      index = (index + 1) % 3;
+    }
+    sizeToIndex(index);
+    startX = null;
+    clearTimeout(touchHoldTimer);
+    isPaused = true;
+    setTimeout(()=> isPaused = false, 900);
+  }
+}, {passive:true});
+
+root.addEventListener('touchend', (e) => {
+  clearTimeout(touchHoldTimer);
+  if(isPaused){
+    setTimeout(()=> { isPaused = false; }, 220);
+    return;
+  }
+  index = (index - 1 + 3) % 3;
+  sizeToIndex(index);
+}, {passive:true});
+
+// mouse interactions (optional)
+root.addEventListener('mouseenter', () => isPaused = true);
+root.addEventListener('mouseleave', () => isPaused = false);
+root.addEventListener('click', () => {
+  index = (index - 1 + 3) % 3;
+  sizeToIndex(index);
+});
+
+// responsive
+window.addEventListener('resize', () => {
+  sizeToIndex(index);
+});
+</script>
 
 
 
@@ -638,6 +831,7 @@
           <p class="font-bold text-green-800">Amrit Mantrah</p>
           <p class="mt-1">Your Health Partner</p>
           <ul>
+            <li><a href="/rechecck.html" class="hover:text-slate-900">recheck Us</a></li>
             <li><a href="/check.html" class="hover:text-slate-900">check Us</a></li>
             <li><a href="/about.html" class="hover:text-slate-900">About Us</a></li>
             <li><a href="/contact.html" class="hover:text-slate-900">Contact Us</a></li>
@@ -699,7 +893,7 @@
           // markers: true,        // (uncomment for debug)
         },
         y: 2000,                   // pill moves down 1000px
-        x: 104,                    // slight right zigzag
+        x: 1000,                    // slight right zigzag
         rotation: 90,             // rotate while moving
         ease: "power2.out"
       });
