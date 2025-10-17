@@ -484,63 +484,6 @@
         }
       }
 
-      function setActiveDot(activeIndex) {
-        dots.forEach((d, idx) => {
-          if (idx === activeIndex) {
-            d.classList.add('bg-black', 'scale-110', 'opacity-100');
-            d.classList.remove('bg-black/60', 'opacity-80');
-          } else {
-            d.classList.remove('bg-black', 'scale-110', 'opacity-100');
-            d.classList.add('bg-black/60', 'opacity-80');
-          }
-        });
-      }
-
-      // Sync dots with timeline using absolute times
-      // Each slide step = move (0.8s) + pause (2s) => stepDuration
-      const moveDur = 0.8;
-      const pauseDur = 2;
-      const stepDuration = moveDur + pauseDur;
-
-      // Add callbacks at exact times in the timeline
-      for (let i = 0; i < totalSlides; i++) {
-        const atTime = i * stepDuration; // when slide i becomes active
-        tl.add(() => setActiveDot(i), atTime);
-      }
-      // Reset dot at the very end (after last reset tween)
-      const totalCycle = totalSlides * stepDuration + 0.8; // extra 0.8 for final reset tween
-      tl.add(() => setActiveDot(0), totalCycle);
-
-      // Initialize
-      createDots();
-      setActiveDot(0);
-
-      // Recalculate slideWidth on resize and update timeline (light approach)
-      window.addEventListener('resize', () => {
-        // recalc width
-        slideWidth = slides[0].offsetWidth;
-        // update timeline positions: safer to rebuild timeline
-        // Pause and clear existing timeline, then rebuild
-        const isPlaying = tl.isActive();
-        tl.pause();
-        tl.clear();
-
-        slides.forEach((_, i) => {
-          tl.to(track, { x: -slideWidth * i, duration: moveDur });
-          tl.to({}, { duration: pauseDur });
-        });
-        tl.to(track, { x: 0, duration: moveDur });
-
-        // re-add dot callbacks at new times
-        for (let i = 0; i < totalSlides; i++) {
-          const atTime = i * (moveDur + pauseDur);
-          tl.add(() => setActiveDot(i), atTime);
-        }
-        const newTotalCycle = totalSlides * (moveDur + pauseDur) + moveDur;
-        tl.add(() => setActiveDot(0), newTotalCycle);
-
-        if (isPlaying) tl.play();
-      });
     </script>
 
 
