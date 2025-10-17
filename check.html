@@ -1122,7 +1122,7 @@
     </style>
 
     <script>
-      gsap.registerPlugin(ScrollTrigger);
+       gsap.registerPlugin(ScrollTrigger);
 
       // Loop through all sections that have data-side
       document.querySelectorAll('section[data-side]').forEach((section) => {
@@ -1153,7 +1153,7 @@
               trigger: section,
               start: 'top 70%',
               toggleActions: 'play none none none',
-              // markers: true,
+              markers: true,
             },
             x: -150,        // slide in from left
             rotation: -720, // reverse spin for symmetry
