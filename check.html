@@ -32,12 +32,12 @@
       max-width: 1200px
     }
 
-     /* extra small helper to ensure smooth pixel rendering on mobile */
-  .card-smooth {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-  }
+    /* extra small helper to ensure smooth pixel rendering on mobile */
+    .card-smooth {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -63,8 +63,6 @@
   <main class="max-w-sm mx-auto p-1 overflow-hidden">
 
 
-
-
     <!-- Hero -->
     <section id="hero" class="relative pt-5">
       <div class="max-w-[360px] mx-auto px-4 relative">
@@ -87,7 +85,7 @@
 
           <!-- Consult button -->
           <a href="#consult"
-            class="inline-flex mt-[18px] -ml-[10px] items-center rounded-2xl px-4 py-2 text-sm font-medium bg-emerald-600 text-white shadow hover:opacity-95 transition">
+            class="inline-flex mt-[23px] -ml-[10px] items-center rounded-2xl px-4 py-2 text-[11px] font-medium bg-emerald-600 text-white shadow hover:opacity-95 transition">
             Consult Now
           </a>
 
@@ -97,9 +95,9 @@
             transform -rotate-[18deg] drop-shadow-lg scale-[130%]" />
 
           <!-- Scattered pill (animated on scroll) -->
-           
+
           <img src="/1st/Capsule without shadow image.png" alt="pill"
-            class="anim-hero-pill absolute z-0 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[200%]" />
+            class="anim-hero-pill absolute z-0 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[150%]" />
 
 
         </div>
@@ -126,15 +124,17 @@
             opacity-40 -z-50 rotate-[23deg] scale-[150%] mt-5 -ml-5">
 
 
+
             <!-- Item 1 (Left) -->
-            <section class="animate-left flex items-center gap-2" data-side="left">
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
-                <img src="/2nd/Expert icon png.png" alt="Expert Guided" class="w-[45px] h-[45px] object-contain  " />
+            <section class="animate-left flex flex-row-reverse items-center gap-2 px-2" data-side="left">
+              <div class="r-icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden mr-5">
+                <img src="/2nd/Expert icon png.png" alt="Expert Guided" class="w-[65px] h-[65px] object-contain" />
               </div>
-              <div class="anim-text flex-1 ">
-                <h3 class="text-emerald-800 font-bold text-[14px] ">
-                  Expert-Guided <br> and Scientifically <br> Proven
+
+              <div class="anim-text flex-1 text-left">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
+                  Expert-Guided <br> and Scientifically Proven
                 </h3>
                 <p class="text-[12px] font-bold text-black mt-1">
                   Modern Research + <br> Ancient Ayurveda
@@ -143,939 +143,1283 @@
             </section>
 
             <!-- Item 2 (Right) -->
-            <section class="animate-right flex items-center gap-2 mt-2" data-side="right">
+            <section class="animate-right flex flex-row-reverse items-center gap-2 mt-2 px-2" data-side="right">
               <div class="anim-text flex-1 text-right">
-                <h3 class="text-emerald-800 font-bold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
                   Trusted By <br> 1000+ Customers
                 </h3>
-                <p class="text-[10px] text-black font-bold mt-1">
+                <p class="text-[12px] text-black font-bold mt-1">
                   Many Customers find <br> our product effective.
                 </p>
               </div>
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
+              <div class="icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden ml-5">
                 <img src="/2nd/Trusted customer icon png.png" alt="Trusted Customers"
-                  class="w-[45px] h-[45px] object-contain" />
+                  class="w-[65px] h-[65px] object-contain" />
               </div>
-
             </section>
 
-
             <!-- Item 3 (Left) -->
-            <section class="animate-left flex items-center gap-4 mt-10" data-side="left">
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
-                <img src="/2nd/Ayurvedic icon image.png" alt="100% Ayurvedic" class="w-[45px] h-[45px] 
-              object-contain" />
+            <section class="animate-left flex flex-row-reverse items-center gap-4 mt-10 px-2" data-side="left">
+              <div class="r-icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden mr-5">
+                <img src="/2nd/Ayurvedic icon image.png" alt="100% Ayurvedic"
+                  class="w-[65px] h-[65px] object-contain" />
               </div>
-              <div class="flex-1">
-                <h3 class="text-emerald-800 font-bold text-[12px]">
+              <div class="flex-1 text-left">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
                   100% Ayurvedic <br> and Natural
                 </h3>
-                <p class="text-[10px] text-black font-bold mt-1">
+                <p class="text-[12px] text-black font-bold mt-1">
                   Safe, Pure and <br> Chemical–Free
                 </p>
               </div>
             </section>
 
             <!-- Item 4 (Right) -->
-            <section class="animate-right flex items-center gap-4 mt-10" data-side="right">
+            <section class="animate-right flex flex-row-reverse items-center gap-4 mt-10 px-2" data-side="right">
               <div class="anim-text flex-1 text-right">
-                <h3 class="text-emerald-800 font-bold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
                   No Side Effects, <br> Only Results
                 </h3>
-                <p class="text-[10px] text-black font-bold mt-1">
+                <p class="text-[12px] text-black font-bold mt-1">
                   Effective and Long-Term <br> Fat Management
                 </p>
               </div>
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
+              <div class="icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden ml-5">
                 <img src="/2nd/No side effect icon png.png" alt="No Side Effects"
-                  class="w-[45px] h-[45px] object-contain" />
+                  class="w-[65px] h-[65px] object-contain" />
               </div>
             </section>
-          </div> <!-- /space-y -->
 
 
-        </div>
-    </section>
 
 
-    <!-- HOW IT WORKS -->
-    <section id="how" class="relative py-6 md:py-4">
-      <div class="container mx-auto px-4">
 
-        <!-- Heading -->
-        <div class="max-w-2xl mx-auto mb-5 text-center">
 
-          <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[50%] left-[65%] -translate-x-1/2 w-[950px] h-[70px] opacity-40 
+            <!-- HOW IT WORKS -->
+            <section id="how" class="relative mt-[10px] py-6 md:py-4">
+              <div class="container mx-auto px-4">
+
+                <!-- Heading -->
+                <div class="max-w-2xl mx-auto text-center">
+
+                  <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[50%] left-[65%] -translate-x-1/2 w-[950px] h-[70px] opacity-40 
         -z-50 -rotate-[42deg] scale-[200%] mt-5 -ml-5">
 
-          <h2 class="text-3xl md:text-4xl font-bold">How It Works</h2>
-          <p class="mt-3 text-slate-600">Four pillars that drive sustainable fat loss.</p>
-        </div>
+                  <h2 class="text-3xl md:text-4xl font-bold">How It Works</h2>
+                </div>
 
-        <!-- First Row -->
-        <section class="py-4">
-          <div class="max-w-md mx-auto px-2  flex justify-space-between gap-8">
+                <!-- First Row -->
+                <section class="py-1 mt-[10px] ">
+                  <div class="max-w-md mx-auto px-2  flex justify-space-between gap-8">
 
-            <!-- Left card -->
-            <div class="animate-left flex flex-col items-start text-start w-1/2">
-              <div class="w-[60px] h-[60px] -ml-4  ">
-                <img src="/3rd/Metabolism icon.png" alt="Boost Metabolism" class="w-[55px] h-[55px] object-contain" />
+                    <!-- Left card -->
+                    <div class="flex flex-col items-start text-start w-1/2">
+                      <div class="how-img w-[60px] h-[60px] -ml-4  ">
+                        <img src="/3rd/Metabolism icon.png" alt="Boost Metabolism"
+                          class="w-[55px] h-[55px] object-contain" />
+                      </div>
+                      <h3 class="text-emerald-800 text-start font-semibold text-[14px]">Boost Metabolism</h3>
+                      <p class="text-slate-600 text-[12px] mt-1 leading-5">
+                        Boosting metabolism helps burn more Boosting metabolism helps burn more
+                      </p>
+                    </div>
+
+                    <!-- Right card -->
+                    <div class="flex flex-col items-end text-end w-1/2">
+                      <div class="how-img w-[60px] h-[60px] -mr-5 ">
+                        <img src="/3rd/Gut health icon.png" alt="Gut Health" class="w-[55px] h-[55px] object-contain" />
+                      </div>
+                      <h3 class="text-emerald-800 font-semibold text-[14px]">Gut Health</h3>
+                      <p class="text-slate-600 text-[12px] mt-1 leading-5">
+                        Good gut health improves digestion and nutrient Boosting metabolism helps burn more
+                      </p>
+                    </div>
+
+                  </div>
+                </section>
+
+                <!-- Image Section  -->
+                <img src="/1st/Capsule without shadow image.png" alt="how-pill"
+                  class="how-pill absolute z-0 w-10 left-[175px] top-[330px] transform -rotate-[35deg] scale-[400%]" />
+
+                <img src="/2nd/Round Arrow image png.png" alt="how-arrow"
+                  class="how-arrow absolute z-0 w-10 left-[260px] top-[280px] transform rotate-[120deg] scale-[300%]" />
+
+                <img src="/2nd/Round Arrow image png.png" alt="how-arrow"
+                  class="how-arrow absolute z-0 w-10 left-[90px] top-[380px] transform -rotate-[50deg] scale-[300%]" />
+
+                <img src="/2nd/2nd Round Arrow image png.png" alt="how-arrow"
+                  class="how-arrow absolute z-0 w-10 left-[100px] top-[280px] transform rotate-[50deg] scale-[320%]" />
+
+                <img src="/2nd/2nd Round Arrow image png.png" alt="how-arrow"
+                  class="how-arrow absolute z-0 w-10 left-[250px] top-[380px] transform rotate-[220deg] scale-[300%]" />
+
+
+
+                <!-- Second Row -->
+                <section class="py-5 mt-[150px]">
+                  <div class="max-w-md mx-auto px-2 flex justify-between gap-8">
+
+                    <!-- Left card -->
+                    <div class="flex flex-col items-start text-start w-1/2">
+                      <div class="how-img w-[60px] h-[60px] -ml-4">
+                        <img src="/3rd/No weight gain icon.png" alt="No Weight Rebound"
+                          class="w-[55px] h-[55px] object-contain" />
+                      </div>
+                      <h3 class="text-emerald-800 font-semibold text-[14px]">No Weight Rebound</h3>
+                      <p class="text-slate-600 text-xs mt-1 leading-5">
+                        Unlike crash diets, once you lose weight with Amrit Mantrah, it stays off.
+                      </p>
+                    </div>
+
+                    <!-- Right card -->
+                    <div class="flex flex-col items-end text-end w-1/2">
+                      <div class="how-img w-[60px] h-[60px] -mr-5">
+                        <img src="/3rd/Appetite icon.png" alt="Appetite Control"
+                          class="w-[55px] h-[55px] object-contain" />
+                      </div>
+                      <h3 class="text-emerald-800 font-semibold text-[14px]">Appetite Control</h3>
+                      <p class="text-slate-600 text-xs mt-1 leading-5">
+                        Appetite control prevents overeating, supporting steady fat loss.
+                      </p>
+                    </div>
+
+                  </div>
+                </section>
+
               </div>
-              <h3 class="text-emerald-800 text-start font-semibold text-sm">Boost Metabolism</h3>
-              <p class="text-slate-600 text-xs mt-1 leading-5">
-                Boosting metabolism helps burn more calories at rest, making fat loss easier.
-              </p>
-            </div>
-
-            <!-- Right card -->
-            <div class="animate-right flex flex-col items-end text-end w-1/2">
-              <div class="w-[60px] h-[60px] -mr-5 ">
-                <img src="/3rd/Gut health icon.png" alt="Gut Health" class="w-[55px] h-[55px] object-contain" />
-              </div>
-              <h3 class="text-emerald-800 font-semibold text-sm">Gut Health</h3>
-              <p class="text-slate-600 text-xs mt-1 leading-5">
-                Good gut health improves digestion and nutrient absorption, aiding fat loss naturally.
-              </p>
-            </div>
-
-          </div>
-        </section>
+            </section>
 
 
-        <!-- Second Row -->
-        <section class="py-4">
-          <div class="max-w-md mx-auto px-2 flex justify-between gap-8">
-
-            <!-- Left card -->
-            <div class="flex flex-col items-start text-start w-1/2">
-              <div class="w-[60px] h-[60px] -ml-4">
-                <img src="/3rd/No weight gain icon.png" alt="No Weight Rebound"
-                  class="w-[55px] h-[55px] object-contain" />
-              </div>
-              <h3 class="text-emerald-800 font-semibold text-sm">No Weight Rebound</h3>
-              <p class="text-slate-600 text-xs mt-1 leading-5">
-                Unlike crash diets, once you lose weight with Amrit Mantrah, it stays off.
-              </p>
-            </div>
-
-            <!-- Right card -->
-            <div class="flex flex-col items-end text-end w-1/2">
-              <div class="w-[60px] h-[60px] -mr-5">
-                <img src="/3rd/Appetite icon.png" alt="Appetite Control" class="w-[55px] h-[55px] object-contain" />
-              </div>
-              <h3 class="text-emerald-800 font-semibold text-sm">Appetite Control</h3>
-              <p class="text-slate-600 text-xs mt-1 leading-5">
-                Appetite control prevents overeating, supporting steady fat loss.
-              </p>
-            </div>
-
-          </div>
-        </section>
-
-      </div>
-    </section>
 
 
-    <!-- BLEND / INGREDIENTS (visual, png placeholders) -->
-    <section id="blend" class="relative py-5">
+            <!-- BLEND / INGREDIENTS (visual, png placeholders) -->
+            <section id="blend" class="relative py-5">
 
-      <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[40%] left-[65%] -translate-x-1/2 w-[950px] h-[70px] opacity-40 
+              <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[40%] left-[65%] -translate-x-1/2 w-[950px] h-[70px] opacity-40 
         -z-50 -rotate-[150deg] scale-[200%] mt-5 -ml-5">
 
-      <img src="./4th/4th Section Left Side image.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute -top-[7%] -left-[20%] 
+              <img src="./4th/4th Section Left Side image.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute -top-[7%] -left-[20%] 
           w-[200px] h-[200px] object-contain scale-[150%]" />
 
-      <div class="container">
-        <div class="max-w-2xl mx-auto mb-5 text-center">
-          <h2 class="text-[20px] md:text-2xl font-bold text-end pr-5">Powerful Ayurvedic <br> Blend for
-            <span> Fat Loss </span>
-          </h2>
-        </div>
+              <div class="container">
+                <div class="max-w-2xl mx-auto mb-5 text-center">
+                  <h2 class="text-[20px] md:text-2xl font-bold text-end pr-5">Powerful Ayurvedic <br> Blend for
+                    <span> Fat Loss </span>
+                  </h2>
+                </div>
 
-        <div class="">
-          <img src="./Image/Chart.png" alt="" srcset="">
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Lab test -->
-    <section id="certifications" class="relative py-1">
-      <div class="container mx-auto px-1">
+                <div class="">
+                  <img src="./Image/Chart.png" alt="" srcset="">
+                </div>
+              </div>
+            </section>
 
 
-        <img src="./4th/5th Section side image.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute -top-[40%] -right-[25%] 
+            <!-- Lab test -->
+            <section id="certifications" class="relative py-1">
+              <div class="container mx-auto px-1">
+
+
+                <img src="./4th/5th Section side image.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute -top-[40%] -right-[25%] 
           w-[200px] h-[200px] object-contain scale-[100%]" />
 
-        <!-- Lab Test / Badges -->
-        <div class="max-w-4xl mx-auto text-center ">
-          <h3 class="text-xl font-semibold mb-4 text-start">Lab Test and Certification</h3>
+                <!-- Lab Test / Badges -->
+                <div class="max-w-4xl mx-auto text-center ">
+                  <h3 class="text-xl font-semibold mb-4 text-start">Lab Test and Certification</h3>
 
-          <div class="flex items-center justify-between gap-10">
+                  <div class="flex items-center justify-between gap-10">
 
-            <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] 
+                    <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] 
             opacity-40 -z-50 -rotate-[180deg] scale-[200%] mt-5 -ml-5">
 
-            <!-- badges -->
-            <div class="flex gap-6 justify-start mt-2">
+                    <!-- badges -->
+                    <div class="flex gap-6 justify-start mt-2">
 
 
-              <div class="flex flex-col items-center pl-1">
-                <img src="/5th/Natural product  png.png" alt="100% Ayurvedic"
-                  class="w-14 h-14 object-contain scale-[150%]" />
-                <span class="pt-5 text-[10px] font-bold text-slate-600">100% Ayurvedic</span>
+                      <div class="flex flex-col items-center pl-1">
+                        <img src="/5th/Natural product  png.png" alt="100% Ayurvedic"
+                          class="w-14 h-14 object-contain scale-[150%]" />
+                        <span class="pt-5 text-[10px] font-bold text-slate-600">100% Ayurvedic</span>
+                      </div>
+                      <div class="flex flex-col items-center">
+                        <img src="/5th/FSSAI.png" alt="FSSAI" class="w-14 h-14 object-contain  scale-[160%]" />
+                        <span class="pt-5 text-[10px] font-bold text-slate-600">FSSAI Approved</span>
+                      </div>
+                      <div class="flex flex-col items-center">
+                        <img src="/5th/GMP  png.png" alt="GMP" class="w-14 h-14 object-contain  scale-[170%]" />
+                        <span class="pt-5 text-[10px] font-bold text-slate-600">GMP Certified</span>
+                      </div>
+                      <div class="flex flex-col items-center">
+                        <img src="/5th/Lab test.png" alt="Lab Tested" class="w-14 h-14 object-contain scale-[170%]" />
+                        <span class="pt-5 text-[10px] font-bold text-slate-600">Lab Tested</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <!-- Download button -->
+                  <div class="pt-4 text-center off">
+                    <a href="./about.html"
+                      class="inline-block bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-medium rounded-full px-6 py-2 shadow">
+                      About Us
+                    </a>
+                  </div>
+
+
+                </div>
               </div>
-              <div class="flex flex-col items-center">
-                <img src="/5th/FSSAI.png" alt="FSSAI" class="w-14 h-14 object-contain  scale-[160%]" />
-                <span class="pt-5 text-[10px] font-bold text-slate-600">FSSAI Approved</span>
-              </div>
-              <div class="flex flex-col items-center">
-                <img src="/5th/GMP  png.png" alt="GMP" class="w-14 h-14 object-contain  scale-[170%]" />
-                <span class="pt-5 text-[10px] font-bold text-slate-600">GMP Certified</span>
-              </div>
-              <div class="flex flex-col items-center">
-                <img src="/5th/Lab test.png" alt="Lab Tested" class="w-14 h-14 object-contain scale-[170%]" />
-                <span class="pt-5 text-[10px] font-bold text-slate-600">Lab Tested</span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Download button -->
-          <div class="pt-4 text-center off">
-            <a href="./about.html"
-              class="inline-block bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-medium rounded-full px-6 py-2 shadow">
-              About Us
-            </a>
-          </div>
+            </section>
 
 
+            <!-- ✅ Verified Buyers Slider (with synced dots) -->
+<div class="verified-wrapper overflow-hidden w-full max-w-[400px] relative my-2">
+
+  <h2 class="text-lg font-semibold text-emerald-800 pl-3 mb-5">Verified Buyers</h2>
+  <img src="/aboutus/bg.png" alt="Background Rectangle" class="absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] opacity-40 -z-50 -rotate-[180deg] scale-[210%] mt-5 -ml-5">
+
+  <!-- Slider Track (All 3 slides inside) -->
+  <div class="slider-track flex transition-transform duration-500">
+
+    <!-- 🧍 Verified Buyer #1 -->
+    <section class="min-w-full flex flex-col px-3 text-center">
+      <div class="flex items-start gap-3">
+        <div class="w-[60%] text-[10px] -mt-2">
+          <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
+          <p class="text-slate-800 font-bold leading-snug">
+            Along with healthy habits, Amrit Mantrah kept me focused. I finally lost stubborn fat.
+          </p>
+        </div>
+        <div class="w-[40%]">
+          <img src="/5th/frame.png" alt="frame" class="w-[280px] scale-150 -mt-[24px]" />
         </div>
       </div>
+      <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
     </section>
 
-
-
-    <!-- ✅ Verified Buyers Slider -->
-    <div class="verified-wrapper overflow-hidden w-full max-w-[360px] relative my-2">
-
-      <h2 class="text-lg font-semibold text-emerald-800 pl-3 mb-5">Verified Buyers</h2>
-      <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] 
-             opacity-40 -z-50 -rotate-[180deg] scale-[200%] mt-5 -ml-5">
-      <!-- Slider Track (All 3 slides inside) -->
-      <div class="slider-track flex transition-transform duration-500">
-
-        <!-- 🧍 Verified Buyer #1 -->
-        <section class="min-w-full flex flex-col px-3 text-center">
-          <div class="flex items-start gap-3">
-            <div class="w-[60%] text-[10px] -mt-2">
-              <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
-              <p class="text-slate-800 font-bold leading-snug">
-                Along with healthy habits, Amrit Mantrah kept me focused. I finally lost stubborn fat.
-              </p>
-            </div>
-            <div class="w-[40%]">
-              <img src="/5th/frame.png" alt="frame" class="w-[280px] scale-150 -mt-[24px]" />
-            </div>
-          </div>
-          <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
-        </section>
-
-        <!-- 🧍‍♀️ Verified Buyer #2 -->
-        <section class="min-w-full flex flex-col px-3 text-center">
-          <div class="flex items-start gap-3">
-            <div class="w-[60%] text-[10px] -mt-2">
-              <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
-              <p class="text-slate-800 font-bold leading-snug">
-                My energy improved and I noticed visible fat loss without weakness. It works!
-              </p>
-            </div>
-            <div class="w-[40%]">
-              <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150 -mt-[24px]" />
-            </div>
-          </div>
-          <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
-        </section>
-
-        <!-- 🧔 Verified Buyer #3 -->
-        <section class="min-w-full flex flex-col px-2 text-center">
-          <div class="flex items-start gap-3">
-            <div class="w-[60%] text-[10px] -mt-2">
-              <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
-              <p class="text-slate-800 font-bold leading-snug">
-                I lost 7 kg in two months and felt more active again. Thank you Amrit Mantrah!
-              </p>
-            </div>
-            <div class="w-[40%]">
-              <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150  -mt-[24px]" />
-            </div>
-          </div>
-          <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
-        </section>
-
+    <!-- 🧍‍♀️ Verified Buyer #2 -->
+    <section class="min-w-full flex flex-col px-3 text-center">
+      <div class="flex items-start gap-3">
+        <div class="w-[60%] text-[10px] -mt-2">
+          <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
+          <p class="text-slate-800 font-bold leading-snug">
+            My energy improved and I noticed visible fat loss without weakness. It works!
+          </p>
+        </div>
+        <div class="w-[40%]">
+          <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150 -mt-[24px]" />
+        </div>
       </div>
-    </div>
-
-    <!-- ✅ GSAP Animation -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script>
-      const track = document.querySelector('.slider-track');
-      const slides = document.querySelectorAll('.slider-track > section');
-      const slideWidth = slides[0].offsetWidth; // Full width of one slide
-      const totalSlides = slides.length;
-
-      const tl = gsap.timeline({ repeat: -1, defaults: { ease: "power2.inOut" } });
-
-      slides.forEach((_, i) => {
-        tl.to(track, {
-          x: -slideWidth * i,
-          duration: 0.8
-        });
-        tl.to({}, { duration: 2 }); // Pause 2 seconds on each slide
-      });
-
-      // Reset back to first slide smoothly
-      tl.to(track, { x: 0, duration: 0.8 });
-    </script>
-
-
-
-    <!-- HOW TO TAKE -->
-    <section class="mt-8 relative">
-
-      <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[58%] left-[65%] -translate-x-1/2 
-      w-[950px] h-[40px] opacity-40 -z-50 -rotate-[150deg] scale-[200%] mt-5 -ml-5">
-
-      <img src="./4th/4th Section Left Side image.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute top-[7%] -left-[20%] 
-          w-[200px] h-[200px] object-contain scale-[110%] -rotate-[5deg]" />
-
-      <h2 class="text-[15px] font-semibold text-center text-emerald-700 mb-8 leading-[18px]">
-        How to Take <br><span class="text-emerald-900">Amrit Mantrah Capsule</span>
-      </h2>
-      <div class="relative w-full max-w-lg mx-auto">
-        <!-- Capsule Center -->
-        <img src="/Image/7th Section.png" alt="Capsule" class="mx-auto w-[260px]">
-
-
-        <!-- 🔹 Top text -->
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-[200px] text-center">
-          <p class="text-[10px] text-black-800 font-medium leading-tight">
-            Before Meal <br> with Lukewarm Water
-          </p>
-        </div>
-
-        <!-- 🔹 Left text -->
-        <div class="absolute top-[45%] left-[5px] w-[120px] text-center">
-          <p class="text-[10px] text-black-800 font-medium leading-tight whitespace-nowrap">
-            Take 2 Capsules Daily <br> or as directed by <br>physician
-          </p>
-        </div>
-
-        <!-- 🔹 Right text -->
-        <div class="absolute top-[47.5%] right-[5px] w-[120px] text-center">
-          <p class="text-[10px] text-black-800 font-medium leading-tight">
-            Follow Consistently <br> for 90 Days
-          </p>
-        </div>
-
-        <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
-          class="pointer-events-none select-none absolute bottom-[30%] left-[35%] w-28 h-20 object-contain scale-[100%] -rotate-[115deg]" />
-      </div>
+      <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
     </section>
 
-<!-- Pricing -->
-<section class="min-h-[300px] flex items-center justify-center p-4 mt-8 scale-[125%]">
-
-  <div id="carousel" class="relative w-[86vw] max-w-xs h-auto touch-none">
-    <!-- Card 0 -->
-    <div class="card card-smooth" data-i="0" data-front="false" style="width:100px;height:100px;">
-      <div class="card-inner">
-        <img src="/Image/1st pricing.png" alt="Card 1" class="card-img" />
-        <div class="card-label">CARD 1</div>
+    <!-- 🧔 Verified Buyer #3 -->
+    <section class="min-w-full flex flex-col px-2 text-center">
+      <div class="flex items-start gap-3">
+        <div class="w-[60%] text-[10px] -mt-2">
+          <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
+          <p class="text-slate-800 font-bold leading-snug">
+            I lost 7 kg in two months and felt more active again. Thank you Amrit Mantrah!
+          </p>
+        </div>
+        <div class="w-[40%]">
+          <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150 -mt-[24px]" />
+        </div>
       </div>
-    </div>
+      <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+    </section>
 
-    <!-- Card 1 -->
-    <div class="card card-smooth" data-i="1" data-front="false" style="width:100px;height:100px;">
-      <div class="card-inner">
-        <img src="/Image/2nd pricing.png" alt="Card 2" class="card-img" />
-        <div class="card-label">CARD 2</div>
-      </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card card-smooth" data-i="2" data-front="false" style="width:100px;height:100px;">
-      <div class="card-inner">
-        <img src="/Image/3rd pricing.png" alt="Card 3" class="card-img" />
-        <div class="card-label">CARD 3</div>
-      </div>
-    </div>
   </div>
 
-</section>
+  <!-- Dots Indicators (inside wrapper, visible & clickable) -->
+  <div id="carousel-dots" class="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-3 z-40 pointer-events-auto"></div>
 
+</div>
+
+<!-- ✅ GSAP Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script>
-/*
-  Mobile-first carousel + taper effect
-  - no image crop (object-fit: contain)
-  - container sizes to current front image natural dims (scaled down if needed)
-  - side cards receive taper class -> vertical mask + scaleY squeeze + muted brightness
-  - interactions: auto-rotate, tap, swipe, long-press pause
-*/
+  // Slider core
+  const track = document.querySelector('.slider-track');
+  const slides = document.querySelectorAll('.slider-track > section');
+  let slideWidth = slides[0].offsetWidth; // make mutable (let)
+  const totalSlides = slides.length;
 
-const root = document.getElementById('carousel');
-const cardEls = Array.from(root.querySelectorAll('.card'));
-const imgs = cardEls.map(c => c.querySelector('.card-img'));
-let index = 0; // front card index
-const INTERVAL = 2200;
-let timer = null;
-let isPaused = false;
+  // GSAP timeline
+  const tl = gsap.timeline({ repeat: -1, defaults: { ease: "power2.inOut" } });
 
-// params (tuned for mobile)
-let params = {
-  gapPx: Math.round(Math.min(window.innerWidth * 0.25, 110)),
-  depthPx: Math.round(Math.min(window.innerWidth * 0.38, 200)),
-  durMs: 700,
-  blurFront: 0,
-  blurSide: 3,
-  scaleFront: 1.03,
-  scaleSide: 0.92
-};
+  // Build timeline (same behavior: move, pause)
+  slides.forEach((_, i) => {
+    tl.to(track, { x: -slideWidth * i, duration: 0.8 });
+    tl.to({}, { duration: 2 }); // pause 2s
+  });
+  // Reset back to first slide smoothly
+  tl.to(track, { x: 0, duration: 0.8 });
 
-// store natural sizes of images when loaded
-const naturalSizes = new Array(imgs.length).fill(null);
-let loadedCount = 0;
+  // ---------- Dots system ----------
+  const dotsRoot = document.getElementById('carousel-dots');
+  const dots = [];
 
-function onImageLoaded(i){
-  const img = imgs[i];
-  naturalSizes[i] = { w: img.naturalWidth || img.width, h: img.naturalHeight || img.height };
-  loadedCount++;
-  if(loadedCount >= 1) {
-    sizeToIndex(index);
+  // Create dots
+  function createDots() {
+    dotsRoot.innerHTML = '';
+    for (let i = 0; i < totalSlides; i++) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.dataset.i = i;
+      // Tailwind classes — visible on white bg
+      btn.className = 'w-2.5 h-2.5 rounded-full bg-black/60 transition-all duration-300 hover:bg-black/80';
+      // Click handler: jump to slide i
+      btn.addEventListener('click', () => {
+        // Stop timeline and animate to target
+        tl.pause();
+        gsap.to(track, { x: -slideWidth * i, duration: 0.6, ease: "power2.inOut" });
+        setActiveDot(i);
+        // resume timeline after short pause
+        setTimeout(() => tl.play(), 3000);
+      });
+      dotsRoot.appendChild(btn);
+      dots.push(btn);
+    }
   }
-  if(loadedCount === imgs.length) {
-    applyPositions();
-  }
-}
 
-imgs.forEach((img, i) => {
-  if (img.complete && img.naturalWidth) {
-    onImageLoaded(i);
-  } else {
-    img.addEventListener('load', () => onImageLoaded(i));
-    img.addEventListener('error', () => {
-      naturalSizes[i] = { w: img.width || 300, h: img.height || 200 };
-      loadedCount++;
-      if(loadedCount >= 1) sizeToIndex(index);
+  function setActiveDot(activeIndex) {
+    dots.forEach((d, idx) => {
+      if (idx === activeIndex) {
+        d.classList.add('bg-black','scale-110','opacity-100');
+        d.classList.remove('bg-black/60','opacity-80');
+      } else {
+        d.classList.remove('bg-black','scale-110','opacity-100');
+        d.classList.add('bg-black/60','opacity-80');
+      }
     });
   }
-});
 
-function getMaxConstraints(){
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-  const breathingRoom = 56; // px to avoid touching bottom
-  const maxW = Math.min(Math.round(vw * 0.86), 420);
-  const maxH = Math.min(Math.round(vw * 0.62), Math.round(vh - breathingRoom));
-  return { maxW, maxH };
-}
+  // Sync dots with timeline using absolute times
+  // Each slide step = move (0.8s) + pause (2s) => stepDuration
+  const moveDur = 0.8;
+  const pauseDur = 2;
+  const stepDuration = moveDur + pauseDur;
 
-function sizeToIndex(i){
-  const sz = naturalSizes[i];
-  if(!sz) return;
-  const { maxW, maxH } = getMaxConstraints();
-  const scale = Math.min(maxW / sz.w, maxH / sz.h, 1); // never upscale beyond natural
-  const finalW = Math.round(sz.w * scale);
-  const finalH = Math.round(sz.h * scale);
+  // Add callbacks at exact times in the timeline
+  for (let i = 0; i < totalSlides; i++) {
+    const atTime = i * stepDuration; // when slide i becomes active
+    tl.add(() => setActiveDot(i), atTime);
+  }
+  // Reset dot at the very end (after last reset tween)
+  const totalCycle = totalSlides * stepDuration + 0.8; // extra 0.8 for final reset tween
+  tl.add(() => setActiveDot(0), totalCycle);
 
-  // ensure finalH respects root max-height
-  const computedMax = parseInt(getComputedStyle(root).maxHeight, 10) || (window.innerHeight - 56);
-  const safeFinalH = Math.min(finalH, computedMax);
+  // Initialize
+  createDots();
+  setActiveDot(0);
 
-  root.style.width = finalW + 'px';
-  root.style.height = safeFinalH + 'px';
+  // Recalculate slideWidth on resize and update timeline (light approach)
+  window.addEventListener('resize', () => {
+    // recalc width
+    slideWidth = slides[0].offsetWidth;
+    // update timeline positions: safer to rebuild timeline
+    // Pause and clear existing timeline, then rebuild
+    const isPlaying = tl.isActive();
+    tl.pause();
+    tl.clear();
 
-  cardEls.forEach(c => {
-    c.style.width = finalW + 'px';
-    c.style.height = safeFinalH + 'px';
-  });
+    slides.forEach((_, i) => {
+      tl.to(track, { x: -slideWidth * i, duration: moveDur });
+      tl.to({}, { duration: pauseDur });
+    });
+    tl.to(track, { x: 0, duration: moveDur });
 
-  params.gapPx = Math.round(Math.min(finalW * 0.28, 110));
-  params.depthPx = Math.round(Math.min(finalW * 0.42, 200));
-
-  applyPositions();
-}
-
-// set z-index and data-front attribute
-function setZIndices(front, right, left){
-  cardEls.forEach(c => c.style.zIndex = 0);
-  cardEls[front].style.zIndex = 30;
-  cardEls[right].style.zIndex = 20;
-  cardEls[left].style.zIndex = 10;
-  cardEls.forEach((c, idx) => c.setAttribute('data-front', (idx === front).toString()));
-}
-
-// apply positions + tapering
-function applyPositions(){
-  const front = index;
-  const left = (index + 1) % 3;
-  const right  = (index + 2) % 3;
-
-  setZIndices(front, right, left);
-  void document.body.offsetHeight; // force reflow
-
-  cardEls.forEach(card => {
-    card.style.transition = `transform ${params.durMs}ms cubic-bezier(.2,.9,.2,1), filter ${params.durMs}ms cubic-bezier(.2,.9,.2,1), opacity ${params.durMs}ms cubic-bezier(.2,.9,.2,1)`;
-    card.style.backfaceVisibility = 'hidden';
-  });
-
-  // FRONT - clear, slightly popped
-  cardEls[front].style.transform = `translate(-50%,-50%) translateZ(${params.depthPx}px) scale(${params.scaleFront})`;
-  cardEls[front].style.filter = `blur(${params.blurFront}px) brightness(1)`;
-  cardEls[front].style.opacity = '1';
-  const frontInner = cardEls[front].querySelector('.card-inner');
-  frontInner.classList.remove('taper');
-  frontInner.setAttribute('data-taper', 'false');
-  frontInner.style.transform = `scaleY(1) translateZ(0)`; // ensure no squeeze
-
-  // RIGHT - tapered, slightly squeezed vertically, muted
-  cardEls[right].style.transform = `translate(calc(-50% + ${params.gapPx}px),-50%) translateZ(0px) rotateY(-18deg) scale(${params.scaleSide})`;
-  cardEls[right].style.filter = `blur(${params.blurSide}px) brightness(.88)`;
-  cardEls[right].style.opacity = '0.95';
-  const rightInner = cardEls[right].querySelector('.card-inner');
-  rightInner.classList.add('taper');
-  rightInner.setAttribute('data-taper', 'true');
-  rightInner.style.transform = `scaleY(0.92) translateZ(0)`;
-
-  // LEFT - tapered, slightly squeezed vertically, more muted
-  cardEls[left].style.transform = `translate(calc(-50% - ${params.gapPx}px),-50%) translateZ(0px) rotateY(18deg) scale(${params.scaleSide})`;
-  cardEls[left].style.filter = `blur(${params.blurSide + 1}px) brightness(.82)`;
-  cardEls[left].style.opacity = '0.88';
-  const leftInner = cardEls[left].querySelector('.card-inner');
-  leftInner.classList.add('taper');
-  leftInner.setAttribute('data-taper', 'true');
-  leftInner.style.transform = `scaleY(0.92) translateZ(0)`;
-}
-
-// initial positions
-applyPositions();
-
-
-// touch interactions: long-press pause, swipe left/right, tap rotate
-let touchHoldTimer = null;
-let startX = null;
-
-root.addEventListener('touchstart', (e) => {
-  clearTimeout(touchHoldTimer);
-  touchHoldTimer = setTimeout(() => { isPaused = true; }, 140);
-  startX = e.touches ? e.touches[0].clientX : e.clientX;
-}, {passive:true});
-
-root.addEventListener('touchmove', (e) => {
-  if(startX === null) return;
-  const current = e.touches ? e.touches[0].clientX : e.clientX;
-  const diff = current - startX;
-  if(Math.abs(diff) > 28){
-    if(diff < 0){
-      index = (index - 1 + 3) % 3;
-    } else {
-      index = (index + 1) % 3;
+    // re-add dot callbacks at new times
+    for (let i = 0; i < totalSlides; i++) {
+      const atTime = i * (moveDur + pauseDur);
+      tl.add(() => setActiveDot(i), atTime);
     }
-    sizeToIndex(index);
-    startX = null;
-    clearTimeout(touchHoldTimer);
-    isPaused = true;
-    setTimeout(()=> isPaused = false, 900);
-  }
-}, {passive:true});
+    const newTotalCycle = totalSlides * (moveDur + pauseDur) + moveDur;
+    tl.add(() => setActiveDot(0), newTotalCycle);
 
-root.addEventListener('touchend', (e) => {
-  clearTimeout(touchHoldTimer);
-  if(isPaused){
-    setTimeout(()=> { isPaused = false; }, 220);
-    return;
-  }
-  index = (index - 1 + 3) % 3;
-  sizeToIndex(index);
-}, {passive:true});
-
-// mouse interactions (optional)
-root.addEventListener('mouseenter', () => isPaused = true);
-root.addEventListener('mouseleave', () => isPaused = false);
-root.addEventListener('click', () => {
-  index = (index - 1 + 3) % 3;
-  sizeToIndex(index);
-});
-
-// responsive
-window.addEventListener('resize', () => {
-  sizeToIndex(index);
-});
+    if (isPlaying) tl.play();
+  });
 </script>
 
 
 
-    <!-- FAQ Section -->
-    <section id="faq" class="relative mb-5">
+            <!-- ✅ Verified Buyers Slider -->
+            <div class="verified-wrapper overflow-hidden w-full max-w-[400px] relative my-2">
 
-      <div class="py-1">
+              <h2 class="text-lg font-semibold text-emerald-800 pl-3 mb-5">Verified Buyers</h2>
+              <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] 
+             opacity-40 -z-50 -rotate-[180deg] scale-[210%] mt-5 -ml-5">
+              <!-- Slider Track (All 3 slides inside) -->
+              <div class="slider-track flex transition-transform duration-500">
 
-        <div class="container mx-auto px-4">
-          <h2 class="text-2xl md:text-3xl font-bold mb-8 text-emerald-900">FAQ</h2>
+                <!-- 🧍 Verified Buyer #1 -->
+                <section class="min-w-full flex flex-col px-3 text-center">
+                  <div class="flex items-start gap-3">
+                    <div class="w-[60%] text-[10px] -mt-2">
+                      <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
+                      <p class="text-slate-800 font-bold leading-snug">
+                        Along with healthy habits, Amrit Mantrah kept me focused. I finally lost stubborn fat.
+                      </p>
+                    </div>
+                    <div class="w-[40%]">
+                      <img src="/5th/frame.png" alt="frame" class="w-[280px] scale-150 -mt-[24px]" />
+                    </div>
+                  </div>
+                  <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+                </section>
 
-          <div class="space-y-3 max-w-2xl">
-            <!-- Q1 -->
-            <details class="group rounded-xl border border-slate-300 bg-white px-4 py-3">
-              <summary class="flex items-center justify-between cursor-pointer font-medium text-sm text-slate-800">
-                <span>Q1: Is Amrit Mantrah safe?</span>
-                <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p class="mt-3 text-sm text-slate-600">Yes, Amrit Mantrah is 100% Ayurvedic and safe. It is FSSAI
-                approved,
-                lab-tested and GMP certified.</p>
-            </details>
+                <!-- 🧍‍♀️ Verified Buyer #2 -->
+                <section class="min-w-full flex flex-col px-3 text-center">
+                  <div class="flex items-start gap-3">
+                    <div class="w-[60%] text-[10px] -mt-2">
+                      <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
+                      <p class="text-slate-800 font-bold leading-snug">
+                        My energy improved and I noticed visible fat loss without weakness. It works!
+                      </p>
+                    </div>
+                    <div class="w-[40%]">
+                      <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150 -mt-[24px]" />
+                    </div>
+                  </div>
+                  <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+                </section>
 
-            <!-- Q2 -->
-            <details class="group rounded-xl border border-slate-300 bg-white px-4 py-3">
-              <summary class="flex items-center justify-between cursor-pointer font-medium text-sm text-slate-800">
-                <span>Q2: Are there any side effects?</span>
-                <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p class="mt-3 text-sm text-slate-600">No, there are no side effects. The formula is made from pure
-                Ayurvedic
-                herbs without chemicals.</p>
-            </details>
+                <!-- 🧔 Verified Buyer #3 -->
+                <section class="min-w-full flex flex-col px-2 text-center">
+                  <div class="flex items-start gap-3">
+                    <div class="w-[60%] text-[10px] -mt-2">
+                      <div class="text-yellow-400 text-[20px] mb-2 text-start">★★★★★</div>
+                      <p class="text-slate-800 font-bold leading-snug">
+                        I lost 7 kg in two months and felt more active again. Thank you Amrit Mantrah!
+                      </p>
+                    </div>
+                    <div class="w-[40%]">
+                      <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150  -mt-[24px]" />
+                    </div>
+                  </div>
+                  <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+                </section>
 
-            <!-- Q3 -->
-            <details class="group rounded-xl border border-slate-300 bg-white px-4 py-3">
-              <summary class="flex items-center justify-between cursor-pointer font-medium text-sm text-slate-800">
-                <span>Q3: Will I gain the weight again afterward?</span>
-                <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p class="mt-3 text-sm text-slate-600">No rebound weight gain — once fat is lost with Amrit Mantrah
-                and
-                healthy lifestyle, it stays off.</p>
-            </details>
-          </div>
-        </div>
-    </section>
+              </div>
 
 
 
-    <!-- consult contact section -->
-    <section id="consult" class="min-h-[550px] w-[380px] flex items-center justify-center">
-      <!-- Card -->
-      <div
-        class="relative w-[300px] bg-white shadow-[0_8px_25px_rgba(0,0,0,0.2)] border border-emerald-900 rounded-[10px]">
+            <!-- ✅ GSAP Animation -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+            <script>
+              const track = document.querySelector('.slider-track');
+              const slides = document.querySelectorAll('.slider-track > section');
+              const slideWidth = slides[0].offsetWidth; // Full width of one slide
+              const totalSlides = slides.length;
 
-        <!-- 🟢 Top-left custom image -->
-        <div class="absolute -top-[24px] -left-[33px] w-[100px] h-[100px]">
-          <img src="./1st/Contact Form badge image png.png" alt="Badge" class="w-full h-full object-contain" />
-        </div>
+              const tl = gsap.timeline({ repeat: -1, defaults: { ease: "power2.inOut" } });
 
-        <!-- Inner padding -->
-        <div class="px-6 pt-8 pb-6 ">
-          <!-- Heading -->
-          <h2 class="text-[20px] font-semibold text-emerald-900 text-center ">Get a Free Consultation</h2>
-          <p class="text-emerald-800 text-center mt-1">Experienced Expert Guidance</p>
+              slides.forEach((_, i) => {
+                tl.to(track, {
+                  x: -slideWidth * i,
+                  duration: 0.8
+                });
+                tl.to({}, { duration: 2 }); // Pause 2 seconds on each slide
+              });
 
-          <!-- Form -->
-          <form action="#" method="POST" class="mt-6 space-y-4">
-            <!-- Name -->
-            <div>
-              <label for="name" class="block text-sm text-emerald-900 mb-1">Name</label>
-              <input id="name" name="name" type="text" required placeholder="Full Name"
-                class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70" />
-            </div>
+              // Reset back to first slide smoothly
+              tl.to(track, { x: 0, duration: 0.8 });
+            </script>
 
-            <!-- Phone -->
-            <div>
-              <label for="phone" class="block text-sm text-emerald-900 mb-1">Phone Number</label>
-              <input id="phone" name="phone" type="tel" required placeholder="Phn. Number/ Whatsapp Number"
-                class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70" />
-            </div>
 
-            <!-- Goal -->
-            <div>
-              <label for="goal" class="block text-sm text-emerald-900 mb-1">Your Goal</label>
-              <textarea id="goal" name="goal" rows="3" required placeholder="Message"
-                class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"></textarea>
-            </div>
 
-            <!-- Submit -->
-            <button type="submit"
-              class="mt-2 w-full rounded-xl bg-emerald-700 text-white text-lg font-medium py-3 hover:opacity-95 active:opacity-90 transition">
-              Submit
-            </button>
-          </form>
+            <!-- HOW TO TAKE -->
+            <section class="mt-8 relative">
 
-          <!-- Privacy -->
-          <p class="text-center text-emerald-900 mt-3 text-sm">Your Data Stays Private</p>
-        </div>
+              <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[58%] left-[65%] -translate-x-1/2 
+      w-[950px] h-[40px] opacity-40 -z-50 -rotate-[150deg] scale-[200%] mt-5 -ml-5">
 
-        <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[85%] left-[65%] -translate-x-1/2 
+              <img src="./4th/4th Section Left Side image.png" alt="" aria-hidden="true" class="pointer-events-none select-none absolute top-[7%] -left-[20%] 
+          w-[200px] h-[200px] object-contain scale-[110%] -rotate-[5deg]" />
+
+              <h2 class="text-[15px] font-semibold text-center text-emerald-700 mb-8 leading-[18px]">
+                How to Take <br><span class="text-emerald-900">Amrit Mantrah Capsule</span>
+              </h2>
+              <div class="relative w-full max-w-lg mx-auto">
+                <!-- Capsule Center -->
+                <img src="/Image/7th Section.png" alt="Capsule" class="mx-auto w-[260px]">
+
+
+                <!-- 🔹 Top text -->
+                <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-[200px] text-center">
+                  <p class="text-[10px] text-black-800 font-medium leading-tight">
+                    Before Meal <br> with Lukewarm Water
+                  </p>
+                </div>
+
+                <!-- 🔹 Left text -->
+                <div class="absolute top-[45%] left-[5px] w-[120px] text-center">
+                  <p class="text-[10px] text-black-800 font-medium leading-tight whitespace-nowrap">
+                    Take 2 Capsules Daily <br> or as directed by <br>physician
+                  </p>
+                </div>
+
+                <!-- 🔹 Right text -->
+                <div class="absolute top-[47.5%] right-[5px] w-[120px] text-center">
+                  <p class="text-[10px] text-black-800 font-medium leading-tight">
+                    Follow Consistently <br> for 90 Days
+                  </p>
+                </div>
+
+                <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
+                  class="pointer-events-none select-none absolute bottom-[30%] left-[35%] w-28 h-20 object-contain scale-[100%] -rotate-[115deg]" />
+              </div>
+            </section>
+
+
+
+            <!-- Pricing -->
+
+            <h2 class="text-[15px] font-semibold text-center text-emerald-700 leading-[19px] mt-2">
+              Choose your Plan <br><span class="text-emerald-900 text-[20px]">for a Healthier You</span>
+            </h2>
+
+            <section class="min-h-[300px] flex items-center justify-center p-4 m-10 scale-[125%] relative">
+
+
+              <div id="carousel" class="relative w-[86vw] max-w-xs h-auto touch-none">
+                <!-- Card 0 -->
+                <div class="card card-smooth relative" data-i="0" data-front="false" style="width:100px;height:100px;">
+                  <div class="card-inner">
+                    <img src="/Image/1st pricing.png" alt="Card 1" class="card-img" />
+
+                  </div>
+                </div>
+
+                <!-- Card 1 -->
+                <div class="card card-smooth" data-i="1" data-front="false" style="width:100px;height:100px;">
+                  <div class="card-inner">
+                    <img src="/Image/2nd pricing.png" alt="Card 2" class="card-img" />
+
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card card-smooth" data-i="2" data-front="false" style="width:100px;height:100px;">
+                  <div class="card-inner">
+                    <img src="/Image/3rd pricing.png" alt="Card 3" class="card-img" />
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dots Indicators -->
+              <!-- Replace existing dots container with this -->
+              <div id="carousel-dots"
+                class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 flex items-center gap-3 z-50 pointer-events-auto">
+              </div>
+
+
+            </section>
+
+            <!-- ===== Tailwind Dots System =====  -->
+            <script>
+              // ===== Tailwind Dots System =====
+              function initDots() {
+                const dotsRoot = document.getElementById('carousel-dots');
+                if (!dotsRoot) return;
+
+                const total = cardEls.length || 3;
+                dotsRoot.innerHTML = '';
+                const dots = [];
+
+                for (let i = 0; i < total; i++) {
+                  const dot = document.createElement('button');
+                  dot.dataset.i = i;
+                  // Tailwind classes for default & transition
+                  dot.className = `
+  w-2 h-2 rounded-full bg-black/80
+  transition-all duration-300 ease-[cubic-bezier(.4,.9,.2,1)]
+  hover:bg-black/60
+    `;
+                  dot.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    index = i;
+                    sizeToIndex(index);
+                    isPaused = true;
+                    setTimeout(() => (isPaused = false), 900);
+                    updateDots();
+                  });
+                  dotsRoot.appendChild(dot);
+                  dots.push(dot);
+                }
+
+                function updateDots() {
+                  dots.forEach((dot, idx) => {
+                    if (idx === index) {
+                      dot.classList.add('bg-black', 'scale-105', 'opacity-100', 'ring-1', 'ring-black/80');
+                      dot.classList.remove('bg-white/30', 'opacity-70');
+                    } else {
+                      dot.classList.remove('bg-black', 'scale-125', 'opacity-100');
+                      dot.classList.add('bg-white/30', 'opacity-70');
+                    }
+                  });
+                }
+
+                // Hook dots to auto-update with slide changes
+                const originalApply = window.applyPositions;
+                window.applyPositions = function (...args) {
+                  originalApply(...args);
+                  updateDots();
+                };
+
+                updateDots();
+              }
+
+              // Run after everything
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initDots);
+              } else {
+                initDots();
+              }
+            </script>
+
+
+            <script>
+              /*
+                Mobile-first carousel + taper effect
+                - no image crop (object-fit: contain)
+                - container sizes to current front image natural dims (scaled down if needed)
+                - side cards receive taper class -> vertical mask + scaleY squeeze + muted brightness
+                - interactions: auto-rotate, tap, swipe, long-press pause
+              */
+
+              const root = document.getElementById('carousel');
+              const cardEls = Array.from(root.querySelectorAll('.card'));
+              const imgs = cardEls.map(c => c.querySelector('.card-img'));
+              let index = 0; // front card index
+              const INTERVAL = 2200;
+              let timer = null;
+              let isPaused = false;
+
+              // params (tuned for mobile)
+              let params = {
+                gapPx: Math.round(Math.min(window.innerWidth * 0.25, 110)),
+                depthPx: Math.round(Math.min(window.innerWidth * 0.38, 200)),
+                durMs: 700,
+                blurFront: 0,
+                blurSide: 3,
+                scaleFront: 1.03,
+                scaleSide: 0.92
+              };
+
+              // store natural sizes of images when loaded
+              const naturalSizes = new Array(imgs.length).fill(null);
+              let loadedCount = 0;
+
+              function onImageLoaded(i) {
+                const img = imgs[i];
+                naturalSizes[i] = { w: img.naturalWidth || img.width, h: img.naturalHeight || img.height };
+                loadedCount++;
+                if (loadedCount >= 1) {
+                  sizeToIndex(index);
+                }
+                if (loadedCount === imgs.length) {
+                  applyPositions();
+                }
+              }
+
+              imgs.forEach((img, i) => {
+                if (img.complete && img.naturalWidth) {
+                  onImageLoaded(i);
+                } else {
+                  img.addEventListener('load', () => onImageLoaded(i));
+                  img.addEventListener('error', () => {
+                    naturalSizes[i] = { w: img.width || 300, h: img.height || 200 };
+                    loadedCount++;
+                    if (loadedCount >= 1) sizeToIndex(index);
+                  });
+                }
+              });
+
+              function getMaxConstraints() {
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                const breathingRoom = 56; // px to avoid touching bottom
+                const maxW = Math.min(Math.round(vw * 0.86), 420);
+                const maxH = Math.min(Math.round(vw * 0.62), Math.round(vh - breathingRoom));
+                return { maxW, maxH };
+              }
+
+              function sizeToIndex(i) {
+                const sz = naturalSizes[i];
+                if (!sz) return;
+                const { maxW, maxH } = getMaxConstraints();
+                const scale = Math.min(maxW / sz.w, maxH / sz.h, 1); // never upscale beyond natural
+                const finalW = Math.round(sz.w * scale);
+                const finalH = Math.round(sz.h * scale);
+
+                // ensure finalH respects root max-height
+                const computedMax = parseInt(getComputedStyle(root).maxHeight, 10) || (window.innerHeight - 56);
+                const safeFinalH = Math.min(finalH, computedMax);
+
+                root.style.width = finalW + 'px';
+                root.style.height = safeFinalH + 'px';
+
+                cardEls.forEach(c => {
+                  c.style.width = finalW + 'px';
+                  c.style.height = safeFinalH + 'px';
+                });
+
+                params.gapPx = Math.round(Math.min(finalW * 0.28, 110));
+                params.depthPx = Math.round(Math.min(finalW * 0.42, 200));
+
+                applyPositions();
+              }
+
+              // set z-index and data-front attribute
+              function setZIndices(front, right, left) {
+                cardEls.forEach(c => c.style.zIndex = 0);
+                cardEls[front].style.zIndex = 30;
+                cardEls[right].style.zIndex = 20;
+                cardEls[left].style.zIndex = 10;
+                cardEls.forEach((c, idx) => c.setAttribute('data-front', (idx === front).toString()));
+              }
+
+              // apply positions + tapering
+              function applyPositions() {
+                const front = index;
+                const left = (index + 1) % 3;
+                const right = (index + 2) % 3;
+
+                setZIndices(front, right, left);
+                void document.body.offsetHeight; // force reflow
+
+                cardEls.forEach(card => {
+                  card.style.transition = `transform ${params.durMs}ms cubic-bezier(.2,.9,.2,1), filter ${params.durMs}ms cubic-bezier(.2,.9,.2,1), opacity ${params.durMs}ms cubic-bezier(.2,.9,.2,1)`;
+                  card.style.backfaceVisibility = 'hidden';
+                });
+
+                // FRONT - clear, slightly popped
+                cardEls[front].style.transform = `translate(-50%,-50%) translateZ(${params.depthPx}px) scale(${params.scaleFront})`;
+                cardEls[front].style.filter = `blur(${params.blurFront}px) brightness(1)`;
+                cardEls[front].style.opacity = '1';
+                const frontInner = cardEls[front].querySelector('.card-inner');
+                frontInner.classList.remove('taper');
+                frontInner.setAttribute('data-taper', 'false');
+                frontInner.style.transform = `scaleY(1) translateZ(0)`; // ensure no squeeze
+
+                // RIGHT - tapered, slightly squeezed vertically, muted
+                cardEls[right].style.transform = `translate(calc(-50% + ${params.gapPx}px),-50%) translateZ(0px) rotateY(-18deg) scale(${params.scaleSide})`;
+                cardEls[right].style.filter = `blur(${params.blurSide}px) brightness(.88)`;
+                cardEls[right].style.opacity = '0.95';
+                const rightInner = cardEls[right].querySelector('.card-inner');
+                rightInner.classList.add('taper');
+                rightInner.setAttribute('data-taper', 'true');
+                rightInner.style.transform = `scaleY(0.92) translateZ(0)`;
+
+                // LEFT - tapered, slightly squeezed vertically, more muted
+                cardEls[left].style.transform = `translate(calc(-50% - ${params.gapPx}px),-50%) translateZ(0px) rotateY(18deg) scale(${params.scaleSide})`;
+                cardEls[left].style.filter = `blur(${params.blurSide + 1}px) brightness(.82)`;
+                cardEls[left].style.opacity = '0.88';
+                const leftInner = cardEls[left].querySelector('.card-inner');
+                leftInner.classList.add('taper');
+                leftInner.setAttribute('data-taper', 'true');
+                leftInner.style.transform = `scaleY(0.92) translateZ(0)`;
+              }
+
+              // initial positions
+              applyPositions();
+
+
+              // touch interactions: long-press pause, swipe left/right, tap rotate
+              let touchHoldTimer = null;
+              let startX = null;
+
+              root.addEventListener('touchstart', (e) => {
+                clearTimeout(touchHoldTimer);
+                touchHoldTimer = setTimeout(() => { isPaused = true; }, 140);
+                startX = e.touches ? e.touches[0].clientX : e.clientX;
+              }, { passive: true });
+
+              root.addEventListener('touchmove', (e) => {
+                if (startX === null) return;
+                const current = e.touches ? e.touches[0].clientX : e.clientX;
+                const diff = current - startX;
+                if (Math.abs(diff) > 28) {
+                  if (diff < 0) {
+                    index = (index - 1 + 3) % 3;
+                  } else {
+                    index = (index + 1) % 3;
+                  }
+                  sizeToIndex(index);
+                  startX = null;
+                  clearTimeout(touchHoldTimer);
+                  isPaused = true;
+                  setTimeout(() => isPaused = false, 900);
+                }
+              }, { passive: true });
+
+              root.addEventListener('touchend', (e) => {
+                clearTimeout(touchHoldTimer);
+                if (isPaused) {
+                  setTimeout(() => { isPaused = false; }, 220);
+                  return;
+                }
+                index = (index - 1 + 3) % 3;
+                sizeToIndex(index);
+              }, { passive: true });
+
+              // mouse interactions (optional)
+              root.addEventListener('mouseenter', () => isPaused = true);
+              root.addEventListener('mouseleave', () => isPaused = false);
+              root.addEventListener('click', () => {
+                index = (index - 1 + 3) % 3;
+                sizeToIndex(index);
+              });
+
+              // responsive
+              window.addEventListener('resize', () => {
+                sizeToIndex(index);
+              });
+            </script>
+
+
+
+            <!-- FAQ Section -->
+            <section id="faq" class="relative mb-5">
+
+              <div class="py-1">
+
+                <div class="container mx-auto px-4">
+                  <h2 class="text-2xl md:text-3xl font-bold mb-8 text-emerald-900">FAQ</h2>
+
+                  <div class="space-y-3 max-w-2xl">
+                    <!-- Q1 -->
+                    <details class="group rounded-xl border border-slate-300 bg-white px-4 py-3">
+                      <summary
+                        class="flex items-center justify-between cursor-pointer font-medium text-sm text-slate-800">
+                        <span>Q1: Is Amrit Mantrah safe?</span>
+                        <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
+                      </summary>
+                      <p class="mt-3 text-sm text-slate-600">Yes, Amrit Mantrah is 100% Ayurvedic and safe. It is FSSAI
+                        approved,
+                        lab-tested and GMP certified.</p>
+                    </details>
+
+                    <!-- Q2 -->
+                    <details class="group rounded-xl border border-slate-300 bg-white px-4 py-3">
+                      <summary
+                        class="flex items-center justify-between cursor-pointer font-medium text-sm text-slate-800">
+                        <span>Q2: Are there any side effects?</span>
+                        <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
+                      </summary>
+                      <p class="mt-3 text-sm text-slate-600">No, there are no side effects. The formula is made from
+                        pure
+                        Ayurvedic
+                        herbs without chemicals.</p>
+                    </details>
+
+                    <!-- Q3 -->
+                    <details class="group rounded-xl border border-slate-300 bg-white px-4 py-3">
+                      <summary
+                        class="flex items-center justify-between cursor-pointer font-medium text-sm text-slate-800">
+                        <span>Q3: Will I gain the weight again afterward?</span>
+                        <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
+                      </summary>
+                      <p class="mt-3 text-sm text-slate-600">No rebound weight gain — once fat is lost with Amrit
+                        Mantrah
+                        and
+                        healthy lifestyle, it stays off.</p>
+                    </details>
+                  </div>
+                </div>
+            </section>
+
+
+
+            <!-- consult contact section -->
+            <section id="consult" class="min-h-[550px] w-[380px] flex items-center justify-center">
+              <!-- Card -->
+              <div
+                class="relative w-[300px] bg-white shadow-[0_8px_25px_rgba(0,0,0,0.2)] border border-emerald-900 rounded-[10px]">
+
+                <!-- 🟢 Top-left custom image -->
+                <div class="absolute -top-[24px] -left-[33px] w-[100px] h-[100px]">
+                  <img src="./1st/Contact Form badge image png.png" alt="Badge" class="w-full h-full object-contain" />
+                </div>
+
+                <!-- Inner padding -->
+                <div class="px-6 pt-8 pb-6 ">
+                  <!-- Heading -->
+                  <h2 class="text-[20px] font-semibold text-emerald-900 text-center ">Get a Free Consultation</h2>
+                  <p class="text-emerald-800 text-center mt-1">Experienced Expert Guidance</p>
+
+                  <!-- Form -->
+                  <form action="#" method="POST" class="mt-6 space-y-4">
+                    <!-- Name -->
+                    <div>
+                      <label for="name" class="block text-sm text-emerald-900 mb-1">Name</label>
+                      <input id="name" name="name" type="text" required placeholder="Full Name"
+                        class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70" />
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                      <label for="phone" class="block text-sm text-emerald-900 mb-1">Phone Number</label>
+                      <input id="phone" name="phone" type="tel" required placeholder="Phn. Number/ Whatsapp Number"
+                        class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70" />
+                    </div>
+
+                    <!-- Goal -->
+                    <div>
+                      <label for="goal" class="block text-sm text-emerald-900 mb-1">Your Goal</label>
+                      <textarea id="goal" name="goal" rows="3" required placeholder="Message"
+                        class="w-full rounded-md border border-emerald-700/30 focus:border-emerald-700 focus:ring-2 focus:ring-emerald-600/30 px-3 py-2 outline-none placeholder:opacity-70"></textarea>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit"
+                      class="mt-2 w-full rounded-xl bg-emerald-700 text-white text-lg font-medium py-3 hover:opacity-95 active:opacity-90 transition">
+                      Submit
+                    </button>
+                  </form>
+
+                  <!-- Privacy -->
+                  <p class="text-center text-emerald-900 mt-3 text-sm">Your Data Stays Private</p>
+                </div>
+
+                <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[85%] left-[65%] -translate-x-1/2 
       w-[950px] h-[60px] opacity-40 -z-50 -rotate-[180deg] scale-[200%] mt-5 -ml-5">
 
-        <!-- Bottom-right decorative image slot (replace src with your image) -->
-        <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
-          class="pointer-events-none select-none absolute -bottom-6 -right-6 w-28 h-20 object-contain scale-[200%]" />
-      </div>
-    </section>
+                <!-- Bottom-right decorative image slot (replace src with your image) -->
+                <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
+                  class="pointer-events-none select-none absolute -bottom-6 -right-6 w-28 h-20 object-contain scale-[200%]" />
+              </div>
+            </section>
 
 
 
-    <!-- FOOTER -->
-    <footer class="py-10">
-      <div class="container mx-auto px-4 text-sm grid md:grid-cols-4 gap-3">
-        <div>
-          <p class="font-bold text-green-800">Amrit Mantrah</p>
-          <p class="mt-1">Your Health Partner</p>
-          <ul>
-            <li><a href="/rechecck.html" class="hover:text-slate-900">recheck Us</a></li>
-            <li><a href="/check.html" class="hover:text-slate-900">check Us</a></li>
-            <li><a href="/about.html" class="hover:text-slate-900">About Us</a></li>
-            <li><a href="/contact.html" class="hover:text-slate-900">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-green-800">Quick Links</p>
-          <ul class="mt-1 space-y-0">
-            <li><a class="hover:text-slate-700" href="#why">Why Us</a></li>
-            <li><a class="hover:text-slate-700" href="#pricing">Pricing</a></li>
-            <li><a class="hover:text-slate-700" href="#consult">Consult Now</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="font-semibold text-green-800">Policies</p>
-          <ul class="mt-1">
-            <li><a class="hover:text-slate-700" href="privacypolicy.html">Privacy Policy</a></li>
-            <li><a class="hover:text-slate-700" href="refund&returnpolicy.html">Refund & Return Policy</a></li>
-            <li><a class="hover:text-slate-700" href="terms&conditions.html">Terms & Conditions</a></li>
+            <!-- FOOTER -->
+            <footer class="py-10">
+              <div class="container mx-auto px-4 text-sm grid md:grid-cols-4 gap-3">
+                <div>
+                  <p class="font-bold text-green-800">Amrit Mantrah</p>
+                  <p class="mt-1">Your Health Partner</p>
+                  <ul>
+                    <li><a href="/rechecck.html" class="hover:text-slate-900">recheck Us</a></li>
+                    <li><a href="/check.html" class="hover:text-slate-900">check Us</a></li>
+                    <li><a href="/about.html" class="hover:text-slate-900">About Us</a></li>
+                    <li><a href="/contact.html" class="hover:text-slate-900">Contact Us</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-green-800">Quick Links</p>
+                  <ul class="mt-1 space-y-0">
+                    <li><a class="hover:text-slate-700" href="#why">Why Us</a></li>
+                    <li><a class="hover:text-slate-700" href="#pricing">Pricing</a></li>
+                    <li><a class="hover:text-slate-700" href="#consult">Consult Now</a></li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-semibold text-green-800">Policies</p>
+                  <ul class="mt-1">
+                    <li><a class="hover:text-slate-700" href="privacypolicy.html">Privacy Policy</a></li>
+                    <li><a class="hover:text-slate-700" href="refund&returnpolicy.html">Refund & Return Policy</a></li>
+                    <li><a class="hover:text-slate-700" href="terms&conditions.html">Terms & Conditions</a></li>
 
-          </ul>
-
-
-
-        </div>
-        <div>
-          <p class="font-semibold text-green-800">Contact</p>
-          <ul class="mt-1 space-y-0">
-            <li>Phone: 9319045476</li>
-            <li>Dwarka Mor, Delhi 110059</li>
-            <li>Email: amritmantrah@gmail.com</li>
-          </ul>
-        </div>
-      </div>
-      <div class="container mx-auto px-4 mt-6 text-xs text-slate-400">© <span id="year"></span> Amrit Mantrah.
-        All
-        rights
-        reserved.</div>
-    </footer>
-
-    <!-- JS (WhatsApp link + GSAP) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script> -->
-
-
- <!-- Capsule Overlay Animation -->
-  <div class="capsule-overlay">
-    <svg viewBox="0 0 450 675" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-      <!-- Combined smooth path (based on your SVG curves) -->
-      <path id="capsulePath"
-            d="M 206 40 
-               C 320 90, 60 180, 240 250 
-               S 320 290, 72 344 
-               S 380 160, 380 160"
-            stroke="transparent"
-            stroke-width="3"
-            fill="none"/>
-
-      <!-- Capsule image (replace with your file path) -->
-      <image id="capsule" href="capsule.png" width="48" height="24" transform="translate(-24,-12)" />
-    </svg>
-  </div>
-
-
-    <!-- Add MotionPathPlugin -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
-
-<script>
-  gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
-
-  gsap.to(".anim-hero-pill", {
-    scrollTrigger: {
-      trigger: "#hero",
-      start: "-=250",
-      end: "+=1000",
-      scrub: 1.5,
-      markers: true // uncomment for debugging
-    },
-    duration: 10,
-    ease: "power1.inOut",
-    motionPath: {
-       path: [
-  { x: 0,   y: 0 },    // start
-  { x: 80,  y: 80 },   // mid of first (right bulge)
-  { x: 0,   y: 120 },  // end 1
-  { x: -80, y: 180 },  // mid of 2nd (left bulge)
-  { x: 0,   y: 240 },  // end 2
-  { x: 80,  y: 300 },  // mid of 3rd (right)
-  { x: 0,   y: 360 },  // end 3
-  { x: -80, y: 420 },  // mid of 4th (left)
-  { x: 0,   y: 480 }   // final end
-     
-      ],
-      curviness: 1, // controls how smooth the curve is
-      autoRotate: true // makes the pill rotate along path
-    },
-    scale:2,
-    rotation: 0,
-  });
-</script>
+                  </ul>
 
 
 
-    <script>
+                </div>
+                <div>
+                  <p class="font-semibold text-green-800">Contact</p>
+                  <ul class="mt-1 space-y-0">
+                    <li>Phone: 9319045476</li>
+                    <li>Dwarka Mor, Delhi 110059</li>
+                    <li>Email: amritmantrah@gmail.com</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="container mx-auto px-4 mt-6 text-xs text-slate-400">© <span id="year"></span> Amrit Mantrah.
+                All
+                rights
+                reserved.</div>
+            </footer>
 
+            <!-- JS (WhatsApp link + GSAP) -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 
-      // Register GSAP plugin
-      gsap.registerPlugin(ScrollTrigger);
+            <!-- Add MotionPathPlugin -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
 
+            <script>
+              gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-
-      // Animate hero pill on scroll
-      gsap.to(".aim-hero-pill", {
-        scrollTrigger: {
-          trigger: "#main",       // starts anim when hero section in view
-          start: "top top",       // when hero top hits top of viewport
-          end: "bottom top",           // animation distance
-          scrub: 1,               // smooth scroll-based motion
-          // markers: true,        // (uncomment for debug)
-        },
-        y: 2000,                   // pill moves down 1000px
-        x: 104,                  // slight right zigzag
-        rotation: 90,             // rotate while moving
-        ease: "power2.out",
-      });
-
-      // Optional: Animate hero text block too (left-side text)
-      gsap.from("#hero h1, #hero p", {
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top center",
-          end: "+=300",
-          scrub: 1,
-        },
-        x: -50,
-        opacity: 0,
-        ease: "power2.out",
-        stagger: 0.1
-      });
-
-
-
-      // register plugin
-      gsap.registerPlugin(ScrollTrigger);
-
-      // GENERAL SETTINGS
-      const commonOpts = {
-        duration: 2,
-        ease: "power2.inOut",
-        opacity: 0,
-        left: 30,
-        stagger: 0.2,
-        overwrite: true
-      };
-
-      // TEXT: fade-up (use class .animate-text on headings / paragraphs you want animated)
-      gsap.utils.toArray(".animt-text").forEach(el => {
-        gsap.from(el, {
-          ...commonOpts,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 55%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-      // IMAGES: subtle scale+fade (use class .animate-image on images you want animated)
-      gsap.utils.toArray(".animate-image").forEach(el => {
-        gsap.from(el, {
-          duration: 0.9,
-          ease: "power3.out",
-          opacity: 0,
-          y: 20,
-          scale: 0.98,
-          stagger: 0.08,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 70%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-      //Right → Left (right se slide-in)
-      gsap.utils.toArray(".animate-rightt").forEach(el => {
-        gsap.from(el, {
-          x: 50,        // right se aayega
-          opacity: 0,
-          duration: 1.2,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          }
-        });
-      });
-
-      //Left → Right (left se slide-in)
-      gsap.utils.toArray(".animate-leftt").forEach(el => {
-        gsap.from(el, {
-          x: -50,       // left se aayega
-          opacity: 0,
-          duration: 1.2,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-      // OPTIONAL: reveal groups (if you wrap a heading+para together with .animate-group)
-      gsap.utils.toArray(".animate-group").forEach(group => {
-        gsap.from(group.querySelectorAll(".animate-text, .animate-image"), {
-          ...commonOpts,
-          scrollTrigger: {
-            trigger: group,
-            start: "top 90%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
+              gsap.to(".aim-hero-pill", {
+                scrollTrigger: {
+                  trigger: "#hero",
+                  start: "-50",
+                  end: "+=600",
+                  scrub: 1.5,
+                  // markers: true // uncomment for debugging
+                },
+                duration: 1,
+                ease: "power1.inOut",
+                motionPath: {
+                  path: [
+                    { x: 0, y: 0.00 },  // start (big capsule)
+                    { x: -130, y: 86.67 },  // left bulge
+                    { x: 0, y: 130.00 },  // end 1
+                    { x: 100, y: 195.00 },  // right bulge
+                    { x: 0, y: 260.00 },  // end 2
+                    { x: -100, y: 325.00 },  // left bulge
+                    { x: 0, y: 390.00 },  // end 3
+                    { x: 100, y: 455.00 },  // right bulge
+                    { x: 0, y: 520.00 },   // final end
+                    { x: -120, y: 520.00 }   // final end
+                  ],
+                  curviness: 1.5, // controls how smooth the curve is
+                  autoRotate: true // makes the pill rotate along path
+                },
+                scale: 2,
+                rotation: 0,
+              });
+            </script>
 
 
 
+            <script>
+              // Register GSAP plugin
+              gsap.registerPlugin(ScrollTrigger);
+
+              // Animate hero pill on scroll
+              gsap.to(".aim-hero-pill", {
+                scrollTrigger: {
+                  trigger: "#main",       // starts anim when hero section in view
+                  start: "top top",       // when hero top hits top of viewport
+                  end: "bottom top",           // animation distance
+                  scrub: 1,               // smooth scroll-based motion
+                  // markers: true,        // (uncomment for debug)
+                },
+                y: 2000,                   // pill moves down 1000px
+                x: 104,                  // slight right zigzag
+                rotation: 90,             // rotate while moving
+                ease: "power2.out",
+              });
+
+              // Optional: Animate hero text block too (left-side text)
+              gsap.from("#hero h1, #hero p", {
+                scrollTrigger: {
+                  trigger: "#hero",
+                  start: "top center",
+                  end: "+=300",
+                  scrub: 1,
+                },
+                x: -50,
+                opacity: 0,
+                ease: "power2.out",
+                stagger: 0.1
+              });
+
+              // register plugin
+              gsap.registerPlugin(ScrollTrigger);
+
+              // GENERAL SETTINGS
+              const commonOpts = {
+                duration: 2,
+                ease: "power2.inOut",
+                opacity: 0,
+                left: 30,
+                stagger: 0.2,
+                overwrite: true
+              };
+
+              // TEXT: fade-up (use class .animate-text on headings / paragraphs you want animated)
+              gsap.utils.toArray(".animt-text").forEach(el => {
+                gsap.from(el, {
+                  ...commonOpts,
+                  scrollTrigger: {
+                    trigger: el,
+                    start: "top 55%",
+                    toggleActions: "play none none none"
+                  }
+                });
+              });
+
+              // IMAGES: subtle scale+fade (use class .animate-image on images you want animated)
+              gsap.utils.toArray(".animate-image").forEach(el => {
+                gsap.from(el, {
+                  duration: 0.9,
+                  ease: "power3.out",
+                  opacity: 0,
+                  y: 20,
+                  scale: 0.98,
+                  stagger: 0.08,
+                  scrollTrigger: {
+                    trigger: el,
+                    start: "top 70%",
+                    toggleActions: "play none none none"
+                  }
+                });
+              });
+
+              //Right → Left (right se slide-in)
+              gsap.utils.toArray(".animate-rightt").forEach(el => {
+                gsap.from(el, {
+                  x: 50,        // right se aayega
+                  opacity: 0,
+                  duration: 2.2,
+                  ease: "power2.inOut",
+                  scrollTrigger: {
+                    trigger: el,
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                  }
+                });
+              });
+
+              //Left → Right (left se slide-in)
+              gsap.utils.toArray(".animate-leftt").forEach(el => {
+                gsap.from(el, {
+                  x: -50,       // left se aayega
+                  opacity: 0,
+                  duration: 2.2,
+                  ease: "power2.inOut",
+                  scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%",
+                    toggleActions: "play none none none"
+                  }
+                });
+              });
+
+              // OPTIONAL: reveal groups (if you wrap a heading+para together with .animate-group)
+              gsap.utils.toArray(".animate-group").forEach(group => {
+                gsap.from(group.querySelectorAll(".animate-text, .animate-image"), {
+                  ...commonOpts,
+                  scrollTrigger: {
+                    trigger: group,
+                    start: "top 90%",
+                    toggleActions: "play none none none"
+                  }
+                });
+              });
+
+            </script>
+
+            <script>
+              gsap.registerPlugin(ScrollTrigger);
+
+              const howTl = gsap.timeline({
+                scrollTrigger: {
+                  trigger: "#how",
+                  start: "top 65%",
+                  toggleActions: "play none none none",
+                  once: true
+                }
+              });
+
+              // 1) Pill pop-in
+              howTl.fromTo(".how-pill",
+                { scale: 0, opacity: 0, rotation: -45, y: -10 },
+                { scale: 4, opacity: 1, rotation: -35, y: 0, duration: 0.5, ease: "back.out(1.6)" }
+              );
+
+              // 2) Arrows pop-in (stagger)
+              howTl.fromTo(".how-arrow",
+                { scale: 0.6, opacity: 0, y: 8 },
+                {
+                  scale: 3,
+                  opacity: 1,
+                  rotation: "+=10",
+                  y: 0,
+                  duration: 0.5,
+                  ease: "power2.out",
+                  stagger: { each: 0.12, from: "center" },
+                  scrub: 1
+                },
+                "+=0.08"
+              );
+
+              // 3) Texts appear (h3 then p)
+              howTl.to(".how-img", { opacity: 1, y: 0, duration: 0.15, ease: "power2.out", stagger: 0.12 }, "+=0.06");
+              howTl.to("#how h3", { opacity: 1, y: 0, duration: 0.15, ease: "power2.out", stagger: 0.12 }, "+=0.06");
+              howTl.to("#how p", { opacity: 1, y: 0, duration: 0.15, ease: "power2.out", stagger: 0.12 }, "-=0.28");
+
+              // optional micro-bounce
+              howTl.to("#how", { y: 0.5, duration: 0.12, yoyo: true, repeat: 1, ease: "sine.inOut" }, "+=0.05");
+            </script>
 
 
-    </script>
+            <!-- GSAP + ScrollTrigger -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+            <style>
+              .icon-circle {
+                transform-style: preserve-3d;
+                backface-visibility: hidden;
+                will-change: transform, opacity;
+              }
+            </style>
 
 
 
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Bigshot+One&family=Gravitas+One&family=Playwrite+US+Modern:wght@100..400&display=swap');
-    </style>
+            <script>
+              gsap.registerPlugin(ScrollTrigger);
+
+              // Loop through all sections that have data-side
+              document.querySelectorAll('section[data-side]').forEach((section) => {
+                const icon = section.querySelector('.icon-circle');
+                const righticon = section.querySelector('.r-icon-circle');
+
+                // Left-side icons (normal)
+                if (icon) {
+                  gsap.from(icon, {
+                    scrollTrigger: {
+                      trigger: section,
+                      start: 'top 60%', // adjust if you want earlier/later trigger
+                      toggleActions: 'play none none none',
+                      // markers: true,
+                    },
+                    x: 150,         // slide in from right
+                    rotation: 720,  // full spin (360° x 2)
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                  });
+                }
+
+                // Right-side icons (reverse direction)
+                if (righticon) {
+                  gsap.from(righticon, {
+                    scrollTrigger: {
+                      trigger: section,
+                      start: 'top 70%',
+                      toggleActions: 'play none none none',
+                      // markers: true,
+                    },
+                    x: -150,        // slide in from left
+                    rotation: -720, // reverse spin for symmetry
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: 'power3.out',
+                  });
+                }
+              });
+            </script>
 
 
-    <script src="script.js"></script>
+
+
+
+            <style>
+              @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Bigshot+One&family=Gravitas+One&family=Playwrite+US+Modern:wght@100..400&display=swap');
+            </style>
+
+            <script src="script.js"></script>
   </main>
 </body>
 

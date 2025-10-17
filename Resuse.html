@@ -92,3 +92,61 @@
               Download Report (PDF)
             </a>
           </div>
+
+
+
+
+              { x: 0, y: 0 },
+            { x: 110, y: 20 },
+            { x: 110, y: 50 },
+            { x: 90, y: 100 },
+            { x: 60, y: 150 },
+            { x: 10, y: 200 },
+            { x: -50, y: 250 },
+            { x: -80, y: 280 },
+            { x: -100, y: 310 },
+
+
+            { x: -50, y: 360 },
+            { x: -10, y: 360 },
+            { x: -10, y: 360 },
+            { x: 10, y: 450 },
+            { x: 60, y: 500 },
+            { x: -50, y: 500 },
+            { x: -120, y: 520 },
+
+
+
+              <script>
+      gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+      gsap.to(".anim-hero-pill", {
+        scrollTrigger: {
+          trigger: "#hero",
+          start: "-=50",
+          end: "+=800",
+          scrub:5,
+          markers: true // uncomment for debugging
+        },
+        duration: 5,
+        ease: "power1.inOut",
+        motionPath: {
+          path: [
+            { x: 0, y: 0.00 },  // start (big capsule)
+            { x: -130, y: 86.67 },  // left bulge
+            { x: 0, y: 130.00 },  // end 1
+            { x: 100, y: 195.00 },  // right bulge
+            { x: 0, y: 260.00 },  // end 2
+            { x: -100, y: 325.00 },  // left bulge
+            { x: 0, y: 390.00 },  // end 3
+            { x: 100, y: 455.00 },  // right bulge
+            { x: 0, y: 520.00 },   // final end
+            { x: -120, y: 520.00 }   // final end
+          ],
+          curviness: 1.5, // controls how smooth the curve is
+          autoRotate: true // makes the pill rotate along path
+        },
+        scale: 2,
+        rotation: 0,
+      });
+    </script>

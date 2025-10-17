@@ -86,3 +86,16 @@
   @media (max-height:420px){
     #carousel { max-height: calc(100vh - 32px); }
   }
+
+
+ /* How to Style  */
+
+  .how-pill, .how-arrow {
+    will-change: transform, opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Optional: ensure texts start invisible for clean animation */
+  #how h3, #how p, .how-img { opacity: 0; transform: translateY(10px); }
+
