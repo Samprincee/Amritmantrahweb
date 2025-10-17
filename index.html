@@ -32,40 +32,62 @@
       max-width: 1200px
     }
 
-     /* extra small helper to ensure smooth pixel rendering on mobile */
-  .card-smooth {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-  }
+    /* extra small helper to ensure smooth pixel rendering on mobile */
+    .card-smooth {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white min-h-screen">
+<body class="min-h-screen">
   <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100 scale-[102%]">
 
+<nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+  <!-- Logo -->
+  <a href="./index.html" class="font-extrabold tracking-tight text-lg">
+    Amrit <span class="text-emerald-600">Mantrah</span>
+  </a>
 
+  <!-- Desktop links -->
+  <div class="hidden md:flex items-center gap-6">
+    <a href="#why" class="nav-link text-sm font-medium text-slate-700 hover:text-emerald-700">Why us</a>
+    <a href="#how" class="nav-link text-sm font-medium text-slate-700 hover:text-emerald-700">How it works</a>
+    <a href="./about.html" class="nav-link text-sm font-medium text-slate-700 hover:text-emerald-700">About us</a>
+    <a href="./privacypolicy.html" class="nav-link text-sm font-medium text-slate-700 hover:text-emerald-700">Privacy</a>
+    <a href="#consult" class="ml-2 inline-flex items-center rounded-2xl px-3 py-1.5 text-sm font-medium bg-emerald-600 text-white shadow hover:opacity-95">Consult</a>
+  </div>
 
-    <!-- Simple Mobile Header -->
-    <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+  <!-- Mobile Hamburger -->
+  <div class="md:hidden flex items-center">
+    <button id="nav-toggle" aria-label="Open menu" class="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-600">
+      <svg id="icon-open" class="w-6 h-6 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" class="w-6 h-6 text-emerald-700 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
 
-      <!-- Logo -->
-      <a href="./index.html" class="font-extrabold tracking-tight text-lg">
-        Amrit <span class="text-emerald-600">Mantrah</span>
-      </a>
+  <!-- Mobile drawer (hidden on desktop) -->
+  <div id="mobile-drawer" class="fixed inset-x-4 top-[64px] bg-white/95 backdrop-blur border border-slate-100 rounded-lg shadow-xl p-4 hidden md:hidden z-50">
+    <div class="flex flex-col gap-3">
+      <a href="#why" class="mobile-link text-base font-medium text-slate-800">Why us</a>
+      <a href="#how" class="mobile-link text-base font-medium text-slate-800">How it works</a>
+      <a href="./about.html" class="mobile-link text-base font-medium text-slate-800">About us</a>
+      <a href="./privacypolicy.html" class="mobile-link text-base font-medium text-slate-800">Privacy</a>
+      <a href="#consult" class="mt-2 inline-block rounded-2xl px-4 py-2 text-sm font-medium bg-emerald-600 text-white text-center">Consult</a>
+    </div>
+  </div>
+</nav>
 
-
-
-    </nav>
   </header>
 
   <main class="max-w-sm mx-auto p-1 overflow-hidden">
 
 
-
     <!-- Hero -->
     <section id="hero" class="relative pt-5">
+
       <div class="max-w-[360px] mx-auto px-4 relative">
         <div class="relative flex justify-space-between items-center w-full h-[220px]">
 
@@ -86,7 +108,7 @@
 
           <!-- Consult button -->
           <a href="#consult"
-            class="inline-flex mt-[18px] -ml-[10px] items-center rounded-2xl px-4 py-2 text-sm font-medium bg-emerald-600 text-white shadow hover:opacity-95 transition">
+            class="inline-flex mt-[23px] -ml-[10px] items-center rounded-2xl px-4 py-2 text-[11px] font-medium bg-emerald-600 text-white shadow hover:opacity-95 transition">
             Consult Now
           </a>
 
@@ -96,8 +118,10 @@
             transform -rotate-[18deg] drop-shadow-lg scale-[130%]" />
 
           <!-- Scattered pill (animated on scroll) -->
+
           <img src="/1st/Capsule without shadow image.png" alt="pill"
-            class="anim-hero-pill absolute z-0 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[130%]" />
+            class="anim-hero-pill absolute z-0 w-10 left-[175px] top-[163px] transform rotate-[45deg] scale-[150%]" />
+
 
         </div>
       </div>
@@ -106,6 +130,7 @@
 
     <!-- WHY US -->
     <section id="why" class="relative py-1">
+
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto mb-10 text-center">
           <h2 class="text-[15px] md:text-4xl font-bold">Why Choose <br> <span class="text-2xl md:text-4xl font-bold">
@@ -121,15 +146,17 @@
             opacity-40 -z-50 rotate-[23deg] scale-[150%] mt-5 -ml-5">
 
 
+
             <!-- Item 1 (Left) -->
-            <section class="animate-left flex items-center gap-2" data-side="left">
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
-                <img src="/2nd/Expert icon png.png" alt="Expert Guided" class="w-[45px] h-[45px] object-contain  " />
+            <section class="animate-left flex flex-row-reverse items-center gap-2 px-2" data-side="left">
+              <div class="r-icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden mr-5">
+                <img src="/2nd/Expert icon png.png" alt="Expert Guided" class="w-[65px] h-[65px] object-contain" />
               </div>
-              <div class="anim-text flex-1 ">
-                <h3 class="text-emerald-800 font-bold text-[14px] ">
-                  Expert-Guided <br> and Scientifically <br> Proven
+
+              <div class="anim-text flex-1 text-left">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
+                  Expert-Guided <br> and Scientifically Proven
                 </h3>
                 <p class="text-[12px] font-bold text-black mt-1">
                   Modern Research + <br> Ancient Ayurveda
@@ -138,119 +165,130 @@
             </section>
 
             <!-- Item 2 (Right) -->
-            <section class="animate-right flex items-center gap-2 mt-2" data-side="right">
+            <section class="animate-right flex flex-row-reverse items-center gap-2 mt-2 px-2" data-side="right">
               <div class="anim-text flex-1 text-right">
-                <h3 class="text-emerald-800 font-bold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
                   Trusted By <br> 1000+ Customers
                 </h3>
-                <p class="text-[10px] text-black font-bold mt-1">
+                <p class="text-[12px] text-black font-bold mt-1">
                   Many Customers find <br> our product effective.
                 </p>
               </div>
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
+              <div class="icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden ml-5">
                 <img src="/2nd/Trusted customer icon png.png" alt="Trusted Customers"
-                  class="w-[45px] h-[45px] object-contain" />
+                  class="w-[65px] h-[65px] object-contain" />
               </div>
-
             </section>
 
-
             <!-- Item 3 (Left) -->
-            <section class="animate-left flex items-center gap-4 mt-10" data-side="left">
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
-                <img src="/2nd/Ayurvedic icon image.png" alt="100% Ayurvedic" class="w-[45px] h-[45px] 
-              object-contain" />
+            <section class="animate-left flex flex-row-reverse items-center gap-4 mt-10 px-2" data-side="left">
+              <div class="r-icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden mr-5">
+                <img src="/2nd/Ayurvedic icon image.png" alt="100% Ayurvedic"
+                  class="w-[65px] h-[65px] object-contain" />
               </div>
-              <div class="flex-1">
-                <h3 class="text-emerald-800 font-bold text-[12px]">
+              <div class="flex-1 text-left">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
                   100% Ayurvedic <br> and Natural
                 </h3>
-                <p class="text-[10px] text-black font-bold mt-1">
+                <p class="text-[12px] text-black font-bold mt-1">
                   Safe, Pure and <br> Chemical–Free
                 </p>
               </div>
             </section>
 
             <!-- Item 4 (Right) -->
-            <section class="animate-right flex items-center gap-4 mt-10" data-side="right">
+            <section class="animate-right flex flex-row-reverse items-center gap-4 mt-10 px-2" data-side="right">
               <div class="anim-text flex-1 text-right">
-                <h3 class="text-emerald-800 font-bold text-[12px]">
+                <h3 class="text-emerald-800 font-bold text-[14px]">
                   No Side Effects, <br> Only Results
                 </h3>
-                <p class="text-[10px] text-black font-bold mt-1">
+                <p class="text-[12px] text-black font-bold mt-1">
                   Effective and Long-Term <br> Fat Management
                 </p>
               </div>
-              <div class="icon-circle flex-shrink-0 w-[50px] h-[50px] rounded-full border-2 border-black 
-              bg-white-900 flex items-center justify-center overflow-hidden">
+              <div class="icon-circle flex-shrink-0 w-[70px] h-[70px] rounded-full border-2 border-black 
+  bg-yellow-50 flex items-center justify-center overflow-hidden ml-5">
                 <img src="/2nd/No side effect icon png.png" alt="No Side Effects"
-                  class="w-[45px] h-[45px] object-contain" />
+                  class="w-[65px] h-[65px] object-contain" />
               </div>
             </section>
-          </div> <!-- /space-y -->
 
-
-        </div>
     </section>
 
 
     <!-- HOW IT WORKS -->
-    <section id="how" class="relative py-6 md:py-4">
+    <section id="how" class="relative mt-[10px] py-6 md:py-4">
       <div class="container mx-auto px-4">
 
         <!-- Heading -->
-        <div class="max-w-2xl mx-auto mb-5 text-center">
+        <div class="max-w-2xl mx-auto text-center">
 
           <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[50%] left-[65%] -translate-x-1/2 w-[950px] h-[70px] opacity-40 
         -z-50 -rotate-[42deg] scale-[200%] mt-5 -ml-5">
 
           <h2 class="text-3xl md:text-4xl font-bold">How It Works</h2>
-          <p class="mt-3 text-slate-600">Four pillars that drive sustainable fat loss.</p>
         </div>
 
         <!-- First Row -->
-        <section class="py-4">
+        <section class="py-1 mt-[10px] ">
           <div class="max-w-md mx-auto px-2  flex justify-space-between gap-8">
 
             <!-- Left card -->
-            <div class="animate-left flex flex-col items-start text-start w-1/2">
-              <div class="w-[60px] h-[60px] -ml-4  ">
+            <div class="flex flex-col items-start text-start w-1/2">
+              <div class="how-img w-[60px] h-[60px] -ml-4  ">
                 <img src="/3rd/Metabolism icon.png" alt="Boost Metabolism" class="w-[55px] h-[55px] object-contain" />
               </div>
-              <h3 class="text-emerald-800 text-start font-semibold text-sm">Boost Metabolism</h3>
-              <p class="text-slate-600 text-xs mt-1 leading-5">
-                Boosting metabolism helps burn more calories at rest, making fat loss easier.
+              <h3 class="text-emerald-800 text-start font-semibold text-[14px]">Boost Metabolism</h3>
+              <p class="text-slate-600 text-[12px] mt-1 leading-5">
+                Boosting metabolism helps burn more Boosting metabolism helps burn more
               </p>
             </div>
 
             <!-- Right card -->
-            <div class="animate-right flex flex-col items-end text-end w-1/2">
-              <div class="w-[60px] h-[60px] -mr-5 ">
+            <div class="flex flex-col items-end text-end w-1/2">
+              <div class="how-img w-[60px] h-[60px] -mr-5 ">
                 <img src="/3rd/Gut health icon.png" alt="Gut Health" class="w-[55px] h-[55px] object-contain" />
               </div>
-              <h3 class="text-emerald-800 font-semibold text-sm">Gut Health</h3>
-              <p class="text-slate-600 text-xs mt-1 leading-5">
-                Good gut health improves digestion and nutrient absorption, aiding fat loss naturally.
+              <h3 class="text-emerald-800 font-semibold text-[14px]">Gut Health</h3>
+              <p class="text-slate-600 text-[12px] mt-1 leading-5">
+                Good gut health improves digestion and nutrient Boosting metabolism helps burn more
               </p>
             </div>
 
           </div>
         </section>
 
+        <!-- Image Section  -->
+        <img src="/1st/Capsule without shadow image.png" alt="how-pill"
+          class="how-pill absolute z-0 w-10 left-[175px] top-[330px] transform -rotate-[35deg] scale-[400%]" />
+
+        <img src="/2nd/Round Arrow image png.png" alt="how-arrow"
+          class="how-arrow absolute z-0 w-10 left-[260px] top-[280px] transform rotate-[120deg] scale-[300%]" />
+
+        <img src="/2nd/Round Arrow image png.png" alt="how-arrow"
+          class="how-arrow absolute z-0 w-10 left-[90px] top-[380px] transform -rotate-[50deg] scale-[300%]" />
+
+        <img src="/2nd/2nd Round Arrow image png.png" alt="how-arrow"
+          class="how-arrow absolute z-0 w-10 left-[100px] top-[280px] transform rotate-[50deg] scale-[320%]" />
+
+        <img src="/2nd/2nd Round Arrow image png.png" alt="how-arrow"
+          class="how-arrow absolute z-0 w-10 left-[250px] top-[380px] transform rotate-[220deg] scale-[300%]" />
+
+
 
         <!-- Second Row -->
-        <section class="py-4">
+        <section class="py-5 mt-[150px]">
           <div class="max-w-md mx-auto px-2 flex justify-between gap-8">
 
             <!-- Left card -->
             <div class="flex flex-col items-start text-start w-1/2">
-              <div class="w-[60px] h-[60px] -ml-4">
+              <div class="how-img w-[60px] h-[60px] -ml-4">
                 <img src="/3rd/No weight gain icon.png" alt="No Weight Rebound"
                   class="w-[55px] h-[55px] object-contain" />
               </div>
-              <h3 class="text-emerald-800 font-semibold text-sm">No Weight Rebound</h3>
+              <h3 class="text-emerald-800 font-semibold text-[14px]">No Weight Rebound</h3>
               <p class="text-slate-600 text-xs mt-1 leading-5">
                 Unlike crash diets, once you lose weight with Amrit Mantrah, it stays off.
               </p>
@@ -258,10 +296,10 @@
 
             <!-- Right card -->
             <div class="flex flex-col items-end text-end w-1/2">
-              <div class="w-[60px] h-[60px] -mr-5">
+              <div class="how-img w-[60px] h-[60px] -mr-5">
                 <img src="/3rd/Appetite icon.png" alt="Appetite Control" class="w-[55px] h-[55px] object-contain" />
               </div>
-              <h3 class="text-emerald-800 font-semibold text-sm">Appetite Control</h3>
+              <h3 class="text-emerald-800 font-semibold text-[14px]">Appetite Control</h3>
               <p class="text-slate-600 text-xs mt-1 leading-5">
                 Appetite control prevents overeating, supporting steady fat loss.
               </p>
@@ -298,7 +336,7 @@
 
 
     <!-- Lab test -->
-    <section id="certifications" class="relative py-1">
+    <section id="certifications" class="relative py-1 pb-[30px] mt-5">
       <div class="container mx-auto px-1">
 
 
@@ -353,13 +391,14 @@
     </section>
 
 
+    <!-- ✅ Verified Buyers Slider (with synced dots) -->
 
-    <!-- ✅ Verified Buyers Slider -->
-    <div class="verified-wrapper overflow-hidden w-full max-w-[360px] relative my-2">
+    <section id="verified-buyers" class="verified-wrapper w-full max-w-[500px] relative my-2 pb-[40px]">
 
       <h2 class="text-lg font-semibold text-emerald-800 pl-3 mb-5">Verified Buyers</h2>
-      <img src="/aboutus/bg.png" alt="Background Rectangle" class="  absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] 
-             opacity-40 -z-50 -rotate-[180deg] scale-[200%] mt-5 -ml-5">
+      <img src="/aboutus/bg.png" alt="Background Rectangle"
+        class="absolute top-[22%] left-[65%] -translate-x-1/2 w-[250px] h-[70px] opacity-40 -z-50 -rotate-[180deg] scale-[210%] mt-5 -ml-5">
+
       <!-- Slider Track (All 3 slides inside) -->
       <div class="slider-track flex transition-transform duration-500">
 
@@ -376,7 +415,7 @@
               <img src="/5th/frame.png" alt="frame" class="w-[280px] scale-150 -mt-[24px]" />
             </div>
           </div>
-          <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+          <p class="mt-6 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
         </section>
 
         <!-- 🧍‍♀️ Verified Buyer #2 -->
@@ -392,7 +431,7 @@
               <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150 -mt-[24px]" />
             </div>
           </div>
-          <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+          <p class="mt-6 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
         </section>
 
         <!-- 🧔 Verified Buyer #3 -->
@@ -405,36 +444,175 @@
               </p>
             </div>
             <div class="w-[40%]">
-              <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150  -mt-[24px]" />
+              <img src="/5th/frame.png" alt="frame" class="w-[240px] scale-150 -mt-[24px]" />
             </div>
           </div>
-          <p class="mt-3 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
+          <p class="mt-5 text-[9px] text-emerald-700 italic text-start">*Results may vary person to person</p>
         </section>
 
       </div>
-    </div>
+
+      <!-- Dots Indicators (inside wrapper, visible & clickable) -->
+      <div id="verified-dots-1"
+        class="absolute bottom-[10px] left-1/2 -translate-x-1/2 flex items-center gap-3 z-40 pointer-events-auto">
+      </div>
+
+  </section>
+
 
     <!-- ✅ GSAP Animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script>
-      const track = document.querySelector('.slider-track');
-      const slides = document.querySelectorAll('.slider-track > section');
-      const slideWidth = slides[0].offsetWidth; // Full width of one slide
-      const totalSlides = slides.length;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-      const tl = gsap.timeline({ repeat: -1, defaults: { ease: "power2.inOut" } });
+    <!-- make sure only one gsap is loaded above this script -->
+<script>
+  (function () {
+    // CONFIG - change suffix if you have multiple sliders on same page
+    const suffix = '-1';
+    const trackSel = '.slider-track';
+    const dotsId = 'verified-dots' + suffix;
+    const wrapperSel = '.verified-wrapper';
 
+    // DOM
+    const wrapper = document.querySelector(wrapperSel);
+    if (!wrapper) return;
+    const track = wrapper.querySelector(trackSel);
+    const slides = Array.from(track.querySelectorAll('section'));
+    const dotsRoot = document.getElementById(dotsId);
+
+    // state
+    let index = 0;
+    let slideW = slides[0].offsetWidth;
+    let isDragging = false;
+    let startX = 0;
+    let currentTranslate = 0;
+    let autoplayTimer = null;
+    const AUTOPLAY_MS = 1500;
+    const ANIM_DUR = 0.05; // seconds
+
+    // ensure responsive width
+    function measure() {
+      slideW = slides[0].offsetWidth;
+      goTo(index, 0); // reposition without anim
+    }
+    window.addEventListener('resize', measure);
+
+    // create dots
+    const dots = [];
+    function createDots() {
+      if (!dotsRoot) return;
+      dotsRoot.innerHTML = '';
       slides.forEach((_, i) => {
-        tl.to(track, {
-          x: -slideWidth * i,
-          duration: 0.8
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.dataset.i = i;
+        btn.className = 'w-2.5 h-2.5 rounded-full bg-black-300 border border-slate-700 transition-all duration-300 hover:bg-slate-400';
+        btn.addEventListener('click', () => {
+          stopAutoplay();
+          goTo(i);
+          restartAutoplayAfterDelay();
         });
-        tl.to({}, { duration: 2 }); // Pause 2 seconds on each slide
+        dotsRoot.appendChild(btn);
+        dots.push(btn);
       });
+      setActiveDot();
+    }
 
-      // Reset back to first slide smoothly
-      tl.to(track, { x: 0, duration: 0.8 });
-    </script>
+    function setActiveDot() {
+      dots.forEach((d, i) => {
+        if (i === index) {
+          d.classList.add('bg-black','scale-105','opacity-100','ring-1','ring-black/80');
+          d.classList.remove('bg-white/30','opacity-70');
+        } else {
+          d.classList.remove('bg-black','scale-105','opacity-100','ring-1','ring-black/80');
+          d.classList.add('bg-white/30','opacity-70');
+        }
+      });
+    }
+
+    // animate track to index (use gsap)
+    function goTo(i, duration = ANIM_DUR) {
+      index = ((i % slides.length) + slides.length) % slides.length;
+      const x = -slideW * index;
+      gsap.to(track, { x, duration, ease: 'power2.out' });
+      currentTranslate = x;
+      setActiveDot();
+    }
+
+    // autoplay loop
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => {
+        goTo(index + 1);
+      }, AUTOPLAY_MS);
+    }
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+    function restartAutoplayAfterDelay(delay = 3000) {
+      stopAutoplay();
+      setTimeout(startAutoplay, delay);
+    }
+
+    // pointer / touch handlers for swipe
+    function onPointerDown(evt) {
+      stopAutoplay();
+      isDragging = true;
+      startX = evt.touches ? evt.touches[0].clientX : evt.clientX;
+      wrapper.classList.add('grabbing');
+    }
+    function onPointerMove(evt) {
+      if (!isDragging) return;
+      const x = evt.touches ? evt.touches[0].clientX : evt.clientX;
+      const dx = x - startX;
+      // translate visually without committing
+      gsap.set(track, { x: currentTranslate + dx });
+    }
+    function onPointerUp(evt) {
+      if (!isDragging) return;
+      isDragging = false;
+      wrapper.classList.remove('grabbing');
+      const x = (evt.changedTouches ? evt.changedTouches[0].clientX : (evt.clientX || startX));
+      const dx = x - startX;
+      // threshold to change slide
+      const threshold = Math.min(60, slideW * 0.12);
+      if (dx < -threshold) {
+        goTo(index + 1);
+      } else if (dx > threshold) {
+        goTo(index - 1);
+      } else {
+        goTo(index); // snap back
+      }
+      restartAutoplayAfterDelay();
+    }
+
+    // mouse fallback (desktop)
+    function addPointerListeners() {
+      // touch
+      wrapper.addEventListener('touchstart', onPointerDown, { passive: true });
+      wrapper.addEventListener('touchmove', onPointerMove, { passive: true });
+      wrapper.addEventListener('touchend', onPointerUp, { passive: true });
+      // mouse
+      wrapper.addEventListener('mousedown', (e) => { e.preventDefault(); onPointerDown(e); });
+      window.addEventListener('mousemove', onPointerMove);
+      window.addEventListener('mouseup', onPointerUp);
+    }
+
+    // init
+    measure();
+    createDots();
+    addPointerListeners();
+    goTo(0, 0); // show first
+    startAutoplay();
+
+    // expose for debugging if needed
+    window.__verifiedSlider = { goTo, startAutoplay, stopAutoplay };
+
+  })();
+</script>
 
 
 
@@ -450,6 +628,7 @@
       <h2 class="text-[15px] font-semibold text-center text-emerald-700 mb-8 leading-[18px]">
         How to Take <br><span class="text-emerald-900">Amrit Mantrah Capsule</span>
       </h2>
+
       <div class="relative w-full max-w-lg mx-auto">
         <!-- Capsule Center -->
         <img src="/Image/7th Section.png" alt="Capsule" class="mx-auto w-[260px]">
@@ -479,237 +658,312 @@
         <img src="./1st/Capsule without shadow image.png" alt="" aria-hidden="true"
           class="pointer-events-none select-none absolute bottom-[30%] left-[35%] w-28 h-20 object-contain scale-[100%] -rotate-[115deg]" />
       </div>
+
     </section>
 
-<!-- Pricing -->
-<section class="min-h-[300px] flex items-center justify-center p-4 mt-8 scale-[125%]">
 
-  <div id="carousel" class="relative w-[86vw] max-w-xs h-auto touch-none">
-    <!-- Card 0 -->
-    <div class="card card-smooth" data-i="0" data-front="false" style="width:100px;height:100px;">
-      <div class="card-inner">
-        <img src="/Image/1st pricing.png" alt="Card 1" class="card-img" />
-        <div class="card-label">CARD 1</div>
+
+    <!-- Pricing -->
+
+    <h2 class="text-[15px] font-semibold text-center text-emerald-700 leading-[19px] mt-2">
+      Choose your Plan <br><span class="text-emerald-900 text-[20px]">for a Healthier You</span>
+    </h2>
+
+    <section class="min-h-[300px] flex items-center justify-center p-4 m-10 scale-[125%] relative">
+
+
+      <div id="carousel" class="relative w-[86vw] max-w-xs h-auto touch-none">
+        <!-- Card 0 -->
+        <div class="card card-smooth relative" data-i="0" data-front="false" style="width:100px;height:100px;">
+          <div class="card-inner">
+            <img src="/Image/1st pricing.png" alt="Card 1" class="card-img" />
+
+          </div>
+        </div>
+
+        <!-- Card 1 -->
+        <div class="card card-smooth" data-i="1" data-front="false" style="width:100px;height:100px;">
+          <div class="card-inner">
+            <img src="/Image/2nd pricing.png" alt="Card 2" class="card-img" />
+
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card card-smooth" data-i="2" data-front="false" style="width:100px;height:100px;">
+          <div class="card-inner">
+            <img src="/Image/3rd pricing.png" alt="Card 3" class="card-img" />
+
+          </div>
+        </div>
       </div>
-    </div>
 
-    <!-- Card 1 -->
-    <div class="card card-smooth" data-i="1" data-front="false" style="width:100px;height:100px;">
-      <div class="card-inner">
-        <img src="/Image/2nd pricing.png" alt="Card 2" class="card-img" />
-        <div class="card-label">CARD 2</div>
+      <!-- Dots Indicators -->
+      <!-- Replace existing dots container with this -->
+      <div id="carousel-dots"
+        class="absolute bottom-[-10px] left-1/2 -translate-x-1/2 flex items-center gap-3 z-50 pointer-events-auto">
       </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card card-smooth" data-i="2" data-front="false" style="width:100px;height:100px;">
-      <div class="card-inner">
-        <img src="/Image/3rd pricing.png" alt="Card 3" class="card-img" />
-        <div class="card-label">CARD 3</div>
-      </div>
-    </div>
-  </div>
-
-</section>
-
-<script>
-/*
-  Mobile-first carousel + taper effect
-  - no image crop (object-fit: contain)
-  - container sizes to current front image natural dims (scaled down if needed)
-  - side cards receive taper class -> vertical mask + scaleY squeeze + muted brightness
-  - interactions: auto-rotate, tap, swipe, long-press pause
-*/
-
-const root = document.getElementById('carousel');
-const cardEls = Array.from(root.querySelectorAll('.card'));
-const imgs = cardEls.map(c => c.querySelector('.card-img'));
-let index = 0; // front card index
-const INTERVAL = 2200;
-let timer = null;
-let isPaused = false;
-
-// params (tuned for mobile)
-let params = {
-  gapPx: Math.round(Math.min(window.innerWidth * 0.25, 110)),
-  depthPx: Math.round(Math.min(window.innerWidth * 0.38, 200)),
-  durMs: 700,
-  blurFront: 0,
-  blurSide: 3,
-  scaleFront: 1.03,
-  scaleSide: 0.92
-};
-
-// store natural sizes of images when loaded
-const naturalSizes = new Array(imgs.length).fill(null);
-let loadedCount = 0;
-
-function onImageLoaded(i){
-  const img = imgs[i];
-  naturalSizes[i] = { w: img.naturalWidth || img.width, h: img.naturalHeight || img.height };
-  loadedCount++;
-  if(loadedCount >= 1) {
-    sizeToIndex(index);
-  }
-  if(loadedCount === imgs.length) {
-    applyPositions();
-  }
-}
-
-imgs.forEach((img, i) => {
-  if (img.complete && img.naturalWidth) {
-    onImageLoaded(i);
-  } else {
-    img.addEventListener('load', () => onImageLoaded(i));
-    img.addEventListener('error', () => {
-      naturalSizes[i] = { w: img.width || 300, h: img.height || 200 };
-      loadedCount++;
-      if(loadedCount >= 1) sizeToIndex(index);
-    });
-  }
-});
-
-function getMaxConstraints(){
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-  const breathingRoom = 56; // px to avoid touching bottom
-  const maxW = Math.min(Math.round(vw * 0.86), 420);
-  const maxH = Math.min(Math.round(vw * 0.62), Math.round(vh - breathingRoom));
-  return { maxW, maxH };
-}
-
-function sizeToIndex(i){
-  const sz = naturalSizes[i];
-  if(!sz) return;
-  const { maxW, maxH } = getMaxConstraints();
-  const scale = Math.min(maxW / sz.w, maxH / sz.h, 1); // never upscale beyond natural
-  const finalW = Math.round(sz.w * scale);
-  const finalH = Math.round(sz.h * scale);
-
-  // ensure finalH respects root max-height
-  const computedMax = parseInt(getComputedStyle(root).maxHeight, 10) || (window.innerHeight - 56);
-  const safeFinalH = Math.min(finalH, computedMax);
-
-  root.style.width = finalW + 'px';
-  root.style.height = safeFinalH + 'px';
-
-  cardEls.forEach(c => {
-    c.style.width = finalW + 'px';
-    c.style.height = safeFinalH + 'px';
-  });
-
-  params.gapPx = Math.round(Math.min(finalW * 0.28, 110));
-  params.depthPx = Math.round(Math.min(finalW * 0.42, 200));
-
-  applyPositions();
-}
-
-// set z-index and data-front attribute
-function setZIndices(front, right, left){
-  cardEls.forEach(c => c.style.zIndex = 0);
-  cardEls[front].style.zIndex = 30;
-  cardEls[right].style.zIndex = 20;
-  cardEls[left].style.zIndex = 10;
-  cardEls.forEach((c, idx) => c.setAttribute('data-front', (idx === front).toString()));
-}
-
-// apply positions + tapering
-function applyPositions(){
-  const front = index;
-  const left = (index + 1) % 3;
-  const right  = (index + 2) % 3;
-
-  setZIndices(front, right, left);
-  void document.body.offsetHeight; // force reflow
-
-  cardEls.forEach(card => {
-    card.style.transition = `transform ${params.durMs}ms cubic-bezier(.2,.9,.2,1), filter ${params.durMs}ms cubic-bezier(.2,.9,.2,1), opacity ${params.durMs}ms cubic-bezier(.2,.9,.2,1)`;
-    card.style.backfaceVisibility = 'hidden';
-  });
-
-  // FRONT - clear, slightly popped
-  cardEls[front].style.transform = `translate(-50%,-50%) translateZ(${params.depthPx}px) scale(${params.scaleFront})`;
-  cardEls[front].style.filter = `blur(${params.blurFront}px) brightness(1)`;
-  cardEls[front].style.opacity = '1';
-  const frontInner = cardEls[front].querySelector('.card-inner');
-  frontInner.classList.remove('taper');
-  frontInner.setAttribute('data-taper', 'false');
-  frontInner.style.transform = `scaleY(1) translateZ(0)`; // ensure no squeeze
-
-  // RIGHT - tapered, slightly squeezed vertically, muted
-  cardEls[right].style.transform = `translate(calc(-50% + ${params.gapPx}px),-50%) translateZ(0px) rotateY(-18deg) scale(${params.scaleSide})`;
-  cardEls[right].style.filter = `blur(${params.blurSide}px) brightness(.88)`;
-  cardEls[right].style.opacity = '0.95';
-  const rightInner = cardEls[right].querySelector('.card-inner');
-  rightInner.classList.add('taper');
-  rightInner.setAttribute('data-taper', 'true');
-  rightInner.style.transform = `scaleY(0.92) translateZ(0)`;
-
-  // LEFT - tapered, slightly squeezed vertically, more muted
-  cardEls[left].style.transform = `translate(calc(-50% - ${params.gapPx}px),-50%) translateZ(0px) rotateY(18deg) scale(${params.scaleSide})`;
-  cardEls[left].style.filter = `blur(${params.blurSide + 1}px) brightness(.82)`;
-  cardEls[left].style.opacity = '0.88';
-  const leftInner = cardEls[left].querySelector('.card-inner');
-  leftInner.classList.add('taper');
-  leftInner.setAttribute('data-taper', 'true');
-  leftInner.style.transform = `scaleY(0.92) translateZ(0)`;
-}
-
-// initial positions
-applyPositions();
 
 
-// touch interactions: long-press pause, swipe left/right, tap rotate
-let touchHoldTimer = null;
-let startX = null;
+    </section>
 
-root.addEventListener('touchstart', (e) => {
-  clearTimeout(touchHoldTimer);
-  touchHoldTimer = setTimeout(() => { isPaused = true; }, 140);
-  startX = e.touches ? e.touches[0].clientX : e.clientX;
-}, {passive:true});
+    <!-- ===== Tailwind Dots System =====  -->
+    <script>
+      // ===== Tailwind Dots System =====
+      function initDots() {
+        const dotsRoot = document.getElementById('carousel-dots');
+        if (!dotsRoot) return;
 
-root.addEventListener('touchmove', (e) => {
-  if(startX === null) return;
-  const current = e.touches ? e.touches[0].clientX : e.clientX;
-  const diff = current - startX;
-  if(Math.abs(diff) > 28){
-    if(diff < 0){
-      index = (index - 1 + 3) % 3;
-    } else {
-      index = (index + 1) % 3;
-    }
-    sizeToIndex(index);
-    startX = null;
-    clearTimeout(touchHoldTimer);
-    isPaused = true;
-    setTimeout(()=> isPaused = false, 900);
-  }
-}, {passive:true});
+        const total = cardEls.length || 3;
+        dotsRoot.innerHTML = '';
+        const dots = [];
 
-root.addEventListener('touchend', (e) => {
-  clearTimeout(touchHoldTimer);
-  if(isPaused){
-    setTimeout(()=> { isPaused = false; }, 220);
-    return;
-  }
-  index = (index - 1 + 3) % 3;
-  sizeToIndex(index);
-}, {passive:true});
+        for (let i = 0; i < total; i++) {
+          const dot = document.createElement('button');
+          dot.dataset.i = i;
+          // Tailwind classes for default & transition
+          dot.className = 'w-2.5 h-2.5 rounded-full bg-black-300 border border-slate-700 transition-all duration-300 hover:bg-slate-400';
+          dot.addEventListener('click', (e) => {
+            e.stopPropagation();
+            index = i;
+            sizeToIndex(index);
+            isPaused = true;
+            setTimeout(() => (isPaused = false), 900);
+            updateDots();
+          });
+          dotsRoot.appendChild(dot);
+          dots.push(dot);
+        }
 
-// mouse interactions (optional)
-root.addEventListener('mouseenter', () => isPaused = true);
-root.addEventListener('mouseleave', () => isPaused = false);
-root.addEventListener('click', () => {
-  index = (index - 1 + 3) % 3;
-  sizeToIndex(index);
-});
+        function updateDots() {
+          dots.forEach((dot, idx) => {
+            if (idx === index) {
+              dot.classList.add('bg-black', 'scale-105', 'opacity-100',);
+              dot.classList.remove('bg-white/30', 'opacity-70');
+            } else {
+              dot.classList.remove('bg-black', 'scale-125', 'opacity-100');
+              dot.classList.add('bg-white/30', 'opacity-70');
+            }
+          });
+        }
 
-// responsive
-window.addEventListener('resize', () => {
-  sizeToIndex(index);
-});
-</script>
+        // Hook dots to auto-update with slide changes
+        const originalApply = window.applyPositions;
+        window.applyPositions = function (...args) {
+          originalApply(...args);
+          updateDots();
+        };
+
+        updateDots();
+      }
+
+      // Run after everything
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDots);
+      } else {
+        initDots();
+      }
+    </script>
+
+
+    <script>
+      /*
+        Mobile-first carousel + taper effect
+        - no image crop (object-fit: contain)
+        - container sizes to current front image natural dims (scaled down if needed)
+        - side cards receive taper class -> vertical mask + scaleY squeeze + muted brightness
+        - interactions: auto-rotate, tap, swipe, long-press pause
+      */
+
+      const root = document.getElementById('carousel');
+      const cardEls = Array.from(root.querySelectorAll('.card'));
+      const imgs = cardEls.map(c => c.querySelector('.card-img'));
+      let index = 0; // front card index
+      const INTERVAL = 2200;
+      let timer = null;
+      let isPaused = false;
+
+      // params (tuned for mobile)
+      let params = {
+        gapPx: Math.round(Math.min(window.innerWidth * 0.25, 110)),
+        depthPx: Math.round(Math.min(window.innerWidth * 0.38, 200)),
+        durMs: 700,
+        blurFront: 0,
+        blurSide: 3,
+        scaleFront: 1.03,
+        scaleSide: 0.92
+      };
+
+      // store natural sizes of images when loaded
+      const naturalSizes = new Array(imgs.length).fill(null);
+      let loadedCount = 0;
+
+      function onImageLoaded(i) {
+        const img = imgs[i];
+        naturalSizes[i] = { w: img.naturalWidth || img.width, h: img.naturalHeight || img.height };
+        loadedCount++;
+        if (loadedCount >= 1) {
+          sizeToIndex(index);
+        }
+        if (loadedCount === imgs.length) {
+          applyPositions();
+        }
+      }
+
+      imgs.forEach((img, i) => {
+        if (img.complete && img.naturalWidth) {
+          onImageLoaded(i);
+        } else {
+          img.addEventListener('load', () => onImageLoaded(i));
+          img.addEventListener('error', () => {
+            naturalSizes[i] = { w: img.width || 300, h: img.height || 200 };
+            loadedCount++;
+            if (loadedCount >= 1) sizeToIndex(index);
+          });
+        }
+      });
+
+      function getMaxConstraints() {
+        const vw = window.innerWidth;
+        const vh = window.innerHeight;
+        const breathingRoom = 56; // px to avoid touching bottom
+        const maxW = Math.min(Math.round(vw * 0.86), 420);
+        const maxH = Math.min(Math.round(vw * 0.62), Math.round(vh - breathingRoom));
+        return { maxW, maxH };
+      }
+
+      function sizeToIndex(i) {
+        const sz = naturalSizes[i];
+        if (!sz) return;
+        const { maxW, maxH } = getMaxConstraints();
+        const scale = Math.min(maxW / sz.w, maxH / sz.h, 1); // never upscale beyond natural
+        const finalW = Math.round(sz.w * scale);
+        const finalH = Math.round(sz.h * scale);
+
+        // ensure finalH respects root max-height
+        const computedMax = parseInt(getComputedStyle(root).maxHeight, 10) || (window.innerHeight - 56);
+        const safeFinalH = Math.min(finalH, computedMax);
+
+        root.style.width = finalW + 'px';
+        root.style.height = safeFinalH + 'px';
+
+        cardEls.forEach(c => {
+          c.style.width = finalW + 'px';
+          c.style.height = safeFinalH + 'px';
+        });
+
+        params.gapPx = Math.round(Math.min(finalW * 0.28, 110));
+        params.depthPx = Math.round(Math.min(finalW * 0.42, 200));
+
+        applyPositions();
+      }
+
+      // set z-index and data-front attribute
+      function setZIndices(front, right, left) {
+        cardEls.forEach(c => c.style.zIndex = 0);
+        cardEls[front].style.zIndex = 30;
+        cardEls[right].style.zIndex = 20;
+        cardEls[left].style.zIndex = 10;
+        cardEls.forEach((c, idx) => c.setAttribute('data-front', (idx === front).toString()));
+      }
+
+      // apply positions + tapering
+      function applyPositions() {
+        const front = index;
+        const left = (index + 1) % 3;
+        const right = (index + 2) % 3;
+
+        setZIndices(front, right, left);
+        void document.body.offsetHeight; // force reflow
+
+        cardEls.forEach(card => {
+          card.style.transition = `transform ${params.durMs}ms cubic-bezier(.2,.9,.2,1), filter ${params.durMs}ms cubic-bezier(.2,.9,.2,1), opacity ${params.durMs}ms cubic-bezier(.2,.9,.2,1)`;
+          card.style.backfaceVisibility = 'hidden';
+        });
+
+        // FRONT - clear, slightly popped
+        cardEls[front].style.transform = `translate(-50%,-50%) translateZ(${params.depthPx}px) scale(${params.scaleFront})`;
+        cardEls[front].style.filter = `blur(${params.blurFront}px) brightness(1)`;
+        cardEls[front].style.opacity = '1';
+        const frontInner = cardEls[front].querySelector('.card-inner');
+        frontInner.classList.remove('taper');
+        frontInner.setAttribute('data-taper', 'false');
+        frontInner.style.transform = `scaleY(1) translateZ(0)`; // ensure no squeeze
+
+        // RIGHT - tapered, slightly squeezed vertically, muted
+        cardEls[right].style.transform = `translate(calc(-50% + ${params.gapPx}px),-50%) translateZ(0px) rotateY(-18deg) scale(${params.scaleSide})`;
+        cardEls[right].style.filter = `blur(${params.blurSide}px) brightness(.88)`;
+        cardEls[right].style.opacity = '0.95';
+        const rightInner = cardEls[right].querySelector('.card-inner');
+        rightInner.classList.add('taper');
+        rightInner.setAttribute('data-taper', 'true');
+        rightInner.style.transform = `scaleY(0.92) translateZ(0)`;
+
+        // LEFT - tapered, slightly squeezed vertically, more muted
+        cardEls[left].style.transform = `translate(calc(-50% - ${params.gapPx}px),-50%) translateZ(0px) rotateY(18deg) scale(${params.scaleSide})`;
+        cardEls[left].style.filter = `blur(${params.blurSide + 1}px) brightness(.82)`;
+        cardEls[left].style.opacity = '0.88';
+        const leftInner = cardEls[left].querySelector('.card-inner');
+        leftInner.classList.add('taper');
+        leftInner.setAttribute('data-taper', 'true');
+        leftInner.style.transform = `scaleY(0.92) translateZ(0)`;
+      }
+
+      // initial positions
+      applyPositions();
+
+
+      // touch interactions: long-press pause, swipe left/right, tap rotate
+      let touchHoldTimer = null;
+      let startX = null;
+
+      root.addEventListener('touchstart', (e) => {
+        clearTimeout(touchHoldTimer);
+        touchHoldTimer = setTimeout(() => { isPaused = true; }, 140);
+        startX = e.touches ? e.touches[0].clientX : e.clientX;
+      }, { passive: true });
+
+      root.addEventListener('touchmove', (e) => {
+        if (startX === null) return;
+        const current = e.touches ? e.touches[0].clientX : e.clientX;
+        const diff = current - startX;
+        if (Math.abs(diff) > 28) {
+          if (diff < 0) {
+            index = (index - 1 + 3) % 3;
+          } else {
+            index = (index + 1) % 3;
+          }
+          sizeToIndex(index);
+          startX = null;
+          clearTimeout(touchHoldTimer);
+          isPaused = true;
+          setTimeout(() => isPaused = false, 900);
+        }
+      }, { passive: true });
+
+      root.addEventListener('touchend', (e) => {
+        clearTimeout(touchHoldTimer);
+        if (isPaused) {
+          setTimeout(() => { isPaused = false; }, 220);
+          return;
+        }
+        index = (index - 1 + 3) % 3;
+        sizeToIndex(index);
+      }, { passive: true });
+
+      // mouse interactions (optional)
+      root.addEventListener('mouseenter', () => isPaused = true);
+      root.addEventListener('mouseleave', () => isPaused = false);
+      root.addEventListener('click', () => {
+        index = (index - 1 + 3) % 3;
+        sizeToIndex(index);
+      });
+
+      // responsive
+      window.addEventListener('resize', () => {
+        sizeToIndex(index);
+      });
+    </script>
 
 
 
@@ -728,7 +982,8 @@ window.addEventListener('resize', () => {
                 <span>Q1: Is Amrit Mantrah safe?</span>
                 <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p class="mt-3 text-sm text-slate-600">Yes, Amrit Mantrah is 100% Ayurvedic and safe. It is FSSAI
+              <p class="mt-3 text-sm text-slate-600">Yes, Amrit Mantrah is 100% Ayurvedic and safe. It is
+                FSSAI
                 approved,
                 lab-tested and GMP certified.</p>
             </details>
@@ -739,7 +994,8 @@ window.addEventListener('resize', () => {
                 <span>Q2: Are there any side effects?</span>
                 <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p class="mt-3 text-sm text-slate-600">No, there are no side effects. The formula is made from pure
+              <p class="mt-3 text-sm text-slate-600">No, there are no side effects. The formula is made from
+                pure
                 Ayurvedic
                 herbs without chemicals.</p>
             </details>
@@ -750,14 +1006,14 @@ window.addEventListener('resize', () => {
                 <span>Q3: Will I gain the weight again afterward?</span>
                 <span class="ml-2 text-emerald-700 group-open:rotate-45 transition-transform">+</span>
               </summary>
-              <p class="mt-3 text-sm text-slate-600">No rebound weight gain — once fat is lost with Amrit Mantrah
+              <p class="mt-3 text-sm text-slate-600">No rebound weight gain — once fat is lost with Amrit
+                Mantrah
                 and
                 healthy lifestyle, it stays off.</p>
             </details>
           </div>
         </div>
     </section>
-
 
 
     <!-- consult contact section -->
@@ -821,7 +1077,6 @@ window.addEventListener('resize', () => {
     </section>
 
 
-
     <!-- FOOTER -->
     <footer class="py-10">
       <div class="container mx-auto px-4 text-sm grid md:grid-cols-4 gap-3">
@@ -847,7 +1102,8 @@ window.addEventListener('resize', () => {
           <p class="font-semibold text-green-800">Policies</p>
           <ul class="mt-1">
             <li><a class="hover:text-slate-700" href="privacypolicy.html">Privacy Policy</a></li>
-            <li><a class="hover:text-slate-700" href="refund&returnpolicy.html">Refund & Return Policy</a></li>
+            <li><a class="hover:text-slate-700" href="refund&returnpolicy.html">Refund & Return Policy</a>
+            </li>
             <li><a class="hover:text-slate-700" href="terms&conditions.html">Terms & Conditions</a></li>
 
           </ul>
@@ -870,137 +1126,183 @@ window.addEventListener('resize', () => {
         reserved.</div>
     </footer>
 
-    <!-- JS (WhatsApp link + GSAP) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js" defer></script> -->
 
 
+    <!-- GSAP LINK -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Add MotionPathPlugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+
+    <!-- How to Animation Section -->
     <script>
-
-      // Register GSAP plugin
       gsap.registerPlugin(ScrollTrigger);
 
-      // Animate hero pill on scroll
-      gsap.to(".anim-hero-pill", {
+      const howTl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#main",       // starts anim when hero section in view
-          start: "top top",       // when hero top hits top of viewport
-          end: "bottom top",           // animation distance
-          scrub: 1,               // smooth scroll-based motion
-          // markers: true,        // (uncomment for debug)
+          trigger: "#how",
+          start: "top 65%",
+          toggleActions: "play none none none",
+          once: true
+        }
+      });
+
+      // 1) Pill pop-in
+      howTl.fromTo(".how-pill",
+        { scale: 0, opacity: 0, rotation: -45, y: -10 },
+        { scale: 4, opacity: 1, rotation: -35, y: 0, duration: 0.3, ease: "back.out(1.6)" }
+      );
+
+      // 2) Arrows pop-in (stagger)
+      howTl.fromTo(".how-arrow",
+        { scale: 0.6, opacity: 0, y: 8 },
+        {
+          scale: 3,
+          opacity: 1,
+          rotation: "+=10",
+          y: 0,
+          duration: 0.3,
+          ease: "power2.out",
+          stagger: { each: 0, from: "center" },
+          scrub: 1
         },
-        y: 2000,                   // pill moves down 1000px
-        x: 1000,                    // slight right zigzag
-        rotation: 90,             // rotate while moving
-        ease: "power2.out"
-      });
+        "+=0.08"
+      );
 
-      // Optional: Animate hero text block too (left-side text)
-      gsap.from("#hero h1, #hero p", {
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top center",
-          end: "+=300",
-          scrub: 1,
-        },
-        x: -50,
-        opacity: 0,
-        ease: "power2.out",
-        stagger: 0.1
-      });
+      // 3) Texts appear (h3 then p)
+      howTl.to("#how p", { opacity: 1, y: 0, duration: 0.1, ease: "power2.out", stagger: 0.12 });
+      howTl.to("#how h3", { opacity: 1, y: 0, duration: 0.1, ease: "power2.out", stagger: 0.02 }, "+=0.06");
+      howTl.to(".how-img", { opacity: 1, y: 0, duration: 0.1, ease: "power2.out", stagger: 0.02 }, "+=0.04");
 
-
-
-      // register plugin
-      gsap.registerPlugin(ScrollTrigger);
-
-      // GENERAL SETTINGS
-      const commonOpts = {
-        duration: 2,
-        ease: "power2.inOut",
-        opacity: 0,
-        left: 30,
-        stagger: 0.2,
-        overwrite: true
-      };
-
-      // TEXT: fade-up (use class .animate-text on headings / paragraphs you want animated)
-      gsap.utils.toArray(".animt-text").forEach(el => {
-        gsap.from(el, {
-          ...commonOpts,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 55%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-      // IMAGES: subtle scale+fade (use class .animate-image on images you want animated)
-      gsap.utils.toArray(".animate-image").forEach(el => {
-        gsap.from(el, {
-          duration: 0.9,
-          ease: "power3.out",
-          opacity: 0,
-          y: 20,
-          scale: 0.98,
-          stagger: 0.08,
-          scrollTrigger: {
-            trigger: el,
-            start: "top 70%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-      //Right → Left (right se slide-in)
-      gsap.utils.toArray(".animate-rightt").forEach(el => {
-        gsap.from(el, {
-          x: 50,        // right se aayega
-          opacity: 0,
-          duration: 1.2,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-            toggleActions: "play none none none",
-          }
-        });
-      });
-
-      //Left → Right (left se slide-in)
-      gsap.utils.toArray(".animate-leftt").forEach(el => {
-        gsap.from(el, {
-          x: -50,       // left se aayega
-          opacity: 0,
-          duration: 1.2,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 90%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-      // OPTIONAL: reveal groups (if you wrap a heading+para together with .animate-group)
-      gsap.utils.toArray(".animate-group").forEach(group => {
-        gsap.from(group.querySelectorAll(".animate-text, .animate-image"), {
-          ...commonOpts,
-          scrollTrigger: {
-            trigger: group,
-            start: "top 90%",
-            toggleActions: "play none none none"
-          }
-        });
-      });
-
-
-
-
-
+      // optional micro-bounce
+      howTl.to("#how", { y: 0.5, duration: 0.12, yoyo: true, repeat: 1, ease: "sine.inOut" }, "+=0.05");
     </script>
+
+
+    <!-- Why Choose AM Animation section -->
+    <style>
+      .icon-circle {
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        will-change: transform, opacity;
+      }
+    </style>
+
+<!-- ensure only one gsap + ScrollTrigger script is included (v3.12.5) -->
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('section[data-side]').forEach(section => {
+      const icon = section.querySelector('.icon-circle');
+      const rightIcon = section.querySelector('.r-icon-circle');
+
+      if (icon) {
+        gsap.from(icon, {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 70%',
+            toggleActions: 'play none none none',
+            // markers: true
+          },
+          x: 150,
+          rotation: 720,
+          opacity: 0,
+          duration: 1.1,
+          ease: 'power3.out'
+        });
+      }
+
+      if (rightIcon) {
+        gsap.from(rightIcon, {
+          scrollTrigger: {
+            trigger: section,
+            start: 'top 70%',
+            toggleActions: 'play none none none',
+            // markers: true
+          },
+          x: -150,
+          rotation: -720,
+          opacity: 0,
+          duration: 1.1,
+          ease: 'power3.out'
+        });
+      }
+    });
+  });
+</script>
+
+
+<!-- menu Toggle Script -->
+ <script>
+  // Mobile drawer toggle + auto-close on link click
+  (function () {
+    const toggle = document.getElementById('nav-toggle');
+    const drawer = document.getElementById('mobile-drawer');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+
+    if (!toggle || !drawer) return;
+
+    toggle.addEventListener('click', () => {
+      const open = drawer.classList.toggle('hidden') === false;
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+    });
+
+    // close drawer when clicking a mobile link
+    document.querySelectorAll('.mobile-link').forEach(a => {
+      a.addEventListener('click', () => {
+        drawer.classList.add('hidden');
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      });
+    });
+
+    // Highlight active nav link on scroll (desktop)
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = [
+      { id: 'why', el: document.getElementById('why') },
+      { id: 'how', el: document.getElementById('how') }
+      // about/privacy are external pages — no section highlight
+    ].filter(s => s.el);
+
+    function onScroll() {
+      const y = window.scrollY + (window.innerHeight * 0.35);
+      let active = null;
+      sections.forEach(s => {
+        const rect = s.el.getBoundingClientRect();
+        const top = window.scrollY + rect.top;
+        if (y >= top) active = s.id;
+      });
+      navLinks.forEach(link => {
+        link.classList.remove('text-emerald-700', 'font-semibold');
+        const href = link.getAttribute('href') || '';
+        if (active && href.includes('#' + active)) {
+          link.classList.add('text-emerald-700', 'font-semibold');
+        } else {
+          link.classList.add('text-slate-700');
+        }
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // optional: smooth scroll polyfill (native CSS 'scroll-behavior: smooth' already in html)
+    // close drawer on outside click
+    document.addEventListener('click', (e) => {
+      if (!drawer.classList.contains('hidden')) {
+        if (!drawer.contains(e.target) && !toggle.contains(e.target)) {
+          drawer.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+        }
+      }
+    });
+  })();
+</script>
+
 
 
     <script src="script.js"></script>

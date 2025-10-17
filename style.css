@@ -1,5 +1,18 @@
   @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Bigshot+One&family=Gravitas+One&family=Playwrite+US+Modern:wght@100..400&display=swap');
 
+
+  /* use Arya everywhere */
+:root { --site-font: 'Arya', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+
+html { scroll-behavior: smooth; }
+
+body, html, input, button, textarea, select, a, p, h1, h2, h3, h4, h5, h6, span, div {
+  font-family: var(--site-font) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
   /* general smoothing */
   .card-smooth {
     -webkit-backface-visibility: hidden;
